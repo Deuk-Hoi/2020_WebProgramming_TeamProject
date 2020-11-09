@@ -38,21 +38,21 @@
 			<div style="text-align: center;">
 				<ul id="Customer_Accept_info" type = "none">
 					<li>
-						<img src="images/customer_accept_info1.gif">
+						<img src="images/supportImg/customer_accept_info1.gif">
 						<h3>매장</h3>
 						<div class="title_notice">방문매장 확인</div>
 						<div class="notice">매장 위치를 검색하세요</div>
 						<a href="#">확인하기</a>
 					</li>
 					<li>
-						<img src="images/customer_accept_info2.gif">
+						<img src="images/supportImg/customer_accept_info2.gif">
 						<h3>인터넷</h3>
 						<div class="title_notice">www.htcafe.com</div>
 						<div class="notice">상담접수 시간 : 24시간</div>
 						<a href="./Q&A.jsp">접수하기</a>
 					</li>
 					<li>
-						<img src="images/customer_accept_info3.gif">
+						<img src="images/supportImg/customer_accept_info3.gif">
 						<h3>전화</h3>
 						<div class="title_notice">041-000-0000</div>
 						<div class="notice">10:00~21:00 (주말･공휴일 휴무)</div>
