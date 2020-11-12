@@ -1,0 +1,62 @@
+#menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 600px;
+}
+.menubar {
+    float: left;
+}
+.menubar a{
+    display: block;
+    color: #000000;
+    padding: 50px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+.menubar a:hover{
+    background-color:gray;
+    color: white;
+}
+.holy{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+h1{
+    font-size: 120px;
+    text-align: center;
+    font-family: 맑은고딕, Malgun Gothic, dotum, gulim, sans-serif;
+    color: black;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*hot coffee css*/
+.moly{
+    place-items: center; 
+    list-style: none;
+    display: grid;
+    grid-template-rows: 350px 350px 350px;
+    grid-template-columns: 350px 350px 350px;
+}
+.hotcof{
+    text-align: center;
+    color:#000000; 
+}
+.hotcof img{
+    width: 150px;
+    height: 150px;
+}
+.hotcof a{
+    text-decoration:none
+}
+.hotcof a:hover{
+    background-color: gray;
+    color: white;
+}
