@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="web_project_01.UserDTO"%>
 <%@ page import="web_project_01.UserDAO"%>
@@ -29,4 +29,4 @@
 		script.println("location.href='login.jsp';");
 		script.println("</script>");
 	}
-%>
+%>--%>
