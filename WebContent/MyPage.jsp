@@ -70,8 +70,93 @@
 		border-radius: 5px;
 		border: 1px solid #253b84;
 	}
+	#stamp_area{
+		margin-bottom: 100px;
+	}
 	
+	#coupon{
+		margin: auto;
+	}
 	
+	#coupon .couponList{
+		text-align: center;
+		margin: 0 12em 0 12em;
+	}
+	
+	#coupon .couponList img{
+		padding: 10px;
+	}
+	#stamp_area .stamp_notice{
+		border-bottom: 1px solid #dadada;
+		margin-top: 150px;
+		margin-bottom: 50px;
+		padding-bottom: 17px;
+	}
+	#stamp_area .stamp_notice>h2{
+		display: inline-block;
+	}
+	#stamp_area .stamp_notice>span{
+		font-size: 15px;
+		font-weight: bold;
+		color: #7b7b7b;
+	}
+	#MemberShip {
+		margin-top: 150px;
+		margin-bottom: 150px;
+	}
+	#MemberShip table{
+		margin:auto;
+		text-align: center;
+	}
+	#MemberShip .Benefits{
+		border-bottom: 1px solid #dadada;
+		padding-bottom: 17px;
+		margin-bottom: 30px;
+	}
+	#MemberShip .Benefit_img{
+		padding: 30px;
+	}
+	
+	#MemberShip .Benefit_contents{
+		padding : 30px;
+	}
+	#UsageGuide .Benefits{
+		border-bottom: 1px solid #dadada;
+		padding-bottom: 17px;
+		margin-bottom: 30px;
+	}
+	#UsageGuide table{
+		margin: 20px;
+	}
+	#UsageGuide .Benefit_img{
+		padding: 30px;
+		text-align: center;
+	}
+	#UsageGuide .Benefit_contents{
+		padding : 30px 30px 30px 50px;
+	}
+	#UsageGuide .Benefit_contents>span{
+		color: #666666;
+	}
+	
+	@media screen and (max-width:1440px) { 
+		.summaryLeft{
+			margin-right: 0;
+		}
+		#coupon .couponList{
+			text-align: center;
+			margin: 0 5em 0 5em;
+		}
+		#MemberShip .Benefit_contents{
+			padding : 30px 0px 30px 0px;
+			font-size: 14px;
+		}
+		#UsageGuide .Benefit_contents{
+			font-size: 14px;
+		}
+	}
+
+		
 </style>
 </head>
 <body>
@@ -116,8 +201,61 @@
 					<div id="modifyButton">
 						<input type="button" value="회원정보 수정  >">
 					</div>
-					
 				</div>
+			</div>
+			<div id = "stamp_area">
+				<div class="stamp_notice">
+					<h2>스탬프 발급 현황 &nbsp;</h2>
+					<span>스탬프 12개를 수집하시면 딸기요거트 스무티 + 초코 쉬폰케이크 무료 쿠폰을 발급해 드립니다.</span>
+				</div>
+				<div id = "coupon">
+					<div class = "couponList">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_stamp.png">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+					</div>
+				</div>
+			</div>
+			<div id = "MemberShip">
+				<div class = "Benefits">
+					<h2>H.T.C 멤버십 혜택</h2>
+				</div>
+				<table>
+					<tr>
+						<td class = "Benefit_img"><img alt="스탬프 사진" src="./images/userInfoImg/benefit.png"></td><td class="Benefit_contents">제조 음료 1잔 결제 시<br>스탬프 1개 적립</td>
+						<td class = "Benefit_img"><img alt="쿠폰카드" src="./images/userInfoImg/coupon_collect.png"></td><td class="Benefit_contents">스탬프 10개 적립 시마다<br>무료 음료 1잔 쿠폰 제공</td>
+						<td class = "Benefit_img"><img alt="할인정보" src="./images/userInfoImg/discount.png"></td><td class="Benefit_contents">매장 소식 및<br>이벤트 쿠폰 제공</td>
+					</tr>
+				</table>
+			</div>
+			<div id = "UsageGuide">
+				<div class = "Benefits">
+					<h2>쿠폰 사용 안내</h2>
+				</div>
+				<table>
+					<tr>
+						<td class = "Benefit_img"><img alt="스탬프 사진" src="./images/userInfoImg/coupon_full_collect.png"></td>
+						<td class="Benefit_contents"><p><strong>스탬프 카드 쿠폰</strong></p><span>스탬프를 적립하여 완성된 무료 음료 쿠폰으로 스탬프카드 메뉴에서 사용할 수 있습니다.<br>(스탬프 카드 쿠폰은 선물하기가 불가합니다.)</span></td>
+					</tr>
+					<tr>
+						<td class = "Benefit_img"><img alt="스탬프 사진" src="./images/userInfoImg/discount.png"></td>
+						<td class="Benefit_contents"><p><strong>이벤트 쿠폰</strong></p><span>이벤트나 행사 또는 선물로 받은 쿠폰은 내쿠폰에서 사용할 수 있습니다.</span></td>
+					</tr>
+					<tr>
+						<td class = "Benefit_img"><img alt="스탬프 사진" src="./images/userInfoImg/coupon_info.png"></td>
+						<td class="Benefit_contents"><p><strong>이용안내</strong></p><span>선물 받은 쿠폰은 문자로 사용이 불가하며 공차 멤버십 회원 가입 후 내쿠폰에서 쿠폰 등록 후 사용할 수 있습니다.<br>모든 쿠폰은 쿠폰 번호나 바코드 이미지로는 
+						사용이 불가하며 앱을 실행하여 제시한 경우만 사용이 가능합니다.</span></td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</section>
