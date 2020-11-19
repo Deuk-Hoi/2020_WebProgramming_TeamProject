@@ -1,7 +1,16 @@
+<%@page import="org.json.simple.parser.JSONParser"%>
+<%@page import="org.json.simple.JSONObject"%>
+<%@page import="org.json.simple.JSONArray"%>
+<%@page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<jsp:useBean id="faqdb" class="com.webprogramming.project.DatabaseManager"/>
 <%
 	request.setCharacterEncoding("UTF-8");
+%>
+<%
+	DatabaseManager dm = new DatabaseManager();
+	String fqa = dm.LoadFAQ();
 %>
 <!DOCTYPE html>
 <html>
@@ -14,13 +23,35 @@
 		padding: 80px 0px 30px 0;
 		border-bottom: 1px solid #dadada;
 	}
-	.FAQDetail{
-		margin-top: 20px;
+	.question, .answer{
+		padding: 30px;
+		border-bottom : 1px solid #dadada;
+		margin: 0px 0px;
 		
 	}
-	.FAQelement{
-		padding: 20px 30px 20px 30px;
-	}
+	.question{
+		font-size: 18px;
+        font-weight: 800; 
+    }
+    .question>span{
+        color: darkblue;
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .question:hover{
+        border: 2px solid blueviolet;
+        color: blueviolet;
+    }
+    .answer{
+        display: none;
+        background-color: #F6F6F6;
+        font-size: 16px;
+        font-weight: 800;
+    }
+    .answer>span{
+        color:darkred;
+        font-size: 25px;
+    }
 	
 </style>
 </head>
@@ -42,13 +73,18 @@
 					<h2>자주하는 질문 [FAQ]</h2>
 				</div>
 				<%
-					for(int i = 0; i < 10; i++){
+					JSONParser parser = new JSONParser();
+					Object o = parser.parse(fqa);
+					JSONArray ja = (JSONArray)o;
+					
+					for(int i = 0; i < ja.size(); i++){
+						JSONObject element = (JSONObject)ja.get(i);
 				%>
-					<details class="FAQDetail">
-						<summary class="FAQelement">앙 기모띠</summary>
-						<p class="FAQelement">호오...</p>
-					</details>
-				<%
+					<div id = "FAQDetail">
+				        <p class = "question" id = "que-<%=i %>"><span>Q.&nbsp;&nbsp;</span><%=(String)element.get("question")%></p>
+				        <p class = "answer" id = "ans-<%=i %>"><span>A.&nbsp;&nbsp;</span><%=(String)element.get("answer")%></p>
+				    </div>
+				<%		
 					}
 				%>
 			</div>
@@ -56,3 +92,17 @@
 	</section>
 </body>
 </html>
+<script>
+    const items = document.querySelectorAll('.question');
+    function openCloseAnswer() {
+
+        const answerId = this.id.replace('que', 'ans');
+        console.log(answerId);
+        if(document.getElementById(answerId).style.display ==='block'){
+            document.getElementById(answerId).style.display = 'none';
+        }else{
+            document.getElementById(answerId).style.display = 'block';
+        }
+    }
+    items.forEach(item => item.addEventListener('click', openCloseAnswer));
+</script>
