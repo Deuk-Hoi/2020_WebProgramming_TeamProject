@@ -35,12 +35,21 @@ body{
 
 .contents{
 	margin-top: 50px;
-	margin-left: 350px;
-	margin-right: 350px;
+	margin-left: 600px;
+	margin-right: 600px;
 	margin-bottom: 50px;
 }
 
 @media screen and (max-width:1910px) { 
+	.contents{
+		margin-top: 50px;
+		margin-left: 400px;
+		margin-right: 400px;
+		margin-bottom: 50px;
+	}
+}
+	
+@media screen and (max-width:1440px) { 
 	.contents{
 		margin-top: 50px;
 		margin-left: 200px;
@@ -49,20 +58,11 @@ body{
 	}
 }
 	
-@media screen and (max-width:1440px) { 
-	.contents{
-		margin-top: 50px;
-		margin-left: 100px;
-		margin-right: 100px;
-		margin-bottom: 50px;
-	}
-}
-	
 @media screen and (max-width:1243px) { 
 	.contents{
 		margin-top: 50px;
-		margin-left: 50px;
-		margin-right: 50px;
+		margin-left: 150px;
+		margin-right: 150px;
 		margin-bottom: 50px;
 	}
 }
