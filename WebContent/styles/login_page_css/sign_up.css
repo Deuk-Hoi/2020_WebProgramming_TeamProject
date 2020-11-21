@@ -1,51 +1,69 @@
 @charset "EUC-KR";
-*{
-	text-decoration:none;
-	font-family:"¸¼Àº °íµñ";
-}
+
 body{
-	background-image:url('image/image_1.jpg');
+	margin:0;
+	background-image: url('../../images/ws_image/main.jpg');
 	background-size:cover;
+	padding:0;
+	font-family : '¸¼Àº °íµñ', sans-serif;
 	background-repeat:no-repeat;
-	background-color:#74c1f7;
+}
+.box {
+	width:500px;
+	height:600px;
+	background-color:white;
+	background-color: rgba( 255, 255, 255, 0.7 );
+	text-align:center;
+	border-radius:5px;
+	margin:50px 0 0 0;
+}
+.box_search_id{
+	width:500px;
+	height:240px;
+	background-color:white;
+	background-color: rgba( 255, 255, 255, 0.7 );
+	text-align:center;
+	border-radius:5px;
+	margin:220px 0 0 0;
+}
+.box_in{
+	text-align:left;
+	padding:10px 0 0 0;
+	margin: 0 50px 0;
 }
 .sign_up_ip{
-	padding:0;
-	margin:15px 10px 0 15%;
-	text-align:left;
+	font-size:18px;
+	font-weight:border;
+	letter-spacing:2px;
+	margin:17px 0 8px 0;
 }
-
-.login_all{
-	position:absolute;
-	width:300px;
-	height:400px;
-	padding: 30px, 20px;
-	text-align:center;
-	top:50%;
-	left:50%;
-	transform: translate(-50%,-50%);
-	border-radius: 15px;
-	background-color:#ffffff;
-	background-color:rgba(255,255,255,0.5);
-}
-.login_ip {
-	border:0;
-	border-bottom:2px solid black;
-	margin: 0px 30px 0px;
-	padding: 10px;
-	background-color:#ffffff;
+.login_ip{
+	border:2px solid #b3b0ab;
 	outline:0;
 	background-color:rgba(255,255,255,0);
-	width:65%;
+	padding:0 15px 0;
+	height:40px;
+	width:90%;
+	font-size:15px;
+	font-weight:500;
+	border-radius:2px;
+	letter-spacing:2px;
 }
-.sign_up_cp{
+.sign_up_sub{
 	border:0;
 	outline:0;
-	margin:50px 30px 10px;
-	padding: 10px 10px;
-	background-color:#ffffff;
-	background-color:rgba(255,255,255,0.5);
-	width:75%;
+	margin:24px 0 20px 0;
+	background-color:rgba(166, 121, 7,0.7);
+	color:white;
+	height:60px;
+	width:100%;
 	font-weight:bold;
-	font-size:large;
+	font-size:20px;
+	border-radius:2px;
+}
+.sign_up_exist{
+	border:0;
+	outline:0;
+	background-color:rgba(255,255,255,0);
+	border-bottom:0.9px solid black;
 }
