@@ -152,4 +152,77 @@ public class DatabaseManager {
 		}
 		return "-2";//db¿À·ù
 	}
+	
+	public String searchUserInfo(DB_DTO db_dto) {
+		JSONArray Jarray = new JSONArray();
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT * FROM Userinfo where userId = ?");
+			pstmt.setString(1, db_dto.getUserId());
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("uid", rs.getString("uid"));
+				obj.put("userName", rs.getString("userName"));
+				obj.put("userEmail", rs.getString("userEmail"));
+				obj.put("userPhone", rs.getString("userPhone"));
+				obj.put("rank", rs.getString("rank"));
+				obj.put("couponNum", rs.getString("couponNum"));
+				Jarray.add(obj);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Jarray.toString();
+	}
+	
+	public int InsertQnA(QnAManager qm, String userId) {
+		int result = 0;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("INSERT INTO Qna(uid, NAME, phone, email, DATE, title, contents) VALUES ((SELECT uid FROM Userinfo WHERE userId = ?), ?, ?, ?, ?, ?, ?)");
+			pstmt.setString(1, userId);
+			pstmt.setString(2, qm.getUserName());
+			pstmt.setString(3, qm.getPhone());
+			pstmt.setString(4, qm.getEmail());
+			pstmt.setString(5, qm.getDate()+" "+qm.getTime());
+			pstmt.setString(6, qm.getTitle());
+			pstmt.setString(7, qm.getContents());
+			
+			result = pstmt.executeUpdate();
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			return -1;
+		}
+		
+		return result;
+	}
+	
+	public String NoticeDetail(String noticeNum) {
+		JSONArray Jarray = new JSONArray();
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT * FROM Notice where nid = "+noticeNum);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("title", rs.getString("title"));
+				obj.put("content", rs.getString("content"));
+				obj.put("photo", rs.getString("photo"));
+				obj.put("date", rs.getString("date"));
+				Jarray.add(obj);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Jarray.toString();
+	}
 }

@@ -235,7 +235,7 @@
 				<table>
 					<tr>
 						<td class = "Benefit_img"><img alt="스탬프 사진" src="./images/userInfoImg/benefit.png"></td><td class="Benefit_contents">제조 음료 1잔 결제 시<br>스탬프 1개 적립</td>
-						<td class = "Benefit_img"><img alt="쿠폰카드" src="./images/userInfoImg/coupon_collect.png"></td><td class="Benefit_contents">스탬프 10개 적립 시마다<br>무료 음료 1잔 쿠폰 제공</td>
+						<td class = "Benefit_img"><img alt="쿠폰카드" src="./images/userInfoImg/coupon_collect.png"></td><td class="Benefit_contents">스탬프 12개 적립 시마다<br>무료 음료 세트 교환권 제공</td>
 						<td class = "Benefit_img"><img alt="할인정보" src="./images/userInfoImg/discount.png"></td><td class="Benefit_contents">매장 소식 및<br>이벤트 쿠폰 제공</td>
 					</tr>
 				</table>
@@ -255,8 +255,8 @@
 					</tr>
 					<tr>
 						<td class = "Benefit_img"><img alt="스탬프 사진" src="./images/userInfoImg/coupon_info.png"></td>
-						<td class="Benefit_contents"><p><strong>이용안내</strong></p><span>선물 받은 쿠폰은 문자로 사용이 불가하며 공차 멤버십 회원 가입 후 내쿠폰에서 쿠폰 등록 후 사용할 수 있습니다.<br>모든 쿠폰은 쿠폰 번호나 바코드 이미지로는 
-						사용이 불가하며 앱을 실행하여 제시한 경우만 사용이 가능합니다.</span></td>
+						<td class="Benefit_contents"><p><strong>이용안내</strong></p><span>선물 받은 쿠폰은 문자로 사용이 가능하며 H.T.C 카페 마이페이지 하단의 내쿠폰에서도 사용할 수 있습니다.<br>모든 쿠폰은 쿠폰 번호나 바코드 이미지로 
+						사용이 가능하며 다른 고객이 양도 받아 사용 할  수 있습니다.</span></td>
 					</tr>
 				</table>
 			</div>

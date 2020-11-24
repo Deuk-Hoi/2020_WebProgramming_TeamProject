@@ -1,7 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="org.json.simple.parser.JSONParser"%>
+<%@page import="org.json.simple.JSONObject"%>
+<%@page import="org.json.simple.JSONArray"%>
+<%@page import="com.webprogramming.project.DatabaseManager"%>
+<jsp:useBean id="userInfo" class="com.webprogramming.project.DB_DTO"/>
+<jsp:useBean id="uploadQnA" class = "com.webprogramming.project.QnAManager"/>
+<jsp:setProperty name="uploadQnA" property="*"/>
 <%
 	request.setCharacterEncoding("UTF-8");
+%>
+<%
+	userInfo.setUserId((String)session.getAttribute("userId"));
+	DatabaseManager dm = new DatabaseManager();
+	String userinfo = dm.searchUserInfo(userInfo);
+	JSONParser parser = new JSONParser();
+	JSONArray ja = (JSONArray)parser.parse(userinfo);
+	JSONObject element = (JSONObject)ja.get(0);
 %>
 <!DOCTYPE html>
 <html>
@@ -177,7 +192,7 @@
 				</p>				
 			</div>
 			<div id = "qna_form">
-				<form action="#" method="POST">
+				<form action="UploadQ&A.jsp" method="POST" onsubmit="return formCheck()">
 					<div id ="term_check" class="border_design">
 						<h3>개인정보 수집동의</h3>
 						<div id = "terms">
@@ -189,7 +204,7 @@
 							<p>3. 보유기간 : 3년(전자상거래법 제 6조 제 3항에 따름)</p>
 							<p>위의 개인정보 수집, 이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 해당페이지의 이용(고객의 소리 접수)에제한이 있습니다.</p><br>
 						</div>
-						<div align="right"><label><input type = "checkbox" name = "agree"> 개인정보 수집 이용에 동의합니다.</label></div>
+						<div align="right"><label><input id = "checkAgree" type = "checkbox" name = "agree"> 개인정보 수집 이용에 동의합니다.</label></div>
 					</div>
 					<div id = "insert_userinfo" class="border_design">
 						<h3>개인정보입력 </h3>
@@ -198,20 +213,20 @@
 							<tbody>
 								<tr>
 									<th>이름<span>*</span></th>
-									<td colspan="2"><input type="text" name="username" placeholder="김득회"></td>
+									<td colspan="2"><input id = "username" type="text" name="userName" placeholder="김득회" readonly="readonly"></td>
 								</tr>
 								<tr>
 									<th>연락처<span>*</span></th>
-									<td colspan="2"><input type="tel" name="tel" placeholder="010-4304-2134"></td>
+									<td colspan="2"><input id = "phone" type="tel" name="phone" placeholder="010-4304-2134" readonly="readonly"></td>
 								</tr>
 								<tr>
 									<th>이메일<span>*</span></th>
-									<td colspan="2"><input type="email" name="email" placeholder="dh97k@naver.com"></td>
+									<td colspan="2"><input id = "email" type="email" name="email" placeholder="dh97k@naver.com" readonly="readonly"></td>
 								</tr>
 								<tr>
 									<th>방문날짜<span>*</span></th>
-									<td><input type="date" name="visite_date" placeholder="날짜 선택"></td>
-									<td><input type="time" name="visite_time" placeholder="시간 선택"></td>
+									<td><input id = "visitDate" type="date" name="date" placeholder="날짜 선택"></td>
+									<td><input id = "visitTime" type="time" name="time" placeholder="시간 선택"></td>
 								</tr>
 							</tbody>
 						</table>
@@ -225,13 +240,13 @@
 									<th>제목<span>*</span></th>
 								</tr>
 								<tr>
-									<td><input type="text" name="qna_title" placeholder="제목을 입력하세요."></td>
+									<td><input id ="title" type="text" name="title" placeholder="제목을 입력하세요."></td>
 								</tr>
 								<tr>
 									<th>문의내용<span>*</span></th>
 								</tr>
 								<tr>
-									<td><textarea name = "qna_contents" placeholder="문의 내용을 입력하세요."></textarea></td>
+									<td><textarea id = "contents" name = "contents" placeholder="문의 내용을 입력하세요."></textarea></td>
 								</tr>
 							</tbody>
 						</table>
@@ -246,3 +261,49 @@
 	</section>
 </body>
 </html>
+<script>
+	
+	var username = document.getElementById("username");
+	var phone = document.getElementById("phone");
+	var email = document.getElementById("email");
+	
+	username.value = "<%= element.get("userName")%>";
+	phone.value = "<%= element.get("userPhone")%>";
+	email.value = "<%= element.get("userEmail")%>";
+	
+	function formCheck(){
+		var checkAgree = document.getElementById("checkAgree").checked;
+		var visitDate = document.getElementById("visitDate").value;
+		var visitTime = document.getElementById("visitTime").value;
+		var title = document.getElementById("title").value;
+		var contents = document.getElementById("contents").value;
+		
+		if(checkAgree == false){
+			alert("약관에 동의해 주세요!");
+			return false;
+		}else{
+			console.log(visitDate);
+			if(visitDate == ""){
+				alert("방문 날짜를 입력해 주세요!");
+				return false;
+			}
+			else if(visitTime == ""){
+				alert("방문 시간을 입력해 주세요!");
+				return false;
+			}
+			else if(title == ""){
+				alert("제목을 입력해 주세요!");
+				return false;
+			}
+			else if(contents == ""){
+				alert("내용을 작성해 주세요!");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+		
+	}
+	
+</script> 

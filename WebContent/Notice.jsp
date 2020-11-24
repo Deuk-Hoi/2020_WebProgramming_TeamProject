@@ -11,11 +11,12 @@
 <%
 	DatabaseManager dm = new DatabaseManager();
 	String notice = dm.LoadNotice();
+	session.setAttribute("userId", "rlaemrghl12");
 %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>공지사항</title>
 <link rel="stylesheet" type="text/css" href="styles/Notice.css">
 <style>
@@ -40,6 +41,9 @@
 	}
 	#noticeTable .cel-2{
 		width: 65%;
+	}
+	#noticeTable #td-2{
+		cursor: pointer;
 	}
 	#noticeTable #td-2{
 		text-align: left;
@@ -78,8 +82,8 @@
 						for(int i = 0; i < ja.size(); i++){
 							JSONObject element = (JSONObject)ja.get(i);
 					%>
-						<tr>
-							<td class="cel-1"><%=(String)element.get("nid")%></td>
+						<tr id="nr_<%= (String)element.get("nid") %>" class = "notice_row " onclick=" location.href='notice_detail.jsp?num=<%= (String)element.get("nid") %>'">
+							<td id = "noticeNum" class="cel-1 "><%=(String)element.get("nid")%></td>
 							<td id = "td-2" class="cel-2"><%=(String)element.get("title")%></td>
 							<td class="cel-3"><%=(String)element.get("date")%></td>
 							<td class="cel-4"><%=(String)element.get("views")%></td>
