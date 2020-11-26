@@ -282,10 +282,6 @@
 	document.getElementById("userinfoName").innerText = "<%= element.get("userName")%>";
 	
 	var rank = document.getElementById("rank").innerText;
-	if(rank == "Bronze"){
-		document.getElementById("rankImg").src="./images/userInfoImg/Bronze.png";
-		document.getElementById("rankColor").style.color = "#b89854";
-	}
 	switch(rank){
 		case "Bronze":
 			document.getElementById("rankImg").src="./images/userInfoImg/Bronze.png";
