@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="org.json.simple.parser.JSONParser"%>
 <%@page import="org.json.simple.JSONObject"%>
-<%@page import="org.json.simple.JSONArray"%>
 <%@page import="com.webprogramming.project.DatabaseManager"%>
 <jsp:useBean id="userInfo" class="com.webprogramming.project.DB_DTO"/>
 <jsp:useBean id="uploadQnA" class = "com.webprogramming.project.QnAManager"/>
@@ -13,10 +11,7 @@
 <%
 	userInfo.setUserId((String)session.getAttribute("userId"));
 	DatabaseManager dm = new DatabaseManager();
-	String userinfo = dm.searchUserInfo(userInfo);
-	JSONParser parser = new JSONParser();
-	JSONArray ja = (JSONArray)parser.parse(userinfo);
-	JSONObject element = (JSONObject)ja.get(0);
+	JSONObject element = (JSONObject)dm.searchUserInfo(userInfo).get(0);
 %>
 <!DOCTYPE html>
 <html>

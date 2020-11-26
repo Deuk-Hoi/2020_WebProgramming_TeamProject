@@ -1,7 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="org.json.simple.JSONObject"%>
+<jsp:useBean id="userInfo" class="com.webprogramming.project.DB_DTO"/>
+<jsp:useBean id="dm" class="com.webprogramming.project.DatabaseManager"/>
 <%
 	request.setCharacterEncoding("UTF-8");
+%>
+<%
+	userInfo.setUserId((String)session.getAttribute("userId"));
+	JSONObject element = (JSONObject)dm.searchUserInfo(userInfo).get(0);
 %>
 <!DOCTYPE html>
 <html>
@@ -178,13 +185,13 @@
 					<table class = "stamp_table">
 						<tr>
 							<td><img alt="스템프 사진" src="./images/userInfoImg/stamp_state.png"></td>
-							<td class = "stamp_info">스탬프 현황<br><span class = "currentStamp">4</span> <sapn class = "totalStamp">/12</sapn></td>
+							<td class = "stamp_info">스탬프 현황<br><span id ="stampNum" class = "currentStamp">4</span> <sapn class = "totalStamp">/12</sapn></td>
 						</tr>
 					</table>
 					<table class = "coupon_table">
 						<tr>
 							<td><img alt="쿠폰 사진" src="./images/userInfoImg/coupon.png"></td>
-							<td class = "stamp_info">보유 쿠폰<br><span class = "currentCoupon">4</span></td>
+							<td class = "stamp_info">보유 쿠폰<br><span id ="couponNum" class = "currentCoupon">4</span></td>
 						</tr>
 					</table>
 				</div>
@@ -192,17 +199,17 @@
 					<table>
 						<tr>
 							<td><img alt="등급사진" src="./images/userInfoImg/level_gold.png"></td>
-							<td><span style="font-weight: bold;">김득회</span> 회원님은<br>
-							<span class="rank_color">Gold Level</span> 입니다.</td>
+							<td><span id = "userName" style="font-weight: bold;">김득회</span> 회원님은<br>
+							<span class="rank_color"><span id="rank">Gold</span> Level</span> 입니다.</td>
 						</tr>
 					</table>
 					<div class = "userinfo">
-						<p>아이디 : dh97k@naver.com</p>
-						<p>휴대폰 : 010-4304-2134</p>
-						<p>이름 : 김득회</p>
+						<p>아이디 : <span id="userEmail">dh97k@naver.com</span></p>
+						<p>휴대폰 : <span id="userPhone">010-4304-2134</span></p>
+						<p>이름 : <span id="userinfoName">김득회</span></p>
 					</div>
 					<div id="modifyButton">
-						<input type="button" value="회원정보 수정  >">
+						<input type="button" value="회원정보 수정  >" onclick="location.href='ModifyUserInfo.jsp'">
 					</div>
 				</div>
 			</div>
@@ -264,3 +271,14 @@
 	</section>
 </body>
 </html>
+<script>
+	document.getElementById("stampNum").innerText = <%= element.get("stampNum")%>;
+	document.getElementById("couponNum").innerText = <%= element.get("couponNum")%>;
+	//document.getElementById("userName").value = <%= element.get("userName")%>;
+	document.getElementById("rank").value = <%= element.get("rank")%>;
+	document.getElementById("userEmail").value = "+<%= element.get("userEmail")%>+";
+	document.getElementById("userPhone").value = <%= element.get("userPhone")%>;
+	document.getElementById("userinfoName").value = <%= element.get("userName")%>;
+	
+	
+</script>

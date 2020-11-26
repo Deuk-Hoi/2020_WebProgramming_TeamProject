@@ -153,7 +153,7 @@ public class DatabaseManager {
 		return "-2";//db¿À·ù
 	}
 	
-	public String searchUserInfo(DB_DTO db_dto) {
+	public JSONArray searchUserInfo(DB_DTO db_dto) {
 		JSONArray Jarray = new JSONArray();
 		
 		try {
@@ -171,12 +171,13 @@ public class DatabaseManager {
 				obj.put("userPhone", rs.getString("userPhone"));
 				obj.put("rank", rs.getString("rank"));
 				obj.put("couponNum", rs.getString("couponNum"));
+				obj.put("stampNum", rs.getString("stampNum"));
 				Jarray.add(obj);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return Jarray.toString();
+		return Jarray;
 	}
 	
 	public int InsertQnA(QnAManager qm, String userId) {
