@@ -1,0 +1,143 @@
+@charset "EUC-KR";
+@charset "utf-8";
+
+html { font-size : 20px;}
+body { font-size : 1rem;}
+
+/* 헤더 */
+header {background: #f6f5ef; border: top 2px solid #000;}
+header > div { position: relative; width : 54.5rem; margin : 0 auto;}
+header > div:after { content: ""; display: block; clear: both;}
+header > div h1 { float : left; padding: 0.7rem 0 1.2rem;}
+header > div nav { float : right; padding: 3.4rem 0 0 0;}
+header > div nav > ul > li { float : left;}
+header > div nav > ul > li > a { display :block; padding: .75rem 1.25rem 0; height: 2.6rem; font-size: .7rem; color:#333; line-height: 100%;}
+header > div .spot { position: absolute; right: 4rem; top: 1rem;}
+header > div .spot li { float: left; position: relative;}
+header > div .spot a { padding: 0 .95rem; font-size: .7rem; color:#333;}
+header > div .spot li ~ li a:after { content: ""; position: absolute; left: 0; top: 50%; width: 1px; height: .6rem; background: #504d4d; transform: translateY(-25%);}
+header > div .total { display:none;}
+
+/* 신제품 소개 */
+.membershipstart {position: relative; width: 100%;height: 460px; background:url('../../images/main/membershipbk3.PNG') no-repeat center top;}
+.membershipstart > div > p{text-align: center; padding-top: 4rem; font-size: 0.9rem; color:white;}
+.membershipstart > div .member_title{font-size:2.4rem; color: white;}
+.membershipstart > div a{display: inline-block; min-width:6.25rem; height: 1.9rem; line-height: 1.9rem; font-size: .7rem; color:#fff; border:2px solid #fff; border-radius:3px; text-align: center;}
+.membershipstart > div a{margin-top: 2rem;}
+.membershipindex { position: relative;}
+.membershipindex > div > p{ text-align:right; font-size:0.6rem; margin : 1rem 18rem 0 0;}
+
+/* 모바일 혜택 소개 */
+.membershiparticle {position: relative; height: 420px; background:url('../../images/main/membershiobk2.PNG') no-repeat center top;}
+.membershiparticle > div div{ position: absolute;}
+.membershiparticle > div div.img1{ left : 20%; top: 0.7rem;z-index: 5;}
+.membershiparticle > div > p{text-align: center; padding-top: 4rem; font-size: 0.9rem;}
+.membershiparticle > div .member_title{font-size:2.4rem; color: black;}
+.membershiparticle > div div.info {position: absolute;  width:100%; height: 17rem; left:45%; top: 4rem;}
+.membershiparticle > div div.info span { font-size:3rem; color:#293996; line-height:100%;}
+.membershiparticle > div div.info p { padding:.7rem 0 0 0; font-size:1rem; color:#5D6C9B; line-height:2rem;}
+
+/* 혜택 소개 */
+.membershipBenefits {position: relative; height: 800px; background:url('../../images/main/whitebk.PNG') no-repeat center top;}
+.membershipBenefits > div { position: relative; width:100%; max-width: 70rem; height: 32.3rem; margin: 0 auto;}
+.membershipBenefits > div div{ position: absolute;}
+.membershipBenefits > div div.img1 { left : 14%; top: 2rem;z-index: 5;}
+.membershipBenefits > div div.img2 { left : 42.5%; top: 2rem; z-index: 3;}
+.membershipBenefits > div div.img3 { left : 73%; top: 2rem;}
+.membershipBenefits > div div.img4 { left : 14%; top: 20rem;}
+.membershipBenefits > div div.img5 { left : 42.5%; top: 20rem;}
+.membershipBenefits > div div.img6 { left : 73%; top: 20rem;}
+
+/* 등급 소개 */
+.membershipGrade {position: relative; width: 100%;height: 900px; background:url('../../images/main/whitebk.PNG') no-repeat center top;}
+.membershipGrade > div {text-align: center;}
+.membershipGrade > div > p{text-align: center; font-size: 0.9rem;}
+.membershipGrade > div .member_title{font-size:2rem; color: #293996; font-style: bold;}
+.membershipGrade > div { position: relative; width:100%; max-width: 70rem; height: 26rem; margin: 0 auto;}
+.membershipGrade > div div{ position: absolute;}
+.membershipGrade > div div.img1 { left : 6%; top: 8rem;z-index: 5;}
+.membershipGrade > div div.img2 { left : 29%; top: 8rem;z-index: 3;}
+.membershipGrade > div div.img3 { left : 52%; top: 8rem;}
+.membershipGrade > div div.img4 { left : 76%; top: 8rem;}
+.membershipGrade > div div.info {text-align: left;   width:100%; height: 8rem; }
+.membershipGrade > div div.info span {  font-size:1.1rem; color:#202023; line-height:100%;}
+.membershipGrade > div div.info > p {  text-align: left;margin:18rem 0 0  6.5rem; font-size:0.6rem; color:#737373; line-height:1rem;}
+.membershipGrade > div div.info2 {text-align: left;   width:100%; height: 5rem; }
+.membershipGrade > div div.info2 span {  font-size:1.1rem; color:#202023; line-height:100%;}
+.membershipGrade > div div.info2 > p {  text-align: left;margin:25rem 0 0  6.5rem; font-size:0.6rem; color:#737373; line-height:1rem;}
+
+/* 약관 소개 */
+.membershipterms {position: relative; width: 100%;height: 400px; background:url('../../images/main/whitebk.PNG') no-repeat center top;}
+.membershipterms > div {text-align: center;}
+.membershipterms > div > p{text-align: center; font-size: 0.9rem;}
+.membershipterms > div .member_title{font-size:2rem; color: #293996; font-style: bold;}
+.membershipterms > div a{display: inline-block; min-width:20rem; height: 1.9rem; line-height: 1.9rem; font-size: 1rem; border:2px solid #7A7A7A; border-radius:3px; text-align: center; color:#7A7A7A;}
+.membershipterms > div a{margin-top: 2rem; margin-left: 1rem;}
+.membershipterms > div a img{margin-left: rem;}
+
+input[id*="popup"] {display: none;}
+input[id*="popup"] + label + div {display: none;}
+input[id*="popup"]:checked + label + div {display: block;}
+input[id*="popup"] + label {display: inline-block; padding: 5px;  color: #fff;}
+input[id*="popup"] + label + div {position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100;}
+input[id*="popup"] + label + div > div {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width: 600px; height: 450px; background: #fff; z-index: 2;}
+input[id*="popup"] + label + div > div > label {position: absolute; left:50%; width: 600px; height: 30px; transform: translate(-50%, -105%);  background: #fff; z-index: 1;}
+input[id*="popup"] + label + div > div > p{font-size:0.8rem; text-align: left; padding-left: 1rem; padding-right: 1rem;}
+input[id*="popup"] + label + div > div > span{font-size:1.5rem; text-align: center; color:#000;}
+input[id*="popup"] + label + div > label {position: absolute; top:0%; left:0%; width:100%; height: 100%; background: rgba(0,0,0,.9); z-index: 1;}
+
+input[id*="popup2"] {display: none;}
+input[id*="popup2"] + label + div {display: none;}
+input[id*="popup2"]:checked + label + div {display: block;}
+input[id*="popup2"] + label {display: inline-block; padding: 5px;  color: #fff;}
+input[id*="popup2"] + label + div {position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100;}
+input[id*="popup2"] + label + div > div {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: #fff; z-index: 2;}
+input[id*="popup2"] + label + div > div > label {position: absolute; left:50%; width: 600px; height: 30px; transform: translate(-50%, -105%);  background: #fff; z-index: 1;}
+input[id*="popup"] + label + div > div > p{font-size:0.8rem; text-align: left; padding-left: 1rem; padding-right: 1rem;}
+input[id*="popup"] + label + div > div > span{font-size:1.5rem; text-align: center; color:#000;}
+input[id*="popup2"] + label + div > label {position: absolute; top:0%; left:0%; width:100%; height: 100%; background: rgba(0,0,0,.9); z-index: 1;}
+
+input[id*="popup3"] {display: none;}
+input[id*="popup3"] + label + div {display: none;}
+input[id*="popup3"]:checked + label + div {display: block;}
+input[id*="popup3"] + label {display: inline-block; padding: 5px;  color: #fff;}
+input[id*="popup3"] + label + div {position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100;}
+input[id*="popup3"] + label + div > div {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width: 600px; height: 400px; background: #fff; z-index: 2;}
+input[id*="popup3"] + label + div > div > label {position: absolute; left:50%; width: 600px; height: 30px; transform: translate(-50%, -105%);  background: #fff; z-index: 1;}
+input[id*="popup"] + label + div > div > p{font-size:0.8rem; text-align: left; padding-left: 1rem; padding-right: 1rem;}
+input[id*="popup"] + label + div > div > span{font-size:1.5rem; text-align: center; color:#000;}
+input[id*="popup3"] + label + div > label {position: absolute; top:0%; left:0%; width:100%; height: 100%; background: rgba(0,0,0,.9); z-index: 1;}
+
+input[id*="popup4"] {display: none;}
+input[id*="popup4"] + label + div {display: none;}
+input[id*="popup4"]:checked + label + div {display: block;}
+input[id*="popup4"] + label {display: inline-block; padding: 5px;  color: #fff;}
+input[id*="popup4"] + label + div {position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100;}
+input[id*="popup4"] + label + div > div {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width: 600px; height: 400px; background: #fff; z-index: 2;}
+input[id*="popup4"] + label + div > div > label {position: absolute; left:50%; width: 600px; height: 30px; transform: translate(-50%, -105%);  background: #fff; z-index: 1;}
+input[id*="popup"] + label + div > div > p{font-size:0.8rem; text-align: left; padding-left: 1rem; padding-right: 1rem;}
+input[id*="popup"] + label + div > div > span{font-size:1.5rem; text-align: center; color:#000;}
+input[id*="popup4"] + label + div > label {position: absolute; top:0%; left:0%; width:100%; height: 100%; background: rgba(0,0,0,.9); z-index: 1;}
+
+
+
+
+/* footer */
+footer .top {background: #383f43;}
+footer .top > div { width: 59rem; margin: 0 auto; padding:.65rem 0;}
+footer .top > div ul { float: left;}
+footer .top > div ul li { float: left; position: relative; padding: 0 .95rem 0 0;}
+footer .top > div ul li:after {content:""; position: absolute; right: .45rem; top: 50%; margin-top: -0.2rem; width: 0.05rem; height: 0.4rem; background: #70767a;}
+footer .top > div ul li a { color: #fff; font-size: 13px; line-height: 2.25rem;}
+footer .top > div ul li:last-child::after {display: none;}
+footer .top > div div { float: right;}
+footer .top > div div p { display: inline-block; width: 12.1rem; height: 2.2rem; text-align: center; background: #2a3033; color:#fff; line-height: 2.25rem;}
+footer .top > div div p strong { padding: 0 0 0 0.75rem; font-size: 1rem;}
+footer .top > div div select {padding : 0 0 0 1.05rem; width: 10rem; height: 2.25rem; color: #191919; font-size:12px; box-sizing: border-box; border:none; vertical-align: 0.15rem;}
+footer .btm  { padding: 2rem 0 2.2rem; background: #4c5459; text-align: center;}
+footer .btm p {font-size: 25px; text-align: center; color:#fff;}
+footer .btm img {display: inline-block; width: 7.5rem; height: 7.5rem; }
+footer .btm ul { padding: 1.6rem 0 0.7rem;}
+footer .btm li {display: inline-block; position:relative; padding: 0 0.5rem; color :#fff; font-size:14px;}
+footer .btm li:after { content:""; position: absolute; right: 0; top:50%; margin-top: -0.2rem; width: 0.05rem; height: 0.4rem; background: #70767a;}
+footer .btm address { font-size: 14px; color:#fff;}
