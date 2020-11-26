@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,7 +83,7 @@
 	
 	#coupon .couponList{
 		text-align: center;
-		margin: 0 12em 0 12em;
+		margin: 0 5em 0 5em;
 	}
 	
 	#coupon .couponList img{
@@ -163,10 +166,10 @@
 	<section id="mypageSection">
 		<div id="pageImg">
 			<div id = "pageImgTxt" align="center">
-				<p class="page_title">³ªÀÇ ¸â¹ö½Ê ÀÌ¿ëÇöÈ²</p>
+				<p class="page_title">ë‚˜ì˜ ë©¤ë²„ì‹­ ì´ìš©í˜„í™©</p>
 				<hr width="50px">
 				<P class="page_letter">My Member's Status</P>
-				<P class="page_letter">°í°´´ÔÀÇ H.T.C Ä«Æä ¸â¹ö½º ¼­ºñ½º ÀÌ¿ëÇöÈ²ÀÔ´Ï´Ù.</P>
+				<P class="page_letter">ê³ ê°ë‹˜ì˜ H.T.C ì¹´íŽ˜ ë©¤ë²„ìŠ¤ ì„œë¹„ìŠ¤ ì´ìš©í˜„í™©ìž…ë‹ˆë‹¤.</P>
 			</div>
 		</div>
 		<div class="contents">
@@ -174,86 +177,86 @@
 				<div class = "summaryLeft">
 					<table class = "stamp_table">
 						<tr>
-							<td><img alt="½ºÅÛÇÁ »çÁø" src="./images/userInfoImg/stamp_state.png"></td>
-							<td class = "stamp_info">½ºÅÆÇÁ ÇöÈ²<br><span class = "currentStamp">4</span> <sapn class = "totalStamp">/12</sapn></td>
+							<td><img alt="ìŠ¤í…œí”„ ì‚¬ì§„" src="./images/userInfoImg/stamp_state.png"></td>
+							<td class = "stamp_info">ìŠ¤íƒ¬í”„ í˜„í™©<br><span class = "currentStamp">4</span> <sapn class = "totalStamp">/12</sapn></td>
 						</tr>
 					</table>
 					<table class = "coupon_table">
 						<tr>
-							<td><img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon.png"></td>
-							<td class = "stamp_info">º¸À¯ ÄíÆù<br><span class = "currentCoupon">4</span></td>
+							<td><img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon.png"></td>
+							<td class = "stamp_info">ë³´ìœ  ì¿ í°<br><span class = "currentCoupon">4</span></td>
 						</tr>
 					</table>
 				</div>
 				<div class = "summaryRight">
 					<table>
 						<tr>
-							<td><img alt="µî±Þ»çÁø" src="./images/userInfoImg/level_gold.png"></td>
-							<td><span style="font-weight: bold;">±èµæÈ¸</span> È¸¿ø´ÔÀº<br>
-							<span class="rank_color">Gold Level</span> ÀÔ´Ï´Ù.</td>
+							<td><img alt="ë“±ê¸‰ì‚¬ì§„" src="./images/userInfoImg/level_gold.png"></td>
+							<td><span style="font-weight: bold;">ê¹€ë“íšŒ</span> íšŒì›ë‹˜ì€<br>
+							<span class="rank_color">Gold Level</span> ìž…ë‹ˆë‹¤.</td>
 						</tr>
 					</table>
 					<div class = "userinfo">
-						<p>¾ÆÀÌµð : dh97k@naver.com</p>
-						<p>ÈÞ´ëÆù : 010-4304-2134</p>
-						<p>ÀÌ¸§ : ±èµæÈ¸</p>
+						<p>ì•„ì´ë”” : dh97k@naver.com</p>
+						<p>íœ´ëŒ€í° : 010-4304-2134</p>
+						<p>ì´ë¦„ : ê¹€ë“íšŒ</p>
 					</div>
 					<div id="modifyButton">
-						<input type="button" value="È¸¿øÁ¤º¸ ¼öÁ¤  >">
+						<input type="button" value="íšŒì›ì •ë³´ ìˆ˜ì •  >">
 					</div>
 				</div>
 			</div>
 			<div id = "stamp_area">
 				<div class="stamp_notice">
-					<h2>½ºÅÆÇÁ ¹ß±Þ ÇöÈ² &nbsp;</h2>
-					<span>½ºÅÆÇÁ 12°³¸¦ ¼öÁýÇÏ½Ã¸é µþ±â¿ä°ÅÆ® ½º¹«Æ¼ + ÃÊÄÚ ½¬ÆùÄÉÀÌÅ© ¹«·á ÄíÆùÀ» ¹ß±ÞÇØ µå¸³´Ï´Ù.</span>
+					<h2>ìŠ¤íƒ¬í”„ ë°œê¸‰ í˜„í™© &nbsp;</h2>
+					<span>ìŠ¤íƒ¬í”„ 12ê°œë¥¼ ìˆ˜ì§‘í•˜ì‹œë©´ ë”¸ê¸°ìš”ê±°íŠ¸ ìŠ¤ë¬´í‹° + ì´ˆì½” ì‰¬í°ì¼€ì´í¬ ë¬´ë£Œ ì¿ í°ì„ ë°œê¸‰í•´ ë“œë¦½ë‹ˆë‹¤.</span>
 				</div>
 				<div id = "coupon">
 					<div class = "couponList">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_stamp.png">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="ÄíÆù »çÁø" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_stamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_nostamp.png">
+						<img alt="ì¿ í° ì‚¬ì§„" src="./images/userInfoImg/coupon_nostamp.png">
 					</div>
 				</div>
 			</div>
 			<div id = "MemberShip">
 				<div class = "Benefits">
-					<h2>H.T.C ¸â¹ö½Ê ÇýÅÃ</h2>
+					<h2>H.T.C ë©¤ë²„ì‹­ í˜œíƒ</h2>
 				</div>
 				<table>
 					<tr>
-						<td class = "Benefit_img"><img alt="½ºÅÆÇÁ »çÁø" src="./images/userInfoImg/benefit.png"></td><td class="Benefit_contents">Á¦Á¶ À½·á 1ÀÜ °áÁ¦ ½Ã<br>½ºÅÆÇÁ 1°³ Àû¸³</td>
-						<td class = "Benefit_img"><img alt="ÄíÆùÄ«µå" src="./images/userInfoImg/coupon_collect.png"></td><td class="Benefit_contents">½ºÅÆÇÁ 10°³ Àû¸³ ½Ã¸¶´Ù<br>¹«·á À½·á 1ÀÜ ÄíÆù Á¦°ø</td>
-						<td class = "Benefit_img"><img alt="ÇÒÀÎÁ¤º¸" src="./images/userInfoImg/discount.png"></td><td class="Benefit_contents">¸ÅÀå ¼Ò½Ä ¹×<br>ÀÌº¥Æ® ÄíÆù Á¦°ø</td>
+						<td class = "Benefit_img"><img alt="ìŠ¤íƒ¬í”„ ì‚¬ì§„" src="./images/userInfoImg/benefit.png"></td><td class="Benefit_contents">ì œì¡° ìŒë£Œ 1ìž” ê²°ì œ ì‹œ<br>ìŠ¤íƒ¬í”„ 1ê°œ ì ë¦½</td>
+						<td class = "Benefit_img"><img alt="ì¿ í°ì¹´ë“œ" src="./images/userInfoImg/coupon_collect.png"></td><td class="Benefit_contents">ìŠ¤íƒ¬í”„ 12ê°œ ì ë¦½ ì‹œë§ˆë‹¤<br>ë¬´ë£Œ ìŒë£Œ ì„¸íŠ¸ êµí™˜ê¶Œ ì œê³µ</td>
+						<td class = "Benefit_img"><img alt="í• ì¸ì •ë³´" src="./images/userInfoImg/discount.png"></td><td class="Benefit_contents">ë§¤ìž¥ ì†Œì‹ ë°<br>ì´ë²¤íŠ¸ ì¿ í° ì œê³µ</td>
 					</tr>
 				</table>
 			</div>
 			<div id = "UsageGuide">
 				<div class = "Benefits">
-					<h2>ÄíÆù »ç¿ë ¾È³»</h2>
+					<h2>ì¿ í° ì‚¬ìš© ì•ˆë‚´</h2>
 				</div>
 				<table>
 					<tr>
-						<td class = "Benefit_img"><img alt="½ºÅÆÇÁ »çÁø" src="./images/userInfoImg/coupon_full_collect.png"></td>
-						<td class="Benefit_contents"><p><strong>½ºÅÆÇÁ Ä«µå ÄíÆù</strong></p><span>½ºÅÆÇÁ¸¦ Àû¸³ÇÏ¿© ¿Ï¼ºµÈ ¹«·á À½·á ÄíÆùÀ¸·Î ½ºÅÆÇÁÄ«µå ¸Þ´º¿¡¼­ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.<br>(½ºÅÆÇÁ Ä«µå ÄíÆùÀº ¼±¹°ÇÏ±â°¡ ºÒ°¡ÇÕ´Ï´Ù.)</span></td>
+						<td class = "Benefit_img"><img alt="ìŠ¤íƒ¬í”„ ì‚¬ì§„" src="./images/userInfoImg/coupon_full_collect.png"></td>
+						<td class="Benefit_contents"><p><strong>ìŠ¤íƒ¬í”„ ì¹´ë“œ ì¿ í°</strong></p><span>ìŠ¤íƒ¬í”„ë¥¼ ì ë¦½í•˜ì—¬ ì™„ì„±ëœ ë¬´ë£Œ ìŒë£Œ ì¿ í°ìœ¼ë¡œ ìŠ¤íƒ¬í”„ì¹´ë“œ ë©”ë‰´ì—ì„œ ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.<br>(ìŠ¤íƒ¬í”„ ì¹´ë“œ ì¿ í°ì€ ì„ ë¬¼í•˜ê¸°ê°€ ë¶ˆê°€í•©ë‹ˆë‹¤.)</span></td>
 					</tr>
 					<tr>
-						<td class = "Benefit_img"><img alt="½ºÅÆÇÁ »çÁø" src="./images/userInfoImg/discount.png"></td>
-						<td class="Benefit_contents"><p><strong>ÀÌº¥Æ® ÄíÆù</strong></p><span>ÀÌº¥Æ®³ª Çà»ç ¶Ç´Â ¼±¹°·Î ¹ÞÀº ÄíÆùÀº ³»ÄíÆù¿¡¼­ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.</span></td>
+						<td class = "Benefit_img"><img alt="ìŠ¤íƒ¬í”„ ì‚¬ì§„" src="./images/userInfoImg/discount.png"></td>
+						<td class="Benefit_contents"><p><strong>ì´ë²¤íŠ¸ ì¿ í°</strong></p><span>ì´ë²¤íŠ¸ë‚˜ í–‰ì‚¬ ë˜ëŠ” ì„ ë¬¼ë¡œ ë°›ì€ ì¿ í°ì€ ë‚´ì¿ í°ì—ì„œ ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</span></td>
 					</tr>
 					<tr>
-						<td class = "Benefit_img"><img alt="½ºÅÆÇÁ »çÁø" src="./images/userInfoImg/coupon_info.png"></td>
-						<td class="Benefit_contents"><p><strong>ÀÌ¿ë¾È³»</strong></p><span>¼±¹° ¹ÞÀº ÄíÆùÀº ¹®ÀÚ·Î »ç¿ëÀÌ ºÒ°¡ÇÏ¸ç °øÂ÷ ¸â¹ö½Ê È¸¿ø °¡ÀÔ ÈÄ ³»ÄíÆù¿¡¼­ ÄíÆù µî·Ï ÈÄ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.<br>¸ðµç ÄíÆùÀº ÄíÆù ¹øÈ£³ª ¹ÙÄÚµå ÀÌ¹ÌÁö·Î´Â 
-						»ç¿ëÀÌ ºÒ°¡ÇÏ¸ç ¾ÛÀ» ½ÇÇàÇÏ¿© Á¦½ÃÇÑ °æ¿ì¸¸ »ç¿ëÀÌ °¡´ÉÇÕ´Ï´Ù.</span></td>
+						<td class = "Benefit_img"><img alt="ìŠ¤íƒ¬í”„ ì‚¬ì§„" src="./images/userInfoImg/coupon_info.png"></td>
+						<td class="Benefit_contents"><p><strong>ì´ìš©ì•ˆë‚´</strong></p><span>ì„ ë¬¼ ë°›ì€ ì¿ í°ì€ ë¬¸ìžë¡œ ì‚¬ìš©ì´ ê°€ëŠ¥í•˜ë©° H.T.C ì¹´íŽ˜ ë§ˆì´íŽ˜ì´ì§€ í•˜ë‹¨ì˜ ë‚´ì¿ í°ì—ì„œë„ ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.<br>ëª¨ë“  ì¿ í°ì€ ì¿ í° ë²ˆí˜¸ë‚˜ ë°”ì½”ë“œ ì´ë¯¸ì§€ë¡œ 
+						ì‚¬ìš©ì´ ê°€ëŠ¥í•˜ë©° ë‹¤ë¥¸ ê³ ê°ì´ ì–‘ë„ ë°›ì•„ ì‚¬ìš© í•   ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</span></td>
 					</tr>
 				</table>
 			</div>

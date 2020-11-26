@@ -78,12 +78,12 @@ public class DatabaseManager {
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
 				if(rs.getString(1).equals(db_dto.getUserPw())) {
-					return 1; //º∫∞¯
+					return 1; //ÏÑ±Í≥µ
 				}else {
-					return 0; //∫“¿œƒ°
+					return 0; //Î∂àÏùºÏπò
 				}
 			}else {
-				return -1; //æ∆¿Ãµx
+				return -1; //ÏïÑÏù¥Îîîx
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -116,7 +116,7 @@ public class DatabaseManager {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return -1;//dbø¿∑˘
+		return -1;//dbÏò§Î•ò
 	}
 	public String searchId(DB_DTO db_dto) {
 		try {
@@ -134,12 +134,12 @@ public class DatabaseManager {
 			}else {
 				return "-2"; //email x
 			}
-			return result; //º∫∞¯
+			return result; //ÏÑ±Í≥µ
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "-1";//dbø¿∑˘
+		return "-1";//dbÏò§Î•ò
 	}
 	public String searchPw(DB_DTO db_dto) {
 		try {
@@ -149,14 +149,14 @@ public class DatabaseManager {
 			pstmt.setString(1, db_dto.getUserId());
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
-				return rs.getString(1); //º∫∞¯
+				return rs.getString(1); //ÏÑ±Í≥µ
 			}else {
-				return "-1"; //æ¯¥¬ Id
+				return "-1"; //ÏóÜÎäî Id
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "-2";//dbø¿∑˘
+		return "-2";//dbÏò§Î•ò
 	}
 	public ArrayList<Event_DTO> getList(String pageNum){
 		ArrayList<Event_DTO> list = new ArrayList<Event_DTO>();
@@ -243,5 +243,78 @@ public class DatabaseManager {
 			e.printStackTrace();
 		}
 		return -1;
+	}
+	
+	public String searchUserInfo(DB_DTO db_dto) {
+		JSONArray Jarray = new JSONArray();
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT * FROM Userinfo where userId = ?");
+			pstmt.setString(1, db_dto.getUserId());
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("uid", rs.getString("uid"));
+				obj.put("userName", rs.getString("userName"));
+				obj.put("userEmail", rs.getString("userEmail"));
+				obj.put("userPhone", rs.getString("userPhone"));
+				obj.put("rank", rs.getString("rank"));
+				obj.put("couponNum", rs.getString("couponNum"));
+				Jarray.add(obj);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Jarray.toString();
+	}
+	
+	public int InsertQnA(QnAManager qm, String userId) {
+		int result = 0;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("INSERT INTO Qna(uid, NAME, phone, email, DATE, title, contents) VALUES ((SELECT uid FROM Userinfo WHERE userId = ?), ?, ?, ?, ?, ?, ?)");
+			pstmt.setString(1, userId);
+			pstmt.setString(2, qm.getUserName());
+			pstmt.setString(3, qm.getPhone());
+			pstmt.setString(4, qm.getEmail());
+			pstmt.setString(5, qm.getDate()+" "+qm.getTime());
+			pstmt.setString(6, qm.getTitle());
+			pstmt.setString(7, qm.getContents());
+			
+			result = pstmt.executeUpdate();
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			return -1;
+		}
+		
+		return result;
+	}
+	
+	public String NoticeDetail(String noticeNum) {
+		JSONArray Jarray = new JSONArray();
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT * FROM Notice where nid = "+noticeNum);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("title", rs.getString("title"));
+				obj.put("content", rs.getString("content"));
+				obj.put("photo", rs.getString("photo"));
+				obj.put("date", rs.getString("date"));
+				Jarray.add(obj);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Jarray.toString();
 	}
 }
