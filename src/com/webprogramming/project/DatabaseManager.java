@@ -21,6 +21,86 @@ public class DatabaseManager {
 		dbPW = "qwerty12";
 	}
 	
+	public String LoadorderHot() {
+		JSONArray Jarray = new JSONArray();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT * FROM Menu WHERE category = 'Hot'");
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("menuName",rs.getString("menuName"));
+				obj.put("img",rs.getString("img"));
+				Jarray.add(obj);
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Jarray.toString();
+	}
+	
+	public String LoadorderIce() {
+		JSONArray Jarray = new JSONArray();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT * FROM Menu WHERE category = 'Ice'");
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("menuName",rs.getString("menuName"));
+				obj.put("img",rs.getString("img"));
+				Jarray.add(obj);
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Jarray.toString();
+	}
+	
+	public String LoadorderNonCoffee() {
+		JSONArray Jarray = new JSONArray();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT * FROM Menu WHERE category = 'Non Coffee'");
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("menuName",rs.getString("menuName"));
+				obj.put("img",rs.getString("img"));
+				Jarray.add(obj);
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Jarray.toString();
+	}
+	
+	public String LoadorderBakery() {
+		JSONArray Jarray = new JSONArray();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT * FROM Menu WHERE category = 'Bakery'");
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("menuName",rs.getString("menuName"));
+				obj.put("img",rs.getString("img"));
+				Jarray.add(obj);
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Jarray.toString();
+	}
+	
 	public String LoadFAQ() {
 		
 		JSONArray Jarray = new JSONArray();

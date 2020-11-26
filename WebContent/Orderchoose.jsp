@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>move</title>
+    <title>order</title>
 </head>
 <style>
     .orderbtn{
@@ -15,9 +15,13 @@
     }
 </style>
 <body>
-    <h1 align="center">주문목록 페이지로 이동하시겠습니까?</h1>
+    <h1 align="center">이 상품을 주문 하시겠습니까?</h1>
+    <input type="text" name="count" size="30px">개
     
-    <input type="button" value="이동하기" class="orderbtn" onclick="window.open('Orderlist.jsp')">
+    
+	<input type="button" value="주문하기" class="orderbtn">
+    
     <input type="button" value="닫기" class="orderbtn" onclick="window.close()">
 </body>
 </html>
+
