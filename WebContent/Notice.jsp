@@ -11,7 +11,6 @@
 <%
 	DatabaseManager dm = new DatabaseManager();
 	String notice = dm.LoadNotice();
-	session.setAttribute("userId", "rlaemrghl12");
 %>
 <!DOCTYPE html>
 <html>
