@@ -2,7 +2,7 @@
 
 body{
 	margin:0;
-	background-image: url('../../images/ws_image/main.jpg');
+	background-image: url('../../images/login_Event_Img/main.jpg');
 	background-size:cover;
 	padding:0;
 	font-family : '¸¼Àº °íµñ', sans-serif;
@@ -10,12 +10,12 @@ body{
 }
 .box {
 	width:500px;
-	height:600px;
+	height:700px;
 	background-color:white;
 	background-color: rgba( 255, 255, 255, 0.7 );
 	text-align:center;
 	border-radius:5px;
-	margin:50px 0 0 0;
+	margin:50px 0 80px 0;
 }
 .box_search_id{
 	width:500px;
@@ -66,4 +66,30 @@ body{
 	outline:0;
 	background-color:rgba(255,255,255,0);
 	border-bottom:0.9px solid black;
+}
+.overlap{
+	outline:0;
+	border:2px solid #b3b0ab;
+	background-color:rgba(255,255,255,0);
+	font-family : '¸¼Àº °íµñ', sans-serif;
+	height:45px;
+	width:100px;
+	margin:0 0 0 13px;
+	border-radius:3px;
+	font-weight:600;
+	font-size:15px;
+	color:#3d3c3c;
+}
+.overlap:hover{
+	outline:0;
+	border:2px solid #b3b0ab;
+	background-color:rgba(166, 121, 7,0.7);
+	font-family : '¸¼Àº °íµñ', sans-serif;
+	height:45px;
+	width:100px;
+	margin:0 0 0 13px;
+	border-radius:3px;
+	font-weight:600;
+	font-size:15px;
+	color:white;
 }

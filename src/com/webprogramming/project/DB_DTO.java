@@ -6,6 +6,14 @@ public class DB_DTO {
 	String userPw;
 	String userEmail;
 	String userPhone;
+	String checkPw;
+	
+	public String getCheckPw() {
+		return checkPw;
+	}
+	public void setCheckPw(String checkPw) {
+		this.checkPw = checkPw;
+	}
 	public String getUserName() {
 		return userName;
 	}

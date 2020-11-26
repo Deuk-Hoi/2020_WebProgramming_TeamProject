@@ -1,7 +1,9 @@
 package com.webprogramming.project;
-import java.sql.*;
-
-import javax.servlet.http.HttpServletRequest;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -67,15 +69,15 @@ public class DatabaseManager {
 		}
 		return Jarray.toString();
 	}
-	public int login(String userID, String userPW) {
+	public int login(DB_DTO db_dto) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
 			pstmt = conn.prepareStatement("SELECT userPw FROM Userinfo WHERE userId=?");
-			pstmt.setString(1, userID);
+			pstmt.setString(1, db_dto.getUserId());
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
-				if(rs.getString(1).equals(userPW)) {
+				if(rs.getString(1).equals(db_dto.getUserPw())) {
 					return 1; //성공
 				}else {
 					return 0; //불일치
@@ -100,11 +102,15 @@ public class DatabaseManager {
 			pstmt.setString(5, db_dto.getUserPhone());
 			PreparedStatement pstmt_2 = conn.prepareStatement("SELECT userId FROM Userinfo WHERE userId=?");
 			pstmt_2.setString(1, db_dto.getUserId());
-			rs=pstmt_2.executeQuery();
-			if(rs.next()) {
-				return -2;//id 존재
+			rs = pstmt_2.executeQuery();
+			if(db_dto.getCheckPw().equals(db_dto.getUserPw())) {
+				if(rs.next()) {
+					return -3;
+				}else {
+					return pstmt.executeUpdate();
+				}
 			}else {
-				return pstmt.executeUpdate();
+				return -2;
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -151,5 +157,91 @@ public class DatabaseManager {
 			e.printStackTrace();
 		}
 		return "-2";//db오류
+	}
+	public ArrayList<Event_DTO> getList(String pageNum){
+		ArrayList<Event_DTO> list = new ArrayList<Event_DTO>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT * FROM Event LIMIT ?, 10 ");
+			pstmt.setInt(1, (Integer.parseInt(pageNum)-1)*10);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				Event_DTO dto = new Event_DTO();
+				dto.setEid(rs.getString(1));
+				dto.setEtype(rs.getString(2));
+				dto.setEtitle(rs.getString(3));
+				dto.setEdate(rs.getString(4));
+				dto.setEview(rs.getString(5));
+				list.add(dto);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	public int maxPage() {
+		int n=0;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT MAX(Eid) FROM Event");
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				n=Integer.parseInt(rs.getString(1));
+			}
+			if(n%10==0) {
+				return (n/10)-1;
+			}
+			return n/10;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	public ArrayList<Event_DTO> Event_detail(int eid){
+		ArrayList<Event_DTO> list = new ArrayList<Event_DTO>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT * FROM Event WHERE eid=?");
+			pstmt.setInt(1, eid);
+			rs=pstmt.executeQuery();
+			if(rs.next()) {
+				Event_DTO dto = new Event_DTO();
+				dto.setEid(rs.getString(1));
+				dto.setEtype(rs.getString(2));
+				dto.setEtitle(rs.getString(3));
+				dto.setEdate(rs.getString(4));
+				dto.setEview(rs.getString(5));
+				dto.setEcontent(rs.getString(6));
+				dto.setEimage(rs.getString(7));
+				list.add(dto);
+				return list;
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	public int view_update(int eid) {
+		int view=1;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT eview FROM Event WHERE eid=?");
+			pstmt.setInt(1, eid);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				view = Integer.parseInt(rs.getString(1));
+			}
+			pstmt = conn.prepareStatement("UPDATE Event SET eview=? WHERE eid=?");
+			pstmt.setInt(1, view+1);
+			pstmt.setInt(2, eid);
+			return pstmt.executeUpdate();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		return -1;
 	}
 }

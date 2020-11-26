@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
-<link rel="stylesheet" type="text/css" href="styles/login_page_css/sign_up.css?ver=4">
+<link rel="stylesheet" type="text/css" href="styles/login_page_css/sign_up.css?ver=6">
 </head>
 <body>
 	<form method="post" action="sign_up_Action.jsp">
@@ -15,9 +15,14 @@
 					<p class="sign_up_ip">이름<font color="red">*</font></p>
 					<input class = "login_ip" type="text" name="userName" placeholder="Name">
 					<p class="sign_up_ip">아이디<font color="red">*</font></p>
-					<input class = "login_ip" type="text" name="userId" placeholder="ID">
+					<input class = "login_ip" type="text" name="userId" placeholder="중복 확인된 아이디를 입력하세요." style="width:60%;">
+					<input class="overlap" type="button" name="Id_overlap" value="중복 확인" onclick="window.open('sign_up_overlap_Action.jsp','중복 확인','width=500,height=300,location=no,status=no,scrollbars=no');">
 					<p class="sign_up_ip">비밀번호<font color="red">*</font></p>
 					<input class = "login_ip" type="password" name="userPw" placeholder="PASSWORD">
+					
+					<p class="sign_up_ip">비밀번호 확인<font color="red">*</font></p>
+					<input class = "login_ip" type="password" name="checkPw" placeholder="PASSWORD_CHECK">
+					
 					<p class="sign_up_ip">이메일<font color="red">*</font></p>
 					<input class = "login_ip" type="email" name="userEmail" placeholder="e-mail">
 					<p class="sign_up_ip">전화번호('-'없이 입력)<font color="red">*</font></p>
