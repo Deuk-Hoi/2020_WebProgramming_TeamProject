@@ -8,12 +8,12 @@
 <link rel="stylesheet" type="text/css" href="styles/login_page_css/login_main.css">
 </head>
 <body>
-	<form method="post">
+	<form method="post" action="login_main_Action.jsp">
 		<div class="entire" align="center">
 			<div class="box">
 				<div class="ip">
-					<input class = "login_ip" type="text" name="id" placeholder="ID"><br>
-					<input class = "login_ip" type="password" name="password" placeholder="PASSWORD"><br>
+					<input class = "login_ip" type="text" name="userId" placeholder="ID"><br>
+					<input class = "login_ip" type="password" name="userPw" placeholder="PASSWORD"><br>
 				</div>
 				<div class="ip_2">
 					<input id="login_button" type="submit" value="로그인"><br>
