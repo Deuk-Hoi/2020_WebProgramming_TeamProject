@@ -48,6 +48,9 @@
 	#noticeTable #td-2{
 		text-align: left;
 	}
+	#noticeTable tbody tr:hover{
+		background-color:lightgray;
+	}
 </style>
 </head>
 <body>
@@ -67,13 +70,15 @@
 				<h1 id="subtitle">공지사항</h1>
 			</div>
 			<table id="noticeTable">
-				<tbody>
+				<thead>
 					<tr>
 						<th class="cel-1">No.</th>
 						<th class="cel-2">제목</th>
 						<th class="cel-3">작성일</th>
 						<th class="cel-4">조회수</th>
 					</tr>
+				</thead>
+				<tbody>
 					<%
 						JSONParser parser = new JSONParser();
 						Object o = parser.parse(notice);

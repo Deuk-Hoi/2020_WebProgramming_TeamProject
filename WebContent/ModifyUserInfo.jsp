@@ -54,7 +54,7 @@
 				<table id = "userFormTable">
 					<tr>
 						<td class="title">이름</td>
-						<td class="content"><input type="text" value="김득회" disabled="disabled"></td>
+						<td class="content"><input type="text" value="김득회" readonly="readonly"></td>
 					</tr>
 					<tr>
 						<td class="title">이메일</td>
@@ -66,12 +66,56 @@
 					</tr>
 					<tr>
 						<td class="title">회원 등급</td>
-						<td class="content"><input type="text" value="gold" disabled="disabled"></td>
+						<td class="content"><input type="text" value="gold" readonly="readonly"></td>
+					</tr>
+					<tr>
+					
 					</tr>
 				</table>
 			</form>
+			<div id = "enroll">
+				<input id = "reset" type="reset" value="취소">
+				<input id = "submit" type="submit" value="등록">
+			</div>
 			
 		</div>
 	</section>
 </body>
 </html>
+<style>
+#enroll{
+		text-align:center;
+		margin-top: 20px;
+	}
+	#enroll input{
+		width: 250px;
+		height: 80px;
+		font-size: 20px;
+		border-radius: 5px;
+		font-family : '맑은 고딕', sans-serif;
+	}
+	
+	#reset{
+		background-color: #572a31;
+		border-color: #572a31;
+		color: white;
+		font-weight: bold;
+		margin-right: 10px; 
+		cursor:pointer;
+	}
+	#reset:hover{
+		background-color: #3a181d;
+	}
+	
+	#submit{
+		background-color: #002f6c;
+		border-color: #002f6c;
+		color: white;
+		font-weight: bold;
+		margin-left: 10px;
+		cursor:pointer;
+	}
+	#submit:hover{
+		background-color: #002049;
+	}
+ </style>
