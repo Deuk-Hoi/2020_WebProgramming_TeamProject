@@ -5,7 +5,7 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
-<jsp:useBean id="qna" class="com.webprogramming.project.QnAManager"/>
+<jsp:useBean id="qna" class="com.webprogramming.project.QnADO"/>
 <jsp:setProperty name="qna" property="*"/>
 <%
 	DatabaseManager dm = new DatabaseManager();

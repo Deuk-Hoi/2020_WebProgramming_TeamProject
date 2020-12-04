@@ -4,6 +4,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map.Entry;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -16,6 +18,7 @@ public class DatabaseManager {
 	private String dbURL = "";
 	private String dbID = "";
 	private String dbPW = "";
+	int row = 0;
 	
 	public DatabaseManager() {
 		dbURL = "jdbc:mysql://conative.myds.me:8888/HTC_Cafe?serverTimezone=UTC&characterEncoding=utf8";
@@ -44,31 +47,6 @@ public class DatabaseManager {
 		}
 		return Jarray.toString();
 	}
-	
-	public String LoadNotice() {
-		JSONArray Jarray = new JSONArray();
-		
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
-			pstmt = conn.prepareStatement("SELECT * FROM Notice");
-			rs = pstmt.executeQuery();
-			
-			while(rs.next()) {
-				JSONObject obj = new JSONObject();
-				obj.put("nid", rs.getString("nid"));
-				obj.put("title", rs.getString("title"));
-				obj.put("content", rs.getString("content"));
-				obj.put("photo", rs.getString("photo"));
-				obj.put("date", rs.getString("date"));
-				obj.put("views", rs.getString("views"));
-				Jarray.add(obj);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return Jarray.toString();
-	}
 	public int login(DB_DTO db_dto) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -78,12 +56,12 @@ public class DatabaseManager {
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
 				if(rs.getString(1).equals(db_dto.getUserPw())) {
-					return 1; //성공
+					return 1; //�꽦怨�
 				}else {
-					return 0; //불일치
+					return 0; //遺덉씪移�
 				}
 			}else {
-				return -1; //아이디x
+				return -1; //�븘�씠�뵒x
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -116,7 +94,7 @@ public class DatabaseManager {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return -1;//db오류
+		return -1;//db�삤瑜�
 	}
 	public String searchId(DB_DTO db_dto) {
 		try {
@@ -134,12 +112,12 @@ public class DatabaseManager {
 			}else {
 				return "-2"; //email x
 			}
-			return result; //성공
+			return result; //�꽦怨�
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "-1";//db오류
+		return "-1";//db�삤瑜�
 	}
 	public String searchPw(DB_DTO db_dto) {
 		try {
@@ -149,14 +127,14 @@ public class DatabaseManager {
 			pstmt.setString(1, db_dto.getUserId());
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
-				return rs.getString(1); //성공
+				return rs.getString(1); //�꽦怨�
 			}else {
-				return "-1"; //없는 Id
+				return "-1"; //�뾾�뒗 Id
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "-2";//db오류
+		return "-2";//db�삤瑜�
 	}
 	public ArrayList<Event_DTO> getList(String pageNum){
 		ArrayList<Event_DTO> list = new ArrayList<Event_DTO>();
@@ -271,51 +249,42 @@ public class DatabaseManager {
 		}
 		return Jarray;
 	}
-	
-	public int InsertQnA(QnAManager qm, String userId) {
-		int result = 0;
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
-			pstmt = conn.prepareStatement("INSERT INTO Qna(uid, NAME, phone, email, DATE, title, contents) VALUES ((SELECT uid FROM Userinfo WHERE userId = ?), ?, ?, ?, ?, ?, ?)");
-			pstmt.setString(1, userId);
-			pstmt.setString(2, qm.getUserName());
-			pstmt.setString(3, qm.getPhone());
-			pstmt.setString(4, qm.getEmail());
-			pstmt.setString(5, qm.getDate()+" "+qm.getTime());
-			pstmt.setString(6, qm.getTitle());
-			pstmt.setString(7, qm.getContents());
-			
-			result = pstmt.executeUpdate();
-			
-		}catch (Exception e) {
-			e.printStackTrace();
-			return -1;
-		}
-		
-		return result;
-	}
-	
-	public String NoticeDetail(String noticeNum) {
-		JSONArray Jarray = new JSONArray();
+	//--------------------------------------------------------------수정중
+	public ResultSet selectDB(String sql, HashMap<Integer, String> info){
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
-			pstmt = conn.prepareStatement("SELECT * FROM Notice where nid = "+noticeNum);
+			pstmt = conn.prepareStatement(sql);
+			
+			if(info != null) {
+				for(Entry<Integer, String> entry: info.entrySet()) {
+					pstmt.setString(entry.getKey(), entry.getValue());
+				}
+			}			
 			rs = pstmt.executeQuery();
 			
-			while(rs.next()) {
-				JSONObject obj = new JSONObject();
-				obj.put("title", rs.getString("title"));
-				obj.put("content", rs.getString("content"));
-				obj.put("photo", rs.getString("photo"));
-				obj.put("date", rs.getString("date"));
-				Jarray.add(obj);
-			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return Jarray.toString();
+		return rs;
+	}
+	
+
+	public int InsertUpdateDB(String sql, HashMap<Integer, String> info) {
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement(sql);
+
+			for(HashMap.Entry<Integer, String> entry: info.entrySet()) {
+				pstmt.setString(entry.getKey(), entry.getValue());
+			}
+			row = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return row;
 	}
 }

@@ -1,20 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="org.json.simple.parser.JSONParser"%>
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.JSONArray"%>
-<%@page import="com.webprogramming.project.DatabaseManager"%>
+<jsp:useBean id="noticeDAO" class="com.webprogramming.project.NoticeDAO"/>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
 <%
 	String noticeNum = (String)request.getParameter("num");
-	DatabaseManager dm = new DatabaseManager();
-	String detail = dm.NoticeDetail(noticeNum);
-	JSONParser parser = new JSONParser();
-	Object o = parser.parse(detail);
-	JSONArray ja = (JSONArray)o;
-	JSONObject element = (JSONObject)ja.get(0);
+	JSONObject element = (JSONObject)noticeDAO.SelectNoticeDetail(noticeNum).get(0);
 %>
 <!DOCTYPE html>
 <html style="height: 100%">

@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="org.json.simple.JSONObject"%>
-<jsp:useBean id="userInfo" class="com.webprogramming.project.DB_DTO"/>
-<jsp:useBean id="dm" class="com.webprogramming.project.DatabaseManager"/>
+<jsp:useBean id="userinfo" class="com.webprogramming.project.UserInfoDO"/>
+<jsp:useBean id="userinfoDAO" class="com.webprogramming.project.UserInfoDAO"/>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
 <%
-	userInfo.setUserId((String)session.getAttribute("userId"));
-	JSONObject element = (JSONObject)dm.searchUserInfo(userInfo).get(0);
+	userinfo.setUserId((String)session.getAttribute("userId"));
+	JSONObject element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
 %>
 <!DOCTYPE html>
 <html>
