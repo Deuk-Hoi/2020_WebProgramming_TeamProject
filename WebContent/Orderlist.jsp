@@ -4,41 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orderlist</title>
+    <title>장바구니</title>
     <link rel="stylesheet" href="styles/Order.css">
 </head>
 <body>
    	<div class="banner">
         <p class="bannertext">Order</p>
     </div>
-    <table align="center">
-    	<thead>
-    		<tr>
-    			<th>상품 이름</th><th>금액</th><th>수량</th><th>자세히</th>
-    		</tr>
-    	</thead>
+    <table align="center" id="ordertable">
     	<tbody>
     		<tr>
-          		<td>zz</td><td>zz</td><td>zz</td>
-        	</tr>
-        	<tr>
-          		<td>zz</td><td>zz</td><td>zz</td>
-        	</tr>
-        	<tr>
-          		<td>zz</td><td>zz</td><td>zz</td>
-        	</tr>
-        	<tr>
-          		<td>zz</td><td>zz</td><td>zz</td>
-        	</tr>
-        	<tr>
-          		<td>zz</td><td>zz</td><td>zz</td>
-        	</tr>
+				<th class="hello1">No.</th>
+				<th class="hello2">Orderlist</th>
+				<th class="hello3">Cost</th>
+				<th class="hello4">Pickup</th>
+			</tr>
     	</tbody>
-    	<tfoot>
-    		<tr>
-    			<td>총합</td><td>몰름</td>
-    		</tr>
-    	</tfoot>
     </table>
 </body>
 </html>
