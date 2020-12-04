@@ -4,13 +4,12 @@
 <%@page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="faqdb" class="com.webprogramming.project.DatabaseManager"/>
+<jsp:useBean id="noticeDAO" class="com.webprogramming.project.NoticeDAO"/>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
 <%
-	DatabaseManager dm = new DatabaseManager();
-	String notice = dm.LoadNotice();
+	JSONArray ja = noticeDAO.SelectNotice();
 %>
 <!DOCTYPE html>
 <html>
@@ -79,10 +78,6 @@
 				</thead>
 				<tbody>
 					<%
-						JSONParser parser = new JSONParser();
-						Object o = parser.parse(notice);
-						JSONArray ja = (JSONArray)o;
-						
 						for(int i = 0; i < ja.size(); i++){
 							JSONObject element = (JSONObject)ja.get(i);
 					%>

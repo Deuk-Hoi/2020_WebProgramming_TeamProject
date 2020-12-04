@@ -1,14 +1,14 @@
 package com.webprogramming.project;
 
-public class QnAManager {
+public class QnADO {
 	
-	private String userName = "";
-	private String phone = "";
-	private String email = "";
-	private String date = "";
-	private String time = "";
-	private String title = "";
-	private String contents = "";
+	private String userName = null;
+	private String phone = null;
+	private String email = null;
+	private String date = null;
+	private String time = null;
+	private String title = null;
+	private String contents = null;
 	
 	
 	public String getUserName() {
@@ -52,8 +52,5 @@ public class QnAManager {
 	}
 	public void setContents(String contents) {
 		this.contents = contents;
-	}
-	
-	
-	
+	}	
 }
