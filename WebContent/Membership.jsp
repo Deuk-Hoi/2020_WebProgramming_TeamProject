@@ -16,28 +16,7 @@
   </head>
 
   <body>
-    <header>
-      <div>
-        <h1><a href="#a"><img src="images/main/logo.PNG" alt="Hoseo TimeOut Cafe LOGO"></a></h1>
-        <h2 class="hide">대메뉴</h2>
-        <nav>
-            <ul>
-                <li><a href="#a">COFFEE</a></li>
-                <li><a href="#a">ORDER</a></li>
-                <li><a href="#a">MENU</a></li>
-                <li><a href="#a">MEMBERSHIP</a></li>
-                <li><a href="#a">EVENT</a></li>
-                <li><a href="#a">Service Center</a></li>
-            </ul>
-        </nav>
-          <ul class="spot">
-            <li><a href="#a"><i class="xi-user"></i><span>  Sign In</span></a></li>
-            <li><a href="#a"><i class="xi-user-plus-o"></i>  Sign Up</a></li>
-            <li><a href="#a"><i class="xi-map-o"></i><span>  Find a Store</span></a></li>
-          </ul>
-          <a href="#a" class="total"><i class="xi-bars"></i><span>전체메뉴보기</span></a>
-      </div>
-    </header>
+    <jsp:include page="header.jsp"></jsp:include>
 
     <main>
         <section class="membershipstart">
@@ -46,7 +25,7 @@
                     <span class = "member_title">H.T.C 멤버스</span><br><br>
                     H.T.C 커피의 특별한 멤버십 서비스를 소개합니다.<br>
                     스탬프 적립, FREE 쿠폰, 이벤트 혜택 등 지금 H.T.C 멤버스에서 만나보세요<br>
-                    <a href="">나의 멤버십 보기</a>
+                    <a href="Mypage.jsp">나의 멤버십 보기</a>
                 </p>
             </div>
         </section>
@@ -187,37 +166,6 @@
       </section>
     </main>
 
-    <footer>
-      <div class="top">
-        <div class="clear">
-          <ul>
-            <li><a href="#a">고객상담</a></li>
-            <li><a href="#a">개인정보처리방침</a></li>
-            <li><a href="#a">기업지배구조</a></li>
-            <li><a href="#a">윤리경영</a></li>
-            <li><a href="#a">Hoseo University</a></li>
-            <li><a href="#a">H.T.C Coffee</a></li>
-          </ul>
-          <div>
-            <p>고객상담<strong>041-532-4752</strong></p>
-            <select>
-              <option>FAMILY SITE</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="btm">
-        <img src="images/main/footer_logo.PNG" alt="호서대 로고">
-        <p>HOSEO TIMEOUT CAFE</p>
-        <ul>
-          <li> 충청남도 아산시 배방읍 호서로 79번길 20 (31499) 강석규 교육관 지하 1층</li>
-          <li>Tel. 041-532-4752</li>
-          <li>개인정보취급관리자 웹벤져스</li>
-          <li>E-mail uitlab421@vision.hoseo.edu</li>
-        </ul>
-        <address>Copyright 2020 HOSEO TIMEOUT CAFE All rights reserved.</address>
-
-      </div>
-    </footer>
+    <jsp:include page="footer.jsp"></jsp:include>
   </body>
 </html>

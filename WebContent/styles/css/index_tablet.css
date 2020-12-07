@@ -1,4 +1,3 @@
-@charset "EUC-KR";
 @charset "utf-8";
 
 html { font-size : 16px; }
@@ -11,3 +10,16 @@ header > div h1 { padding: 1.1rem 0 1.2rem 1rem;}
 
 .membershiparticlel > div div img{ width: 100%;}
 .membershiparticle > div div.img1 { left : 10%; top: 1.3rem; min-width: 5rem; width: 18%;}
+
+/* 멤버 소개 */
+.barista {position: relative;  height: 646px;}
+.barista div { position: relative; width:100%; max-width: 70rem; height: 35rem; }
+.barista > div div{ position: absolute;}
+.barista > div div.barista_img { top: 2rem; left : 1%;}
+.barista > div div.barista_img img{ transform: translateX(1rem); transition: all 2.3s;}
+.barista > div div.barista_left_img { top: 10rem; left : 100%; width: 20%}
+.barista > div div.barista_left_img img{ transform:translateX(-25rem); transition: all 3s; width: 410px}
+.barista > div div.barista_btn { top: 23rem; left : 150%;}
+.barista > div div.barista_btn {display: inline-block; width:21rem; text-align: center;  font-size: 30px; color:#666666;}
+.barista > div div.barista_btn { transform: translateX(-55rem); transition: all 3s; }
+.barista > div div.barista_btn a:hover {width:6rem; padding: 0.5rem 0.5rem 0.5rem 0.5rem; color:#fff; background: #976D3F; transition: all 0.2s;}
