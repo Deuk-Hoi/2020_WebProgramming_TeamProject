@@ -106,27 +106,6 @@ public class DatabaseManager {
 		return Jarray.toString();
 	}
 	
-	public String LoadFAQ() {
-		
-		JSONArray Jarray = new JSONArray();
-		
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
-			pstmt = conn.prepareStatement("SELECT * FROM Faq");
-			rs = pstmt.executeQuery();
-			
-			while(rs.next()) {
-				JSONObject obj = new JSONObject();
-				obj.put("question", rs.getString("question"));
-				obj.put("answer", rs.getString("answer"));
-				Jarray.add(obj);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return Jarray.toString();
-	}
 	public int login(DB_DTO db_dto) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -303,7 +282,7 @@ public class DatabaseManager {
 		return -1;
 	}
 	
-	public JSONArray searchUserInfo(DB_DTO db_dto) {
+	/*public JSONArray searchUserInfo(DB_DTO db_dto) {
 		JSONArray Jarray = new JSONArray();
 		
 		try {
@@ -328,7 +307,7 @@ public class DatabaseManager {
 			e.printStackTrace();
 		}
 		return Jarray;
-	}
+	}*/
 	//--------------------------------------------------------------수정중
 	public ResultSet selectDB(String sql, HashMap<Integer, String> info){
 		
