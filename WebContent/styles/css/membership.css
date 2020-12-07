@@ -1,10 +1,9 @@
-@charset "EUC-KR";
 @charset "utf-8";
 
 html { font-size : 20px;}
 body { font-size : 1rem;}
 
-/* Çì´õ */
+/* í—¤ë” */
 header {background: #f6f5ef; border: top 2px solid #000;}
 header > div { position: relative; width : 54.5rem; margin : 0 auto;}
 header > div:after { content: ""; display: block; clear: both;}
@@ -18,7 +17,7 @@ header > div .spot a { padding: 0 .95rem; font-size: .7rem; color:#333;}
 header > div .spot li ~ li a:after { content: ""; position: absolute; left: 0; top: 50%; width: 1px; height: .6rem; background: #504d4d; transform: translateY(-25%);}
 header > div .total { display:none;}
 
-/* ½ÅÁ¦Ç° ¼Ò°³ */
+/* ì†Œê°œ */
 .membershipstart {position: relative; width: 100%;height: 460px; background:url('../../images/main/membershipbk3.PNG') no-repeat center top;}
 .membershipstart > div > p{text-align: center; padding-top: 4rem; font-size: 0.9rem; color:white;}
 .membershipstart > div .member_title{font-size:2.4rem; color: white;}
@@ -27,7 +26,7 @@ header > div .total { display:none;}
 .membershipindex { position: relative;}
 .membershipindex > div > p{ text-align:right; font-size:0.6rem; margin : 1rem 18rem 0 0;}
 
-/* ¸ð¹ÙÀÏ ÇýÅÃ ¼Ò°³ */
+/* ëª¨ë°”ì¼ í˜œíƒ ì†Œê°œ */
 .membershiparticle {position: relative; height: 420px; background:url('../../images/main/membershiobk2.PNG') no-repeat center top;}
 .membershiparticle > div div{ position: absolute;}
 .membershiparticle > div div.img1{ left : 20%; top: 0.7rem;z-index: 5;}
@@ -37,7 +36,7 @@ header > div .total { display:none;}
 .membershiparticle > div div.info span { font-size:3rem; color:#293996; line-height:100%;}
 .membershiparticle > div div.info p { padding:.7rem 0 0 0; font-size:1rem; color:#5D6C9B; line-height:2rem;}
 
-/* ÇýÅÃ ¼Ò°³ */
+/* í˜œíƒ ì†Œê°œ */
 .membershipBenefits {position: relative; height: 800px; background:url('../../images/main/whitebk.PNG') no-repeat center top;}
 .membershipBenefits > div { position: relative; width:100%; max-width: 70rem; height: 32.3rem; margin: 0 auto;}
 .membershipBenefits > div div{ position: absolute;}
@@ -48,7 +47,7 @@ header > div .total { display:none;}
 .membershipBenefits > div div.img5 { left : 42.5%; top: 20rem;}
 .membershipBenefits > div div.img6 { left : 73%; top: 20rem;}
 
-/* µî±Þ ¼Ò°³ */
+/* ë“±ê¸‰ ì†Œê°œ */
 .membershipGrade {position: relative; width: 100%;height: 900px; background:url('../../images/main/whitebk.PNG') no-repeat center top;}
 .membershipGrade > div {text-align: center;}
 .membershipGrade > div > p{text-align: center; font-size: 0.9rem;}
@@ -66,7 +65,7 @@ header > div .total { display:none;}
 .membershipGrade > div div.info2 span {  font-size:1.1rem; color:#202023; line-height:100%;}
 .membershipGrade > div div.info2 > p {  text-align: left;margin:25rem 0 0  6.5rem; font-size:0.6rem; color:#737373; line-height:1rem;}
 
-/* ¾à°ü ¼Ò°³ */
+/* ì•½ê´€ ì†Œê°œ */
 .membershipterms {position: relative; width: 100%;height: 400px; background:url('../../images/main/whitebk.PNG') no-repeat center top;}
 .membershipterms > div {text-align: center;}
 .membershipterms > div > p{text-align: center; font-size: 0.9rem;}
@@ -141,3 +140,5 @@ footer .btm ul { padding: 1.6rem 0 0.7rem;}
 footer .btm li {display: inline-block; position:relative; padding: 0 0.5rem; color :#fff; font-size:14px;}
 footer .btm li:after { content:""; position: absolute; right: 0; top:50%; margin-top: -0.2rem; width: 0.05rem; height: 0.4rem; background: #70767a;}
 footer .btm address { font-size: 14px; color:#fff;}
+
+
