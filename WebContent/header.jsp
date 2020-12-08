@@ -3,8 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <meta name="format-detection" content="telephone=no">
+	    <title>Hoseo TimeOut Cafe</title>
+	    <link rel="stylesheet" type="text/css" href="styles/css/XEIcon-2.2.0/xeicon.min.css">
+	    <link rel="stylesheet" href="styles/css/default.css">
+	    <link rel="stylesheet" href="styles/css/header.css">
+	    <link rel="stylesheet" href="styles/css/index_tablet.css" media="all and (max-width:1120px)">
+	    <link rel="stylesheet" href="styles/css/index_moblie.css" media="all and (max-width:960px)">
+ 	</head>
 </head>
 <body>
 	<header>

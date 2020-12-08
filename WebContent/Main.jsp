@@ -139,7 +139,7 @@
                 차별화된 커피 경험을 누릴 수 있는 <strong>리저브 매장</strong><br>
                 다양한 방법으로 편리하게 즐길 수 있는 <strong>TimeOut 시스템 매장</strong><br>
                 함께해서 더 따뜻할 수 있는 지역사회 소통 공간 <strong>커뮤니티 매장</strong><br>
-                <a href="" class="find_btn">매장 소개</a>
+                <a href="Company.jsp" class="find_btn">매장 소개</a>
               </p>
             </div>
           </div>
