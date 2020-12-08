@@ -1,10 +1,9 @@
-@charset "EUC-KR";
 @charset "utf-8";
 
 html { font-size : 20px;}
 body { font-size : 1rem;}
 
-/* Çì´õ */
+/* í—¤ë” */
 header {background: #f6f5ef; border: top 2px solid #000;}
 header > div { position: relative; width : 54.5rem; margin : 0 auto;}
 header > div:after { content: ""; display: block; clear: both;}
@@ -18,7 +17,7 @@ header > div .spot a { padding: 0 .95rem; font-size: .7rem; color:#333;}
 header > div .spot li ~ li a:after { content: ""; position: absolute; left: 0; top: 50%; width: 1px; height: .6rem; background: #504d4d; transform: translateY(-25%);}
 header > div .total { display:none;}
 
-/* ½½¶óÀÌµå ¹è³Ê */
+/* ìŠ¬ë¼ì´ë“œ ë°°ë„ˆ */
 .section input[id*="slide"] {display:none;}
 .section .slidewrap {position:relative;overflow:hidden;}
 .section .slidelist {white-space:nowrap;font-size:0;overflow:hidden;position:relative;}
@@ -40,8 +39,8 @@ header > div .total { display:none;}
 .section input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
 .section input[id="slide04"]:checked ~ .slidewrap .slide-control > div:nth-child(4) {display:block;}
 
-/* ½ÅÁ¦Ç° ¼Ò°³ */
-.visual {position: relative; height: 646px; background:url('../../images/main/2_bk.PNG') no-repeat center top;}
+/* ì‹ ì œí’ˆ ì†Œê°œ */
+.visual {position: relative; height: 646px; background:url("../../images/main/2_bk.PNG") no-repeat center top;}
 .visual > div { position: relative; width:100%; max-width: 70rem; height: 32.3rem; margin: 0 auto;}
 .visual > div div{ position: absolute;}
 .visual > div div.img1 { left : 2%; top: 3rem;}
@@ -51,6 +50,7 @@ header > div .total { display:none;}
 .visual > div div.img3 { left : 45%; top: 14.5rem; z-index: 3;}
 .visual > div div.img4 { left : 75%; top: 9rem;}
 
+/* ë©¤ë²„ ì†Œê°œ */
 .barista {position: relative;  height: 646px;}
 .barista div { position: relative; width:100%; max-width: 70rem; height: 35rem; }
 .barista > div div{ position: absolute;}
@@ -63,7 +63,7 @@ header > div .total { display:none;}
 .barista > div div.barista_btn { transform: translateX(-62rem); transition: all 3s; }
 .barista > div div.barista_btn a:hover {width:6rem; padding: 0.5rem 0.5rem 0.5rem 0.5rem; color:#fff; background: #976D3F; transition: all 0.2s;}
 
-/* ¸ÅÀåÃ£±â */
+/* ë§¤ìž¥ì°¾ê¸° */
 .find_store {position: relative;  background:url('../../images/main/store_bk.PNG') no-repeat center top;}
 .find_store > div { position: relative; width:100%; max-width: 70rem; height: 18rem; margin: 0 auto;}
 .find_store > div div {position: absolute;}

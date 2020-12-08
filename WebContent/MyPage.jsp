@@ -1,7 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="org.json.simple.JSONObject"%>
+<jsp:useBean id="userinfo" class="com.webprogramming.project.UserInfoDO"/>
+<jsp:useBean id="userinfoDAO" class="com.webprogramming.project.UserInfoDAO"/>
 <%
 	request.setCharacterEncoding("UTF-8");
+%>
+<%
+	userinfo.setUserId((String)session.getAttribute("userId"));
+	JSONObject element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
 %>
 <!DOCTYPE html>
 <html>
@@ -178,31 +185,31 @@
 					<table class = "stamp_table">
 						<tr>
 							<td><img alt="스템프 사진" src="./images/userInfoImg/stamp_state.png"></td>
-							<td class = "stamp_info">스탬프 현황<br><span class = "currentStamp">4</span> <sapn class = "totalStamp">/12</sapn></td>
+							<td class = "stamp_info">스탬프 현황<br><span id ="stampNum" class = "currentStamp"></span> <sapn class = "totalStamp">/12</sapn></td>
 						</tr>
 					</table>
 					<table class = "coupon_table">
 						<tr>
 							<td><img alt="쿠폰 사진" src="./images/userInfoImg/coupon.png"></td>
-							<td class = "stamp_info">보유 쿠폰<br><span class = "currentCoupon">4</span></td>
+							<td class = "stamp_info">보유 쿠폰<br><span id ="couponNum" class = "currentCoupon"></span></td>
 						</tr>
 					</table>
 				</div>
 				<div class = "summaryRight">
 					<table>
 						<tr>
-							<td><img alt="등급사진" src="./images/userInfoImg/level_gold.png"></td>
-							<td><span style="font-weight: bold;">김득회</span> 회원님은<br>
-							<span class="rank_color">Gold Level</span> 입니다.</td>
+							<td><img id = "rankImg" alt="등급사진"></td>
+							<td><span id = "userName" style="font-weight: bold;"></span> 회원님은<br>
+							<span id= "rankColor" class="rank_color"><span id="rank"></span> Level</span> 입니다.</td>
 						</tr>
 					</table>
 					<div class = "userinfo">
-						<p>아이디 : dh97k@naver.com</p>
-						<p>휴대폰 : 010-4304-2134</p>
-						<p>이름 : 김득회</p>
+						<p>이메일 : <span id="userEmail"></span></p>
+						<p>휴대폰 : <span id="userPhone"></span></p>
+						<p>이름 : <span id="userinfoName"></span></p>
 					</div>
 					<div id="modifyButton">
-						<input type="button" value="회원정보 수정  >">
+						<input type="button" value="회원정보 수정  >" onclick="location.href='ModifyUserInfo.jsp'">
 					</div>
 				</div>
 			</div>
@@ -213,18 +220,19 @@
 				</div>
 				<div id = "coupon">
 					<div class = "couponList">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_stamp.png">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
-						<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<%
+							for(int i = 0; i < 12; i++){
+								if(i < Integer.parseInt((String)element.get("stampNum"))){
+						%>
+									<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_stamp.png">
+						<%
+								}else{
+						%>
+									<img alt="쿠폰 사진" src="./images/userInfoImg/coupon_nostamp.png">
+						<%
+								}
+							}
+						%>
 					</div>
 				</div>
 			</div>
@@ -264,3 +272,33 @@
 	</section>
 </body>
 </html>
+<script>
+	document.getElementById("stampNum").innerText = <%= element.get("stampNum")%>;
+	document.getElementById("couponNum").innerText = <%= element.get("couponNum")%>;
+	document.getElementById("userName").innerText = "<%= element.get("userName")%>";
+	document.getElementById("rank").innerText = "<%= element.get("rank")%>";
+	document.getElementById("userEmail").innerText = "<%= element.get("userEmail")%>";
+	document.getElementById("userPhone").innerText = "<%= element.get("userPhone")%>";
+	document.getElementById("userinfoName").innerText = "<%= element.get("userName")%>";
+	
+	var rank = document.getElementById("rank").innerText;
+	switch(rank){
+		case "Bronze":
+			document.getElementById("rankImg").src="./images/userInfoImg/Bronze.png";
+			document.getElementById("rankColor").style.color = "#b89854";
+			break;
+		case "Silver":
+			document.getElementById("rankImg").src="./images/userInfoImg/Silver.png";
+			document.getElementById("rankColor").style.color = "#c0c0c0";
+			break;
+		case "Gold":
+			document.getElementById("rankImg").src="./images/userInfoImg/Gold.png";
+			document.getElementById("rankColor").style.color = "#f7a300";
+			break;
+		case "Platinum":
+			document.getElementById("rankImg").src="./images/userInfoImg/Platinum.png";
+			document.getElementById("rankColor").style.color = "#00bfff";
+			break;
+	}
+	
+</script>

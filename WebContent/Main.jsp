@@ -2,43 +2,22 @@
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="format-detection" content="telephone=no">
-    <title>Hoseo TimeOut Cafe</title>
-    <link rel="stylesheet" type="text/css" href="styles/css/XEIcon-2.2.0/xeicon.min.css">
-    <link rel="stylesheet" href="styles/css/default.css">
-    <link rel="stylesheet" href="styles/css/index.css">
-    <link rel="stylesheet" href="styles/css/index_tablet.css" media="all and (max-width:1120px)">
-    <link rel="stylesheet" href="styles/css/index_moblie.css" media="all and (max-width:960px)">
-  </head>
+  	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <meta name="format-detection" content="telephone=no">
+	    <title>Hoseo TimeOut Cafe</title>
+	    <link rel="stylesheet" type="text/css" href="styles/css/XEIcon-2.2.0/xeicon.min.css">
+	    <link rel="stylesheet" href="styles/css/default.css">
+	    <link rel="stylesheet" href="styles/css/index.css">
+	    <link rel="stylesheet" href="styles/css/index_tablet.css" media="all and (max-width:1120px)">
+	    <link rel="stylesheet" href="styles/css/index_moblie.css" media="all and (max-width:960px)">
+ 	</head>
 
   <body>
-    <header>
-      <div>
-        <h1><a href="#a"><img src="images/main/logo.PNG" alt="Hoseo TimeOut Cafe LOGO"></a></h1>
-        <h2 class="hide">´ë¸Þ´º</h2>
-        <nav>
-            <ul>
-                <li><a href="#a">COFFEE</a></li>
-                <li><a href="#a">ORDER</a></li>
-                <li><a href="#a">MENU</a></li>
-                <li><a href="#a">MEMBERSHIP</a></li>
-                <li><a href="#a">EVENT</a></li>
-                <li><a href="#a">Service Center</a></li>
-            </ul>
-        </nav>
-          <ul class="spot">
-            <li><a href="#a"><i class="xi-user"></i><span>  Sign In</span></a></li>
-            <li><a href="#a"><i class="xi-user-plus-o"></i>  Sign Up</a></li>
-            <li><a href="#a"><i class="xi-map-o"></i><span>  Find a Store</span></a></li>
-          </ul>
-          <a href="#a" class="total"><i class="xi-bars"></i><span>ÀüÃ¼¸Þ´ºº¸±â</span></a>
-      </div>
-    </header>
-
+    <jsp:include page="header.jsp"></jsp:include>
+    
     <main>
       <div class="section">
         <input type="radio" name="slide" id="slide01" checked>
@@ -49,13 +28,13 @@
           
           <ul class="slidelist">
   
-            <!-- ½½¶óÀÌµå ¿µ¿ª -->
+            <!-- ìŠ¬ë¼ì´ë“œ ì˜ì—­ -->
             <li class="slideitem">
               <a>
                 <div class="textbox">
                   
                 </div>
-                <img src="./images/main/banner_1.PNG" width="100%">
+                <img src="images/main/banner_1.PNG" width="100%">
               </a>
             </li>
             <li class="slideitem">
@@ -64,7 +43,7 @@
                 <div class="textbox">
                   
                 </div>
-                <img src="./images/main/banner_2.PNG">
+                <img src="images/main/banner_2.PNG">
               </a>
             </li>
             <li class="slideitem">
@@ -73,7 +52,7 @@
                 <div class="textbox">
                   
                 </div>
-                <img src="./images/main/banner_3.PNG">
+                <img src="images/main/banner_3.PNG">
               </a>
             </li class="slideitem">
             <li class="slideitem">
@@ -82,11 +61,11 @@
                 <div class="textbox">
                   
                 </div>
-                <img src="./images/main/banner_4.PNG">
+                <img src="images/main/banner_4.PNG">
               </a>
             </li class="slideitem">
       
-            <!-- ÁÂ,¿ì ½½¶óÀÌµå ¹öÆ° -->
+            <!-- ì¢Œ,ìš° ìŠ¬ë¼ì´ë“œ ë²„íŠ¼ -->
             <div class="slide-control">
               <div>
                 <label for="slide04" class="left"></label>
@@ -111,22 +90,22 @@
 
       <section class="rewards">
         <div>
-          <div class="rewardimg1"><img src="images/main/reward_logo.png" alt="°¡°Ô"></div>
+          <div class="rewardimg1"><img src="images/main/reward_logo.png" alt="ê°€ê²Œ"></div>
           <div class="info">
-            <span>H.T.C ¸¸ÀÇ <strong>Æ¯º°ÇÑ ÇýÅÃ</strong>, MY H.T.C <strong>¸â¹ö½Ê</strong></span>
+            <span>H.T.C ë§Œì˜ <strong>íŠ¹ë³„í•œ í˜œíƒ</strong>, MY H.T.C <strong>ë©¤ë²„ì‹­</strong></span>
             <p>
-                <strong>H.T.C È¸¿øÀÌ¼¼¿ä?</strong> ·Î±×ÀÎÀ» ÅëÇØ ³ª¸¸ÀÇ ¸â¹ö½Ê¸¦ È®ÀÎÇØº¸¼¼¿ä.<br>
-                <strong>H.T.C È¸¿øÀÌ ¾Æ´Ï¼¼¿ä?</strong> °¡ÀÔÀ» ÅëÇØ ¸â¹ö½Ê ÇýÅÃÀ» Áñ±â¼¼¿ä.<br>
+                <strong>H.T.C íšŒì›ì´ì„¸ìš”?</strong> ë¡œê·¸ì¸ì„ í†µí•´ ë‚˜ë§Œì˜ ë©¤ë²„ì‹­ë¥¼ í™•ì¸í•´ë³´ì„¸ìš”.<br>
+                <strong>H.T.C íšŒì›ì´ ì•„ë‹ˆì„¸ìš”?</strong> ê°€ìž…ì„ í†µí•´ ë©¤ë²„ì‹­ í˜œíƒì„ ì¦ê¸°ì„¸ìš”.<br>
             </p>
-              <a href="" class="btn type1">È¸¿ø°¡ÀÔ</a>
-              <a href="" class="btn">·Î±×ÀÎ</a>
+              <a href="sign_up.jsp" class="btn type1">íšŒì›ê°€ìž…</a>
+              <a href="login_main.jsp" class="btn">ë¡œê·¸ì¸</a>
               <p>
-                È¸¿ø °¡ÀÔ ÈÄ, H.T.C È¨ÆäÀÌÁö¿¡¼­<br>
-                <strong>"ORDER"·Î ÁÖ¹®ÇÏ½Ã°í, Æí¸®ÇÏ°Ô ±¸¸Å ÇØº¸¼¼¿ä!</strong><br>
-                È¸¿ø¸¦ µî·ÏÇÏ¿© ¸¶ÀÌ H.T.C ¸â¹ö½Ê È¸¿øÀÌ µÇ½Å ÈÄ,<br>
-                Ã¹ ±¸¸Å¸¦ ÇÏ½Ã¸é ¹«·á À½·á ÄíÆùÀ» µå¸³´Ï´Ù!
+                íšŒì› ê°€ìž… í›„, H.T.C í™ˆíŽ˜ì´ì§€ì—ì„œ<br>
+                <strong>"ORDER"ë¡œ ì£¼ë¬¸í•˜ì‹œê³ , íŽ¸ë¦¬í•˜ê²Œ êµ¬ë§¤ í•´ë³´ì„¸ìš”!</strong><br>
+                íšŒì›ë¥¼ ë“±ë¡í•˜ì—¬ ë§ˆì´ H.T.C ë©¤ë²„ì‹­ íšŒì›ì´ ë˜ì‹  í›„,<br>
+                ì²« êµ¬ë§¤ë¥¼ í•˜ì‹œë©´ ë¬´ë£Œ ìŒë£Œ ì¿ í°ì„ ë“œë¦½ë‹ˆë‹¤!
               </p>
-            <a href="" class="btn type2">H.T.C - ÁÖ¹®ÇÏ±â</a>
+            <a href="" class="btn type2">H.T.C - ì£¼ë¬¸í•˜ê¸°</a>
           </div>
         </div>
       </section>
@@ -135,11 +114,11 @@
         <div>
           <div class="img1">
             <img src="images/main/2_logo.PNG" alt="CARRT the MERRY">
-            <a href="">ÀÚ¼¼È÷ º¸±â</a>
+            <a href="">ìžì„¸ížˆ ë³´ê¸°</a>
           </div>
-            <div class="img2"><img src="images/main/2_coffe1.PNG" alt="ÅäÇÇ ³Ó ¶ó¶¼"></div>
-            <div class="img3"><img src="images/main/2_coffe2.PNG" alt="Ä³¸ð¸¶ÀÏ ¸±·º¼­"></div>
-            <div class="img4"><img src="images/main/2_coffe3.PNG" alt="´ÙÅ© ÃÊÄÝ¸´"></div>
+            <div class="img2"><img src="images/main/2_coffe1.PNG" alt="í† í”¼ ë„› ë¼ë–¼"></div>
+            <div class="img3"><img src="images/main/2_coffe2.PNG" alt="ìºëª¨ë§ˆì¼ ë¦´ë ‰ì„œ"></div>
+            <div class="img4"><img src="images/main/2_coffe3.PNG" alt="ë‹¤í¬ ì´ˆì½œë¦¿"></div>
         </div>
       </section>
 
@@ -147,7 +126,7 @@
         <div>
           <div class="barista_img"><img src="images/main/barist.PNG"></div>
           <div class="barista_left_img"><img src="images/main/barist_left.PNG"></div>
-          <div class="barista_btn"><a href="">M E M B E R. S T O R Y</a></div>
+          <div class="barista_btn"><a href="Member.jsp">M E M B E R. S T O R Y</a></div>
         </div>
       </section>
 
@@ -155,49 +134,20 @@
           <div>
             <div>
               <p>
-                <span class="find_top_t">H.T.C<strong>°¡±îÀÌ¿¡¼­ °æÇè</strong>ÇØº¸¼¼¿ä.</span><br>
-                <span class="find_top_t2">°í°´´Ô°ú °¡Àå °¡±îÀÌ ÀÖ´Â ¸ÅÀåÀ» Ã£¾Æº¸¼¼¿ä!</span><br><br>
-                Â÷º°È­µÈ Ä¿ÇÇ °æÇèÀ» ´©¸± ¼ö ÀÖ´Â <strong>¸®Àúºê ¸ÅÀå</strong><br>
-                ´Ù¾çÇÑ ¹æ¹ýÀ¸·Î Æí¸®ÇÏ°Ô Áñ±æ ¼ö ÀÖ´Â <strong>TimeOut ½Ã½ºÅÛ ¸ÅÀå</strong><br>
-                ÇÔ²²ÇØ¼­ ´õ µû¶æÇÒ ¼ö ÀÖ´Â Áö¿ª»çÈ¸ ¼ÒÅë °ø°£ <strong>Ä¿¹Â´ÏÆ¼ ¸ÅÀå</strong><br>
-                <a href="" class="find_btn">¸ÅÀå ¼Ò°³</a>
+                <span class="find_top_t">H.T.C<strong>ê°€ê¹Œì´ì—ì„œ ê²½í—˜</strong>í•´ë³´ì„¸ìš”.</span><br>
+                <span class="find_top_t2">ê³ ê°ë‹˜ê³¼ ê°€ìž¥ ê°€ê¹Œì´ ìžˆëŠ” ë§¤ìž¥ì„ ì°¾ì•„ë³´ì„¸ìš”!</span><br><br>
+                ì°¨ë³„í™”ëœ ì»¤í”¼ ê²½í—˜ì„ ëˆ„ë¦´ ìˆ˜ ìžˆëŠ” <strong>ë¦¬ì €ë¸Œ ë§¤ìž¥</strong><br>
+                ë‹¤ì–‘í•œ ë°©ë²•ìœ¼ë¡œ íŽ¸ë¦¬í•˜ê²Œ ì¦ê¸¸ ìˆ˜ ìžˆëŠ” <strong>TimeOut ì‹œìŠ¤í…œ ë§¤ìž¥</strong><br>
+                í•¨ê»˜í•´ì„œ ë” ë”°ëœ»í•  ìˆ˜ ìžˆëŠ” ì§€ì—­ì‚¬íšŒ ì†Œí†µ ê³µê°„ <strong>ì»¤ë®¤ë‹ˆí‹° ë§¤ìž¥</strong><br>
+                <a href="" class="find_btn">ë§¤ìž¥ ì†Œê°œ</a>
+
               </p>
             </div>
           </div>
       </section>
     </main>
 
-    <footer>
-      <div class="top">
-        <div class="clear">
-          <ul>
-            <li><a href="#a">°í°´»ó´ã</a></li>
-            <li><a href="#a">°³ÀÎÁ¤º¸Ã³¸®¹æÄ§</a></li>
-            <li><a href="#a">±â¾÷Áö¹è±¸Á¶</a></li>
-            <li><a href="#a">À±¸®°æ¿µ</a></li>
-            <li><a href="#a">Hoseo University</a></li>
-            <li><a href="#a">H.T.C Coffee</a></li>
-          </ul>
-          <div>
-            <p>°í°´»ó´ã<strong>041-532-4752</strong></p>
-            <select>
-              <option>FAMILY SITE</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="btm">
-        <img src="./images/main/footer_logo.PNG" alt="È£¼­´ë ·Î°í">
-        <p>HOSEO TIMEOUT CAFE</p>
-        <ul>
-          <li> ÃæÃ»³²µµ ¾Æ»ê½Ã ¹è¹æÀ¾ È£¼­·Î 79¹ø±æ 20 (31499) °­¼®±Ô ±³À°°ü ÁöÇÏ 1Ãþ</li>
-          <li>Tel. 041-532-4752</li>
-          <li>°³ÀÎÁ¤º¸Ãë±Þ°ü¸®ÀÚ À¥º¥Á®½º</li>
-          <li>E-mail uitlab421@vision.hoseo.edu</li>
-        </ul>
-        <address>Copyright 2020 HOSEO TIMEOUT CAFE All rights reserved.</address>
+	<jsp:include page="footer.jsp"></jsp:include>
 
-      </div>
-    </footer>
   </body>
 </html>

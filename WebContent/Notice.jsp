@@ -4,14 +4,17 @@
 <%@page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="faqdb" class="com.webprogramming.project.DatabaseManager"/>
+<jsp:useBean id="noticeDAO" class="com.webprogramming.project.NoticeDAO"/>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
 <%
-	DatabaseManager dm = new DatabaseManager();
-	String notice = dm.LoadNotice();
-	session.setAttribute("userId", "rlaemrghl12");
+	String pages = "1";
+	if(request.getParameter("pages")!=null){
+		pages = request.getParameter("pages");
+	}
+	JSONArray ja = noticeDAO.SelectNotice(pages);
+	int Pagecount = noticeDAO.getCount();
 %>
 <!DOCTYPE html>
 <html>
@@ -48,6 +51,34 @@
 	#noticeTable #td-2{
 		text-align: left;
 	}
+	#noticeTable tbody tr:hover{
+		background-color:lightgray;
+	}
+	#pagingForm{ 
+		text-align : center;
+		margin-top : 20px;
+	}
+	.pagination {
+	  display: inline-block;
+	  text-align:center
+	}
+	.pagination a {
+	  color: black;
+	  float: left;
+	  padding: 8px 16px;
+	  text-decoration: none;
+	}
+	
+	.pagination a.active {
+	  background-color: #4CAF50;
+	  color: white;
+	  border-radius: 5px;
+	}
+	
+	.pagination a:hover:not(.active) {
+	  background-color: #ddd;
+	  border-radius: 5px;
+	}
 </style>
 </head>
 <body>
@@ -67,18 +98,16 @@
 				<h1 id="subtitle">공지사항</h1>
 			</div>
 			<table id="noticeTable">
-				<tbody>
+				<thead>
 					<tr>
 						<th class="cel-1">No.</th>
 						<th class="cel-2">제목</th>
 						<th class="cel-3">작성일</th>
 						<th class="cel-4">조회수</th>
 					</tr>
+				</thead>
+				<tbody>
 					<%
-						JSONParser parser = new JSONParser();
-						Object o = parser.parse(notice);
-						JSONArray ja = (JSONArray)o;
-						
 						for(int i = 0; i < ja.size(); i++){
 							JSONObject element = (JSONObject)ja.get(i);
 					%>
@@ -93,6 +122,19 @@
 					%>
 				</tbody>
 			</table>
+			<div id = "pagingForm">
+				<div id="page" class = "pagination">
+					 <a href="Notice.jsp?pages=1">&laquo;</a>
+					<%
+						for(int j=0;j<Pagecount+1;j++){
+					%>
+						<a href="Notice.jsp?pages=<%out.print(j+1);%>"><%out.print(j+1);%></a>
+					<%
+						}
+					%>
+					<a href="Notice.jsp?pages=<%=Pagecount+1 %>">&raquo;</a>
+				</div>
+			</div>
 		</div>
 	</section>
 </body>

@@ -1,7 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="org.json.simple.JSONObject"%>
+<jsp:useBean id="userinfo" class="com.webprogramming.project.UserInfoDO"/>
+<jsp:useBean id="userinfoDAO" class="com.webprogramming.project.UserInfoDAO"/>
+<jsp:setProperty name="userinfo" property="userName"/>
+<jsp:setProperty name="userinfo" property="userEmail"/>
+<jsp:setProperty name="userinfo" property="userPhone"/>
+<jsp:setProperty name="userinfo" property="rank"/>
 <%
 	request.setCharacterEncoding("UTF-8");
+	userinfo.setUserId((String)session.getAttribute("userId"));
+	JSONObject element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
+%>
+<%
+	if((userinfo.getUserEmail()!= null) && (userinfo.getUserPhone() != null)){
+		if(userinfoDAO.UpdateUserInfo(userinfo, userinfo.getUserId()) == 1){
+			out.print("<script>alert('업데이트 성공!');</script>");
+		}else{
+			out.print("<script>alert('업데이트 실패!');</script>");
+		}
+	}
 %>
 <!DOCTYPE html>
 <html>
@@ -12,6 +30,11 @@
 <style>
 	.contents{
 		margin-top: 150px;
+	}
+	#formborder{
+		border: 1px solid #dadada;
+		border-radius: 20px;
+		padding : 50px 100px 50px 100px;
 	}
 	#userForm h1{
 		text-align: center;
@@ -49,29 +72,82 @@
 			</div>
 		</div>
 		<div class="contents">
-			<form id = "userForm">
-				<h1>회원정보 수정</h1>
-				<table id = "userFormTable">
-					<tr>
-						<td class="title">이름</td>
-						<td class="content"><input type="text" value="김득회" disabled="disabled"></td>
-					</tr>
-					<tr>
-						<td class="title">이메일</td>
-						<td class="content"><input type="email" value="dh97k@naver.com"></td>
-					</tr>
-					<tr>
-						<td class="title">휴대폰</td>
-						<td class="content"><input type="tel" value="01043042134"></td>
-					</tr>
-					<tr>
-						<td class="title">회원 등급</td>
-						<td class="content"><input type="text" value="gold" disabled="disabled"></td>
-					</tr>
-				</table>
-			</form>
+			<div id="formborder">
+				<form id = "userForm" method="POST">
+					<h1>회원정보 수정</h1>
+					<table id = "userFormTable">
+						<tr>
+							<td class="title">이름</td>
+							<td class="content"><input id="userName" type="text" name = "userName" readonly="readonly"></td>
+						</tr>
+						<tr>
+							<td class="title">이메일</td>
+							<td class="content"><input id="userEmail" type="email" name = "userEmail" ></td>
+						</tr>
+						<tr>
+							<td class="title">휴대폰</td>
+							<td class="content"><input id="userPhone" type="tel" name = "userPhone"></td>
+						</tr>
+						<tr>
+							<td class="title">회원 등급</td>
+							<td class="content"><input id ="rank" type="text" name = "rank" readonly="readonly"></td>
+						</tr>
+						<tr>
+						
+						</tr>
+					</table>
+					<div id = "enroll">
+						<input id = "reset" type="reset" value="취소">
+						<input id = "submit" type="submit" value="등록">
+					</div>
+				</form>
 			
+				
+			</div>
 		</div>
 	</section>
 </body>
 </html>
+<script>
+	document.getElementById("userName").value = "<%= element.get("userName")%>";
+	document.getElementById("userEmail").value = "<%= element.get("userEmail")%>";
+	document.getElementById("userPhone").value = "<%= element.get("userPhone")%>";
+	document.getElementById("rank").value = "<%= element.get("rank")%>";
+</script>
+<style>
+#enroll{
+		text-align:center;
+		margin-top: 20px;
+	}
+	#enroll input{
+		width: 250px;
+		height: 80px;
+		font-size: 20px;
+		border-radius: 5px;
+		font-family : '맑은 고딕', sans-serif;
+	}
+	
+	#reset{
+		background-color: #572a31;
+		border-color: #572a31;
+		color: white;
+		font-weight: bold;
+		margin-right: 10px; 
+		cursor:pointer;
+	}
+	#reset:hover{
+		background-color: #3a181d;
+	}
+	
+	#submit{
+		background-color: #002f6c;
+		border-color: #002f6c;
+		color: white;
+		font-weight: bold;
+		margin-left: 10px;
+		cursor:pointer;
+	}
+	#submit:hover{
+		background-color: #002049;
+	}
+ </style>

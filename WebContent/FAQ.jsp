@@ -4,13 +4,12 @@
 <%@page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="faqdb" class="com.webprogramming.project.DatabaseManager"/>
+<jsp:useBean id="FaqDAO" class="com.webprogramming.project.FaqDAO"/>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
 <%
-	DatabaseManager dm = new DatabaseManager();
-	String fqa = dm.LoadFAQ();
+	JSONArray ja = FaqDAO.LoadFAQ();
 %>
 <!DOCTYPE html>
 <html>
@@ -73,10 +72,6 @@
 					<h2>자주하는 질문 [FAQ]</h2>
 				</div>
 				<%
-					JSONParser parser = new JSONParser();
-					Object o = parser.parse(fqa);
-					JSONArray ja = (JSONArray)o;
-					
 					for(int i = 0; i < ja.size(); i++){
 						JSONObject element = (JSONObject)ja.get(i);
 				%>

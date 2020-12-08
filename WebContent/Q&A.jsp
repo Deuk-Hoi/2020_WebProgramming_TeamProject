@@ -1,22 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="org.json.simple.parser.JSONParser"%>
 <%@page import="org.json.simple.JSONObject"%>
-<%@page import="org.json.simple.JSONArray"%>
 <%@page import="com.webprogramming.project.DatabaseManager"%>
-<jsp:useBean id="userInfo" class="com.webprogramming.project.DB_DTO"/>
-<jsp:useBean id="uploadQnA" class = "com.webprogramming.project.QnAManager"/>
-<jsp:setProperty name="uploadQnA" property="*"/>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
+<jsp:useBean id="userinfo" class="com.webprogramming.project.UserInfoDO"/>
+<jsp:useBean id="userinfoDAO" class="com.webprogramming.project.UserInfoDAO"/>
+<jsp:useBean id="setQnA" class = "com.webprogramming.project.QnADO"/>
+<jsp:useBean id="InsertQnA" class = "com.webprogramming.project.QnaDAO"/>
+<jsp:setProperty name="setQnA" property="*"/>
 <%
-	userInfo.setUserId((String)session.getAttribute("userId"));
-	DatabaseManager dm = new DatabaseManager();
-	String userinfo = dm.searchUserInfo(userInfo);
-	JSONParser parser = new JSONParser();
-	JSONArray ja = (JSONArray)parser.parse(userinfo);
-	JSONObject element = (JSONObject)ja.get(0);
+	userinfo.setUserId((String)session.getAttribute("userId"));
+	JSONObject element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
+%>
+<%
+	if((setQnA.getTitle() != null) && (setQnA.getContents() != null)){
+		if(InsertQnA.InsertQna(setQnA, userinfo.getUserId()) == 1){
+			out.print("<script>alert('소중한 문의 감사합니다!');</script>");
+		}else{
+			out.print("<script>alert('문의 실패!');</script>");
+		}
+	}
 %>
 <!DOCTYPE html>
 <html>
@@ -192,7 +197,7 @@
 				</p>				
 			</div>
 			<div id = "qna_form">
-				<form action="UploadQ&A.jsp" method="POST" onsubmit="return formCheck()">
+				<form accept-charset="UTF-8" method="POST" onsubmit="return formCheck()">
 					<div id ="term_check" class="border_design">
 						<h3>개인정보 수집동의</h3>
 						<div id = "terms">
@@ -260,6 +265,7 @@
 		</div>
 	</section>
 </body>
+
 </html>
 <script>
 	
