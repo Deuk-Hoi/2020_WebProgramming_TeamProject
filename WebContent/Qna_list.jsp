@@ -1,10 +1,9 @@
 <%@page import="org.json.simple.parser.JSONParser"%>
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.JSONArray"%>
-<%@page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="noticeDAO" class="com.webprogramming.project.NoticeDAO"/>
+<jsp:useBean id="QnaDAO" class="com.webprogramming.project.QnaDAO"/>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
@@ -13,54 +12,53 @@
 	if(request.getParameter("pages")!=null){
 		pages = request.getParameter("pages");
 	}
-	JSONArray ja = noticeDAO.SelectNotice(pages);
-	int Pagecount = noticeDAO.getCount();
+	JSONArray ja = QnaDAO.SelectQna(pages);
+	int Pagecount = QnaDAO.getCount();
 %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지사항</title>
-<link rel="stylesheet" type="text/css" href="styles/Notice.css">
+<title>Q & A</title>
+<link rel="stylesheet" type="text/css" href="styles/Supports.css">
 <style>
-	#noticeTable{
+	#qnaTable{
 		width: 100%;
 		text-align: center;
 		border-top: 2px solid;
 		border-collapse: collapse;
 	}
-	#noticeTable td{
+	#qnaTable td{
 		border-top: 1px solid #d9d9d9;
 		border-bottom: 1px solid #d9d9d9;
 	}
-	#noticeTable th, td{
+	#qnaTable th, td{
 		padding: 30px;
 	}
-	#noticeTable .cel-1, .cel-4{
+	#qnaTable .cel-1, .cel-4{
 		width: 10%;
 	}
-	#noticeTable .cel-3{
-		width: 15%;
+	#qnaTable .cel-3{
+		width: 25%;
 	}
-	#noticeTable .cel-2{
-		width: 65%;
+	#qnaTable .cel-2{
+		width: 55%;
 	}
-	#noticeTable #td-2{
+	#qnaTable #td-2{
 		cursor: pointer;
 	}
-	#noticeTable #td-2{
+	#qnaTable #td-2{
 		text-align: left;
 	}
-	#noticeTable tbody tr:hover{
+	#qnaTable tbody tr:hover{
 		background-color:lightgray;
 	}
-	#pagingForm{ 
-		text-align : center;
-		margin-top : 20px;
+	#pagingForm{
+		text-align: center;
+		margin : 20px;
 	}
 	.pagination {
 	  display: inline-block;
-	  text-align:center
 	}
 	.pagination a {
 	  color: black;
@@ -82,28 +80,28 @@
 </style>
 </head>
 <body>
-	<section id="noticeSection">
+	<section id="QnaSection">
 		<div id="pageImg">
 			<div id = "pageImgTxt" align="center">
-				<p class="page_title">공지사항</p>
+				<p class="page_title">고객의 소리</p>
 				<hr width="50px">
 				<P class="page_letter">H.T.C 카페는 고객님들에게 최상의 커피를<br>제공하기 위해 노력 하겠습니다.</P>
 			</div>
 		</div>
 		<div class="contents">
 			<div id="pageLocation">
-				<p>Home > 카페 소식 > 공지사항</p>
+				<p>Home > 고객센터 > 묻고 답하기(관리자) </p>
 			</div>
 			<div>
-				<h1 id="subtitle">공지사항</h1>
+				<h1 id="subtitle">Q & A</h1>
 			</div>
-			<table id="noticeTable">
+			<table id="qnaTable">
 				<thead>
 					<tr>
 						<th class="cel-1">No.</th>
 						<th class="cel-2">제목</th>
 						<th class="cel-3">작성일</th>
-						<th class="cel-4">조회수</th>
+						<th class="cel-4">작성자</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -111,11 +109,11 @@
 						for(int i = 0; i < ja.size(); i++){
 							JSONObject element = (JSONObject)ja.get(i);
 					%>
-						<tr id="nr_<%= (String)element.get("nid") %>" class = "notice_row " onclick=" location.href='notice_detail.jsp?num=<%= (String)element.get("nid") %>'">
-							<td id = "noticeNum" class="cel-1 "><%=(String)element.get("nid")%></td>
+						<tr id="nr_<%= (String)element.get("qid") %>" class = "notice_row " onclick=" location.href='notice_detail.jsp?num=<%= (String)element.get("qid") %>'">
+							<td id = "noticeNum" class="cel-1 "><%=(String)element.get("qid")%></td>
 							<td id = "td-2" class="cel-2"><%=(String)element.get("title")%></td>
 							<td class="cel-3"><%=(String)element.get("date")%></td>
-							<td class="cel-4"><%=(String)element.get("views")%></td>
+							<td class="cel-4"><%=(String)element.get("name")%></td>
 						</tr>
 					<%
 						}
@@ -124,15 +122,15 @@
 			</table>
 			<div id = "pagingForm">
 				<div id="page" class = "pagination">
-					 <a href="Notice.jsp?pages=1">&laquo;</a>
+					 <a href="Qna_list.jsp?pages=1">&laquo;</a>
 					<%
 						for(int j=0;j<Pagecount+1;j++){
 					%>
-						<a href="Notice.jsp?pages=<%out.print(j+1);%>"><%out.print(j+1);%></a>
+						<a href="Qna_list.jsp?pages=<%out.print(j+1);%>"><%out.print(j+1);%></a>
 					<%
 						}
 					%>
-					<a href="Notice.jsp?pages=<%=Pagecount+1 %>">&raquo;</a>
+					<a href="Qna_list.jsp?pages=<%=Pagecount+1 %>">&raquo;</a>
 				</div>
 			</div>
 		</div>
