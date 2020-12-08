@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+html { font-size : 20px;}
+body { font-size : 1rem;}
+
+.companytitle {height: 6rem; margin-left: 20%;}
+.companytitle > .clear > .tit > h1{ color:#383f43;  font-size: 26px;}
+.companytitle > .clear > .tit > h1 > strong{ color:blue; font-size: 26px; font-style: bold;}
+.companytitle > .clear > .tit > p{ color:#70767a;  font-size: 20px;}
+
+/* 소개 */
+.companystart {position: relative; width: 100%;height: 460px; background:url('../../images/main/company.PNG') no-repeat center top;}
+.companystart > div > p{text-align: center; padding-top: 7rem; font-size: 0.9rem; color:black;}
+.companystart > div .member_title{font-size:2.4rem; color:#464646;}
+.companyindex { position: relative;}
+.companyindex > div > p{ text-align:right; font-size:0.6rem; margin : 1rem 18rem 0 0;}
+
+/* 회사 소개 1*/
+.companyarticle {position: relative; height: 450px;  background:#fff;}
+.companyarticle > div div{ position: absolute;}
+.companyarticle > div div.img1{ left : 21%; top: 0.7rem;z-index: 5;}
+.companyarticle > div > p{text-align: center; padding-top: 4rem; font-size: 0.9rem;}
+.companyarticle > div .member_title{font-size:1.4rem; color: black;}
+.companyarticle > div div.info {position: absolute;   height: 17rem; left:47%; top: 6.5rem;}
+.companyarticle > div div.info span { font-size:1rem; color:#202023; line-height:100%;}
+.companyarticle > div div.info p { padding:.7rem 0 0 0; font-size:0.65rem; color:#464646; line-height:2rem;}
+
+/* 회사 소개 2 */
+.companyarticle2 {position: relative; height: 450px;  background:#fff;}
+.companyarticle2 > div div{ position: absolute;}
+.companyarticle2 > div div.img1{ left : 53%; top: 0.7rem;z-index: 5;}
+.companyarticle2 > div > p{text-align: center; padding-top: 4rem; font-size: 0.9rem;}
+.companyarticle2 > div .member_title{font-size:1.4rem; color: black;}
+.companyarticle2 > div div.info {position: absolute;  height: 17rem; left:21%; top: 6.5rem;}
+.companyarticle2 > div div.info span { font-size:1rem; color:#202023; line-height:100%;}
+.companyarticle2 > div div.info p { padding:.7rem 0 0 0; font-size:0.65rem; color:#464646; line-height:2rem;}
+
+/* 회사 소개 */
+.companylogoin {position: relative;  height: 20rem; text-align: center; margin-top: 1rem;}
+.companylogoin div { position: relative; }
+.companylogoin > div div{ position: absolute;}
+
+.companylogoin > div div.log_img1{ left : 23%;}
+.companylogoin > div div.mind { top: 4rem; left : 20.5%;}
+.companylogoin > div div.mind strong { font-size: 18px; color:#333;}
+.companylogoin > div div.mind .field { font-size: 13px; color:#4c5459;}
+
+.companylogoin > div div.log_img2{ left : 43%;}
+.companylogoin > div div.love { top: 4rem; left : 41.7%;}
+.companylogoin > div div.love strong { font-size: 18px; color:#333; }
+.companylogoin > div div.love .field { font-size: 13px; color:#4c5459;}
+
+.companylogoin > div div.log_img3{ left : 62.7%;}
+.companylogoin > div div.lock { top: 4rem; left : 61%;}
+.companylogoin > div div.lock strong { font-size: 18px; color:#333;}
+.companylogoin > div div.lock .field { font-size: 13px; color:#4c5459;}

@@ -25,7 +25,7 @@
                     <span class = "member_title">H.T.C 멤버스</span><br><br>
                     H.T.C 커피의 특별한 멤버십 서비스를 소개합니다.<br>
                     스탬프 적립, FREE 쿠폰, 이벤트 혜택 등 지금 H.T.C 멤버스에서 만나보세요<br>
-                    <a href="Mypage.jsp">나의 멤버십 보기</a>
+                    <a href="MyPage.jsp">나의 멤버십 보기</a>
                 </p>
             </div>
         </section>

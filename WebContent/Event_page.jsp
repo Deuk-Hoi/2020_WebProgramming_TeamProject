@@ -3,6 +3,7 @@
 <%@ page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page import="com.webprogramming.project.Event_DTO"%>
 <%@ page import="java.util.ArrayList" %>
+
 <!DOCTYPE html>
 <html>
 <%
