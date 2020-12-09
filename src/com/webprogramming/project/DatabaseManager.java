@@ -9,6 +9,7 @@ import java.util.Map.Entry;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import java.security.MessageDigest;
 
 public class DatabaseManager {
 	
@@ -134,13 +135,15 @@ public class DatabaseManager {
 			pstmt = conn.prepareStatement("INSERT INTO Userinfo(userName,userId,userPw,userEmail,userPhone,rank,couponNum) VALUES (?,?,?,?,?,'bronze',0)");
 			pstmt.setString(1, db_dto.getUserName());
 			pstmt.setString(2, db_dto.getUserId());
-			pstmt.setString(3, db_dto.getUserPw());
+			String pw_sha = DatabaseManager.encrypt(db_dto.getUserPw());
+			pstmt.setString(3, pw_sha);
 			pstmt.setString(4, db_dto.getUserEmail());
 			pstmt.setString(5, db_dto.getUserPhone());
 			PreparedStatement pstmt_2 = conn.prepareStatement("SELECT userId FROM Userinfo WHERE userId=?");
 			pstmt_2.setString(1, db_dto.getUserId());
 			rs = pstmt_2.executeQuery();
-			if(db_dto.getCheckPw().equals(db_dto.getUserPw())) {
+			String pw_sha_2 = DatabaseManager.encrypt(db_dto.getCheckPw());
+			if(pw_sha_2.equals(pw_sha)) {
 				if(rs.next()) {
 					return -3;
 				}else {
@@ -153,7 +156,30 @@ public class DatabaseManager {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return -1;//db�삤瑜�
+		return -1;
+	}
+	public static String encrypt(String planText) {
+		try {
+			MessageDigest md = MessageDigest.getInstance("SHA-256");
+			md.update(planText.getBytes());
+			byte byteData[] = md.digest();
+			StringBuffer sb = new StringBuffer();
+			for (int i = 0; i < byteData.length; i++) {
+				sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+			}
+			StringBuffer hexString = new StringBuffer();
+			for (int i = 0; i < byteData.length; i++) {
+				String hex = Integer.toHexString(0xff & byteData[i]);
+				if (hex.length() == 1) {
+					hexString.append('0');
+				}
+				hexString.append(hex);
+			}
+			return hexString.toString();
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException();
+		}
 	}
 	public String searchId(DB_DTO db_dto) {
 		try {
@@ -186,14 +212,14 @@ public class DatabaseManager {
 			pstmt.setString(1, db_dto.getUserId());
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
-				return rs.getString(1); //�꽦怨�
+				return rs.getString(1); 
 			}else {
-				return "-1"; //�뾾�뒗 Id
+				return "-1";
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "-2";//db�삤瑜�
+		return "-2";
 	}
 	public ArrayList<Event_DTO> getList(String pageNum){
 		ArrayList<Event_DTO> list = new ArrayList<Event_DTO>();
@@ -261,6 +287,23 @@ public class DatabaseManager {
 		}
 		return list;
 	}
+	public int IdCheck(String id) {
+		int rst=0;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT * FROM Userinfo WHERE userId=?");
+			pstmt.setString(1, id);
+			rs=pstmt.executeQuery();
+			if(rs.next()) {
+				rst=1;
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rst;
+	}
+	
 	public int view_update(int eid) {
 		int view=1;
 		try {

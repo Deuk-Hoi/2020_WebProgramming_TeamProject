@@ -5,9 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인</title>
-<link rel="stylesheet" type="text/css" href="styles/login_page_css/login_main.css">
+<link rel="stylesheet" type="text/css" href="styles/login_page_css/login_main.css?v=2">
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+<div class="main">
 	<form method="post" action="login_main_Action.jsp">
 		<div class="entire" align="center">
 			<div class="box">
@@ -24,5 +26,7 @@
 			</div>
 		</div>
 	</form>
+</div>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

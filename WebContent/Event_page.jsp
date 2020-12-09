@@ -25,14 +25,16 @@
 <head>
 <meta charset="UTF-8">
 <title>이벤트</title>
-<link rel="stylesheet" type="text/css" href="styles/Event_page.css?v=3">
+<link rel="stylesheet" type="text/css" href="styles/Event_page.css?v=4">
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+<div class="main" >
 	<div class="main_head" align="center">
 		<div class="main_font">
-			<p style="font-size:50px;">이벤트</p>
-			<hr>
-			<p>호서대를 선도하는<br><br> H.T.C에서 준비한 이벤트에 참여하세요.</p>
+			<p style="font-size:60px;color:#000000;">이벤트</p>
+			<hr style="margin:40px 0 40px 0;background-color:black">
+			<p style="font-size:19px;color:#000000;">호서대를 선도하는<br><br> H.T.C에서 준비한 이벤트에 참여하세요.</p>
 		</div>
 	</div>
 	<div class="main_body" align="center">
@@ -74,5 +76,7 @@
 				}
 			%>
 		</div>
+</div>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

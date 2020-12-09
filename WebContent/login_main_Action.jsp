@@ -47,9 +47,10 @@
 				session.setAttribute("userId",user.getUserId());
 				session.setAttribute("userPw",user.getUserPw());
 				script.println("alert('로그인에 성공하였습니다.')");
-				script.println("location.href='./login_main.jsp'");
+				script.println("location.href='./Main.jsp'");
 				script.println("</script>");
 				session.setAttribute("userId",user.getUserId());
+				session.setMaxInactiveInterval(-1);
 			}
 		}
 	%>
