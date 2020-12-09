@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,7 +13,16 @@
 	    <link rel="stylesheet" href="styles/css/header.css">
 	    <link rel="stylesheet" href="styles/css/index_tablet.css" media="all and (max-width:1120px)">
 	    <link rel="stylesheet" href="styles/css/index_moblie.css" media="all and (max-width:960px)">
- 	</head>
+	    <%
+		String id ="";		
+		id=(String)session.getAttribute("userId");
+		%>
+
+	    <script type="text/javascript">
+			function Logout(s){
+				location.href="Logout_Action.jsp";
+			}
+		</script>
 </head>
 <body>
 	<header>
@@ -32,12 +40,19 @@
             </ul>
         </nav>
           <ul class="spot">
+          <%if(id==null||id.equals("")){%>
             <li><a href="login_main.jsp"><i class="xi-user"></i><span>  Sign In</span></a></li>
             <li><a href="sign_up.jsp"><i class="xi-user-plus-o"></i>  Sign Up</a></li>
             <li><a href="#a"><i class="xi-map-o"></i><span>  Find a Store</span></a></li>
+            <%}else{%>
+            <li><a><span><%out.print(id);%> 님 환영합니다.</span></a></li>
+            <li><a><span><input type="button" value="Log out" onclick="Logout()" style="background-color:rgba( 255, 255, 255, 0 );font-size:13px;"></span></a></li>
+            <%} %>
           </ul>
           <a href="#a" class="total"><i class="xi-bars"></i><span>전체메뉴보기</span></a>
       </div>
     </header>
+    
+
 </body>
 </html>

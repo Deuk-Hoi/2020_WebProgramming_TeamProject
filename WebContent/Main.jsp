@@ -28,7 +28,7 @@
           
           <ul class="slidelist">
   
-            <!-- ìŠ¬ë¼ì´ë“œ ì˜ì—­ -->
+            <!-- ½½¶óÀÌµå ¿µ¿ª -->
             <li class="slideitem">
               <a>
                 <div class="textbox">
@@ -65,7 +65,7 @@
               </a>
             </li class="slideitem">
       
-            <!-- ì¢Œ,ìš° ìŠ¬ë¼ì´ë“œ ë²„íŠ¼ -->
+            <!-- ÁÂ,¿ì ½½¶óÀÌµå ¹öÆ° -->
             <div class="slide-control">
               <div>
                 <label for="slide04" class="left"></label>
@@ -90,22 +90,22 @@
 
       <section class="rewards">
         <div>
-          <div class="rewardimg1"><img src="images/main/reward_logo.png" alt="ê°€ê²Œ"></div>
+          <div class="rewardimg1"><img src="images/main/reward_logo.png" alt="°¡°Ô"></div>
           <div class="info">
-            <span>H.T.C ë§Œì˜ <strong>íŠ¹ë³„í•œ í˜œíƒ</strong>, MY H.T.C <strong>ë©¤ë²„ì‹­</strong></span>
+            <span>H.T.C ¸¸ÀÇ <strong>Æ¯º°ÇÑ ÇýÅÃ</strong>, MY H.T.C <strong>¸â¹ö½Ê</strong></span>
             <p>
-                <strong>H.T.C íšŒì›ì´ì„¸ìš”?</strong> ë¡œê·¸ì¸ì„ í†µí•´ ë‚˜ë§Œì˜ ë©¤ë²„ì‹­ë¥¼ í™•ì¸í•´ë³´ì„¸ìš”.<br>
-                <strong>H.T.C íšŒì›ì´ ì•„ë‹ˆì„¸ìš”?</strong> ê°€ìž…ì„ í†µí•´ ë©¤ë²„ì‹­ í˜œíƒì„ ì¦ê¸°ì„¸ìš”.<br>
+                <strong>H.T.C È¸¿øÀÌ¼¼¿ä?</strong> ·Î±×ÀÎÀ» ÅëÇØ ³ª¸¸ÀÇ ¸â¹ö½Ê¸¦ È®ÀÎÇØº¸¼¼¿ä.<br>
+                <strong>H.T.C È¸¿øÀÌ ¾Æ´Ï¼¼¿ä?</strong> °¡ÀÔÀ» ÅëÇØ ¸â¹ö½Ê ÇýÅÃÀ» Áñ±â¼¼¿ä.<br>
             </p>
-              <a href="sign_up.jsp" class="btn type1">íšŒì›ê°€ìž…</a>
-              <a href="login_main.jsp" class="btn">ë¡œê·¸ì¸</a>
+              <a href="sign_up.jsp" class="btn type1">È¸¿ø°¡ÀÔ</a>
+              <a href="login_main.jsp" class="btn">·Î±×ÀÎ</a>
               <p>
-                íšŒì› ê°€ìž… í›„, H.T.C í™ˆíŽ˜ì´ì§€ì—ì„œ<br>
-                <strong>"ORDER"ë¡œ ì£¼ë¬¸í•˜ì‹œê³ , íŽ¸ë¦¬í•˜ê²Œ êµ¬ë§¤ í•´ë³´ì„¸ìš”!</strong><br>
-                íšŒì›ë¥¼ ë“±ë¡í•˜ì—¬ ë§ˆì´ H.T.C ë©¤ë²„ì‹­ íšŒì›ì´ ë˜ì‹  í›„,<br>
-                ì²« êµ¬ë§¤ë¥¼ í•˜ì‹œë©´ ë¬´ë£Œ ìŒë£Œ ì¿ í°ì„ ë“œë¦½ë‹ˆë‹¤!
+                È¸¿ø °¡ÀÔ ÈÄ, H.T.C È¨ÆäÀÌÁö¿¡¼­<br>
+                <strong>"ORDER"·Î ÁÖ¹®ÇÏ½Ã°í, Æí¸®ÇÏ°Ô ±¸¸Å ÇØº¸¼¼¿ä!</strong><br>
+                È¸¿ø¸¦ µî·ÏÇÏ¿© ¸¶ÀÌ H.T.C ¸â¹ö½Ê È¸¿øÀÌ µÇ½Å ÈÄ,<br>
+                Ã¹ ±¸¸Å¸¦ ÇÏ½Ã¸é ¹«·á À½·á ÄíÆùÀ» µå¸³´Ï´Ù!
               </p>
-            <a href="" class="btn type2">H.T.C - ì£¼ë¬¸í•˜ê¸°</a>
+            <a href="" class="btn type2">H.T.C - ÁÖ¹®ÇÏ±â</a>
           </div>
         </div>
       </section>
@@ -114,11 +114,11 @@
         <div>
           <div class="img1">
             <img src="images/main/2_logo.PNG" alt="CARRT the MERRY">
-            <a href="">ìžì„¸ížˆ ë³´ê¸°</a>
+            <a href="">ÀÚ¼¼È÷ º¸±â</a>
           </div>
-            <div class="img2"><img src="images/main/2_coffe1.PNG" alt="í† í”¼ ë„› ë¼ë–¼"></div>
-            <div class="img3"><img src="images/main/2_coffe2.PNG" alt="ìºëª¨ë§ˆì¼ ë¦´ë ‰ì„œ"></div>
-            <div class="img4"><img src="images/main/2_coffe3.PNG" alt="ë‹¤í¬ ì´ˆì½œë¦¿"></div>
+            <div class="img2"><img src="images/main/2_coffe1.PNG" alt="ÅäÇÇ ³Ó ¶ó¶¼"></div>
+            <div class="img3"><img src="images/main/2_coffe2.PNG" alt="Ä³¸ð¸¶ÀÏ ¸±·º¼­"></div>
+            <div class="img4"><img src="images/main/2_coffe3.PNG" alt="´ÙÅ© ÃÊÄÝ¸´"></div>
         </div>
       </section>
 
@@ -134,13 +134,12 @@
           <div>
             <div>
               <p>
-                <span class="find_top_t">H.T.C<strong>ê°€ê¹Œì´ì—ì„œ ê²½í—˜</strong>í•´ë³´ì„¸ìš”.</span><br>
-                <span class="find_top_t2">ê³ ê°ë‹˜ê³¼ ê°€ìž¥ ê°€ê¹Œì´ ìžˆëŠ” ë§¤ìž¥ì„ ì°¾ì•„ë³´ì„¸ìš”!</span><br><br>
-                ì°¨ë³„í™”ëœ ì»¤í”¼ ê²½í—˜ì„ ëˆ„ë¦´ ìˆ˜ ìžˆëŠ” <strong>ë¦¬ì €ë¸Œ ë§¤ìž¥</strong><br>
-                ë‹¤ì–‘í•œ ë°©ë²•ìœ¼ë¡œ íŽ¸ë¦¬í•˜ê²Œ ì¦ê¸¸ ìˆ˜ ìžˆëŠ” <strong>TimeOut ì‹œìŠ¤í…œ ë§¤ìž¥</strong><br>
-                í•¨ê»˜í•´ì„œ ë” ë”°ëœ»í•  ìˆ˜ ìžˆëŠ” ì§€ì—­ì‚¬íšŒ ì†Œí†µ ê³µê°„ <strong>ì»¤ë®¤ë‹ˆí‹° ë§¤ìž¥</strong><br>
-                <a href="" class="find_btn">ë§¤ìž¥ ì†Œê°œ</a>
-
+                <span class="find_top_t">H.T.C<strong>°¡±îÀÌ¿¡¼­ °æÇè</strong>ÇØº¸¼¼¿ä.</span><br>
+                <span class="find_top_t2">°í°´´Ô°ú °¡Àå °¡±îÀÌ ÀÖ´Â ¸ÅÀåÀ» Ã£¾Æº¸¼¼¿ä!</span><br><br>
+                Â÷º°È­µÈ Ä¿ÇÇ °æÇèÀ» ´©¸± ¼ö ÀÖ´Â <strong>¸®Àúºê ¸ÅÀå</strong><br>
+                ´Ù¾çÇÑ ¹æ¹ýÀ¸·Î Æí¸®ÇÏ°Ô Áñ±æ ¼ö ÀÖ´Â <strong>TimeOut ½Ã½ºÅÛ ¸ÅÀå</strong><br>
+                ÇÔ²²ÇØ¼­ ´õ µû¶æÇÒ ¼ö ÀÖ´Â Áö¿ª»çÈ¸ ¼ÒÅë °ø°£ <strong>Ä¿¹Â´ÏÆ¼ ¸ÅÀå</strong><br>
+                <a href="Company.jsp" class="find_btn">¸ÅÀå ¼Ò°³</a>
               </p>
             </div>
           </div>

@@ -5,9 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>비밀번호 찾기</title>
-<link rel="stylesheet" type="text/css" href="styles/login_page_css/sign_up.css?ver=0">
+<link rel="stylesheet" type="text/css" href="styles/login_page_css/sign_up.css?ver=1">
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+<div class="main" style="padding:100px 0 250px 0;">
 	<form method="post" action="search_pw_Action.jsp">
 		<div class="entire" align="center">
 			<div class="box_search_id">
@@ -22,5 +24,7 @@
 			</div>
 		</div>
 	</form>
+</div>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

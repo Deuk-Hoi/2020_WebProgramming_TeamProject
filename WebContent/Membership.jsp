@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="styles/css/index_tablet.css" media="all and (max-width:1120px)">
     <link rel="stylesheet" href="styles/css/index_moblie.css" media="all and (max-width:960px)">
   </head>
-
   <body>
     <jsp:include page="header.jsp"></jsp:include>
 
