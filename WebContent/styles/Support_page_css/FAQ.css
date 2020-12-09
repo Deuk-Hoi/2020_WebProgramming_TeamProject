@@ -1,0 +1,33 @@
+.subtitle{
+		padding: 80px 0px 30px 0;
+		border-bottom: 1px solid #dadada;
+	}
+	.question, .answer{
+		padding: 30px;
+		border-bottom : 1px solid #dadada;
+		margin: 0px 0px;
+		
+	}
+	.question{
+		font-size: 18px;
+        font-weight: 800; 
+    }
+    .question>span{
+        color: darkblue;
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .question:hover{
+        border: 2px solid blueviolet;
+        color: blueviolet;
+    }
+    .answer{
+        display: none;
+        background-color: #F6F6F6;
+        font-size: 16px;
+        font-weight: 800;
+    }
+    .answer>span{
+        color:darkred;
+        font-size: 25px;
+    }

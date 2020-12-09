@@ -19,121 +19,74 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Q & A</title>
-<link rel="stylesheet" type="text/css" href="styles/Supports.css">
-<style>
-	#qnaTable{
-		width: 100%;
-		text-align: center;
-		border-top: 2px solid;
-		border-collapse: collapse;
-	}
-	#qnaTable td{
-		border-top: 1px solid #d9d9d9;
-		border-bottom: 1px solid #d9d9d9;
-	}
-	#qnaTable th, td{
-		padding: 30px;
-	}
-	#qnaTable .cel-1, .cel-4{
-		width: 10%;
-	}
-	#qnaTable .cel-3{
-		width: 25%;
-	}
-	#qnaTable .cel-2{
-		width: 55%;
-	}
-	#qnaTable #td-2{
-		cursor: pointer;
-	}
-	#qnaTable #td-2{
-		text-align: left;
-	}
-	#qnaTable tbody tr:hover{
-		background-color:lightgray;
-	}
-	#pagingForm{
-		text-align: center;
-		margin : 20px;
-	}
-	.pagination {
-	  display: inline-block;
-	}
-	.pagination a {
-	  color: black;
-	  float: left;
-	  padding: 8px 16px;
-	  text-decoration: none;
-	}
-	
-	.pagination a.active {
-	  background-color: #4CAF50;
-	  color: white;
-	  border-radius: 5px;
-	}
-	
-	.pagination a:hover:not(.active) {
-	  background-color: #ddd;
-	  border-radius: 5px;
-	}
-</style>
+<title>묻고 답하기 (관리자)</title>
+<link rel="stylesheet" type="text/css" href="styles/Support_page_css/Supports.css">
+<link rel="stylesheet" type="text/css" href="styles/Support_page_css/Qna_list.css">
 </head>
+
 <body>
-	<section id="QnaSection">
-		<div id="pageImg">
-			<div id = "pageImgTxt" align="center">
-				<p class="page_title">고객의 소리</p>
-				<hr width="50px">
-				<P class="page_letter">H.T.C 카페는 고객님들에게 최상의 커피를<br>제공하기 위해 노력 하겠습니다.</P>
-			</div>
-		</div>
-		<div class="contents">
-			<div id="pageLocation">
-				<p>Home > 고객센터 > 묻고 답하기(관리자) </p>
-			</div>
-			<div>
-				<h1 id="subtitle">Q & A</h1>
-			</div>
-			<table id="qnaTable">
-				<thead>
-					<tr>
-						<th class="cel-1">No.</th>
-						<th class="cel-2">제목</th>
-						<th class="cel-3">작성일</th>
-						<th class="cel-4">작성자</th>
-					</tr>
-				</thead>
-				<tbody>
-					<%
-						for(int i = 0; i < ja.size(); i++){
-							JSONObject element = (JSONObject)ja.get(i);
-					%>
-						<tr id="nr_<%= (String)element.get("qid") %>" class = "notice_row " onclick=" location.href='notice_detail.jsp?num=<%= (String)element.get("qid") %>'">
-							<td id = "noticeNum" class="cel-1 "><%=(String)element.get("qid")%></td>
-							<td id = "td-2" class="cel-2"><%=(String)element.get("title")%></td>
-							<td class="cel-3"><%=(String)element.get("date")%></td>
-							<td class="cel-4"><%=(String)element.get("name")%></td>
-						</tr>
-					<%
-						}
-					%>
-				</tbody>
-			</table>
-			<div id = "pagingForm">
-				<div id="page" class = "pagination">
-					 <a href="Qna_list.jsp?pages=1">&laquo;</a>
-					<%
-						for(int j=0;j<Pagecount+1;j++){
-					%>
-						<a href="Qna_list.jsp?pages=<%out.print(j+1);%>"><%out.print(j+1);%></a>
-					<%
-						}
-					%>
-					<a href="Qna_list.jsp?pages=<%=Pagecount+1 %>">&raquo;</a>
+	<header>
+		<jsp:include page="header.jsp"></jsp:include>
+	</header>
+	<main>
+		<section id="QnaSection">
+			<div id="pageImg">
+				<div id = "pageImgTxt" align="center">
+					<p class="page_title">묻고 답하기</p>
+					<hr width="50px">
+					<P class="page_letter">H.T.C 카페는 고객님들에게 최상의 서비스를<br>제공하기 위해 항상 노력 하겠습니다.</P>
 				</div>
 			</div>
-		</div>
-	</section>
+			<div class="contents">
+				<div id="pageLocation">
+					<p>Home > 고객센터 > 묻고 답하기(관리자) </p>
+				</div>
+				<div>
+					<h1 id="subtitle">Q & A</h1>
+				</div>
+				<table id="qnaTable">
+					<thead>
+						<tr>
+							<th class="cel-1">No.</th>
+							<th class="cel-2">제목</th>
+							<th class="cel-3">작성일</th>
+							<th class="cel-4">작성자</th>
+						</tr>
+					</thead>
+					<tbody>
+						<%
+							for(int i = 0; i < ja.size(); i++){
+								JSONObject element = (JSONObject)ja.get(i);
+						%>
+							<tr id="nr_<%= (String)element.get("qid") %>" class = "notice_row " onclick=" location.href='Qna_ans.jsp?num=<%= (String)element.get("qid") %>'">
+								<td id = "noticeNum" class="cel-1 "><%=(String)element.get("qid")%></td>
+								<td id = "td-2" class="cel-2"><%=(String)element.get("title")%></td>
+								<td class="cel-3"><%=(String)element.get("date")%></td>
+								<td class="cel-4"><%=(String)element.get("name")%></td>
+							</tr>
+						<%
+							}
+						%>
+					</tbody>
+				</table>
+				<div id = "pagingForm">
+					<div id="page" class = "pagination">
+						 <a href="Qna_list.jsp?pages=1">&laquo;</a>
+						<%
+							for(int j=0;j<Pagecount+1;j++){
+						%>
+							<a href="Qna_list.jsp?pages=<%out.print(j+1);%>"><%out.print(j+1);%></a>
+						<%
+							}
+						%>
+						<a href="Qna_list.jsp?pages=<%=Pagecount+1 %>">&raquo;</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<jsp:include page="footer.jsp"></jsp:include>
+	</footer>
 </body>
 </html>

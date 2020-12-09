@@ -9,7 +9,7 @@ public class QnADO {
 	private String time = null;
 	private String title = null;
 	private String contents = null;
-	
+	private String answer = null;
 	
 	public String getUserName() {
 		return userName;
@@ -52,5 +52,11 @@ public class QnADO {
 	}
 	public void setContents(String contents) {
 		this.contents = contents;
+	}
+	public String getAnswer() {
+		return answer;
+	}
+	public void setAnswer(String answer) {
+		this.answer = answer;
 	}	
 }

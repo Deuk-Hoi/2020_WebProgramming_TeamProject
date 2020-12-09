@@ -76,5 +76,41 @@ public class QnaDAO {
 		} 
 		return Pagecount;
 	}
+	
+	public JSONArray SelectQna_detail(String num){
+		DatabaseManager db = new DatabaseManager();		
+		sql  = "SELECT * FROM Qna WHERE qid = ?"; 
+		Jarray = new JSONArray();
+		HashMap<Integer, String> info = new HashMap<Integer, String>();
+		info.put(1, num);
+		rs = db.selectDB(sql, info);
+		
+		try {
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("qid", rs.getString("qid"));
+				obj.put("title", rs.getString("title"));
+				obj.put("date", rs.getString("date"));
+				obj.put("email", rs.getString("email"));
+				obj.put("contents", rs.getString("contents"));
+				Jarray.add(obj);
+			}
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		
+		return Jarray;
+	}
+	
+	public int UpdateAnswer(String num, String answer){
+		DatabaseManager db = new DatabaseManager();		
+		sql  = "UPDATE Qna SET answer = ? WHERE qid = ?"; 
+		HashMap<Integer, String> info = new HashMap<Integer, String>();
+		info.put(1, answer);
+		info.put(2, num);
+		
+		return db.InsertUpdateDB(sql, info);
+	}
 
 }
