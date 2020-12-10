@@ -93,7 +93,18 @@
 						<div class="qna_list">
 							<h2>나의 문의 현황</h2>
 						</div>
-						<table id = "qna_table">
+						<% 
+							if(myqna.size() == 0){
+						%>
+								<table id = "qna_table" style="display:none;">
+								<div>질문 한 내역이 없습니다.</div>
+						<%
+							}else{
+						%>
+								<table id = "qna_table">
+						<%
+							}
+						%>
 							<tr class="qna_row_width ans_title">
 								<td><strong>등록번호</strong></td>
 								<td><strong>제목</strong></td>
