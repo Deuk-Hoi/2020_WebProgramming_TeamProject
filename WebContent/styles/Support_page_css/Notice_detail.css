@@ -4,7 +4,7 @@ body{
 }
 	
 #pageImg{
-	background-image: url("../images/noticeImg/noticeImg.jpg");
+	background-image: url("../../images/noticeImg/noticeImg.jpg");
 	width: 100%;
 }
 	
@@ -28,9 +28,13 @@ body{
 
 .contents{
 	margin-top: 50px;
-	margin-left: 350px;
-	margin-right: 350px;
+	margin-left: 450px;
+	margin-right: 450px;
 	margin-bottom: 50px;
+	border: 1px solid #dadada;
+	padding : 30px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px gray;
 }
 
 #pageLocation > p{
@@ -45,6 +49,35 @@ body{
 	margin-top: 40px;
 	margin-bottom: 80px;
 }
+#noticeSection{
+		height: 100%;
+	}
+	#notice_form .notice_title_date>table{
+		width : 100%;
+		padding : 10px;
+		border-bottom: 2px solid #dadada;
+	}
+	#notice_form .notice_title_date>table td:nth-child(1){
+		width: 70%;
+	}
+	#notice_form .notice_title_date>table td:nth-child(2){
+		width: 30%;
+		text-align: right;
+	}
+	#notice_form .notice_contents>table{
+		margin-top: 20px;
+		text-align: center;
+	}
+	#notice_form .notice_contents>table tr:nth-child(1){
+		margin: 0px, 30px, 0px, 30px;
+	}
+	#notice_form .notice_contents>table tr:nth-child(2){
+		padding-top: 30px;
+	}
+	#notice_form .notice_contents>table tr:nth-child(2) td{
+		text-align: left;
+	}
+
 @media screen and (max-width:1910px) { 
 	.contents{
 		margin-top: 50px;

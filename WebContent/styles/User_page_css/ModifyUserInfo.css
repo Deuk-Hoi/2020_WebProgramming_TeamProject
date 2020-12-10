@@ -1,0 +1,132 @@
+body{
+	margin:0;
+	font-family : '¸¼Àº °íµñ', sans-serif;
+}
+
+#pageImg{
+	background-image: url("../../images/userInfoImg/mypageImg.jpg");
+	width: 100%;
+	height: 500px;
+}
+
+#pageImgTxt{
+	padding : 120px;
+}
+
+#pageImgTxt p{
+	color: white;
+}
+
+#pageImgTxt .page_letter:nth-of-type(2){
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#pageImgTxt .page_title{
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+#pageImgTxt.page_letter{
+	font-size: 17px;
+	line-height: 100px;
+}
+
+.contents{
+	margin-top: 200px;
+	margin-left: 400px;
+	margin-right: 400px;
+	margin-bottom: 50px;
+}
+
+#formborder{
+		border: 1px solid #dadada;
+		border-radius: 20px;
+		padding : 50px 100px 50px 100px;
+	}
+	#userForm h1{
+		text-align: center;
+	}
+	#userFormTable{
+		width: 100%;
+	}
+	#userFormTable .title{
+		width: 20%;
+		text-align: left;
+		font-weight: bold;
+	}
+	
+	#userFormTable .content{
+		width: 80%;
+		padding: 15px;
+	}
+	
+	#userFormTable .content > input{
+		width: 100%;
+		height: 50px;
+		font-weight: bold;
+		padding: 0px 10px 0 10px;
+	}
+	
+	#enroll{
+		text-align:center;
+		margin-top: 20px;
+	}
+	#enroll input{
+		width: 250px;
+		height: 80px;
+		font-size: 20px;
+		border-radius: 5px;
+		font-family : '¸¼Àº °íµñ', sans-serif;
+	}
+	
+	#reset{
+		background-color: #572a31;
+		border-color: #572a31;
+		color: white;
+		font-weight: bold;
+		margin-right: 10px; 
+		cursor:pointer;
+	}
+	#reset:hover{
+		background-color: #3a181d;
+	}
+	
+	#submit{
+		background-color: #002f6c;
+		border-color: #002f6c;
+		color: white;
+		font-weight: bold;
+		margin-left: 10px;
+		cursor:pointer;
+	}
+	#submit:hover{
+		background-color: #002049;
+	}
+@media screen and (max-width:1910px) { 
+	.contents{
+		margin-top: 50px;
+		margin-left: 300px;
+		margin-right: 300px;
+		margin-bottom: 50px;
+	}
+}
+	
+@media screen and (max-width:1440px) { 
+	.contents{
+		margin-top: 50px;
+		margin-left: 100px;
+		margin-right: 100px;
+		margin-bottom: 50px;
+	}
+}
+	
+@media screen and (max-width:1243px) { 
+	.contents{
+		margin-top: 50px;
+		margin-left: 50px;
+		margin-right: 50px;
+		margin-bottom: 50px;
+	}
+}

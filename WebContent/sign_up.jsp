@@ -1,13 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.webprogramming.project.DatabaseManager"%>
+<%@ page import="com.webprogramming.project.DB_DTO"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import= "java.io.PrintWriter"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
-<link rel="stylesheet" type="text/css" href="styles/login_page_css/sign_up.css?ver=6">
+<link rel="stylesheet" type="text/css" href="styles/login_page_css/sign_up.css?ver=9">
+<script type="text/JavaScript">
+	function IdCheck(){
+		var id = document.getElementById('overlap').value;
+		if (id.length<1 || id ==null){
+			alert("아이디를 입력하세요.");
+			return false;
+		}
+		var url = "sign_up_overlap_Action.jsp?id="+id;
+		window.open(url,"get","left=600,top=120,height=150,width=300");
+	}
+</script>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+<div class="main">
 	<form method="post" action="sign_up_Action.jsp">
 		<div class="entire" align="center">
 			<div class="box">
@@ -15,14 +32,14 @@
 					<p class="sign_up_ip">이름<font color="red">*</font></p>
 					<input class = "login_ip" type="text" name="userName" placeholder="Name">
 					<p class="sign_up_ip">아이디<font color="red">*</font></p>
-					<input class = "login_ip" type="text" name="userId" placeholder="중복 확인된 아이디를 입력하세요." style="width:60%;">
-					<input class="overlap" type="button" name="Id_overlap" value="중복 확인" onclick="window.open('sign_up_overlap_Action.jsp','중복 확인','width=500,height=300,location=no,status=no,scrollbars=no');">
+					<input id="overlap" class = "login_ip" type="text" name="userId" placeholder="아이디" style="width:60%;">
+					
+					<input class="overlap" type="button" name="Id_overlap" value="중복 확인" onclick="return IdCheck()">
+	
 					<p class="sign_up_ip">비밀번호<font color="red">*</font></p>
-					<input class = "login_ip" type="password" name="userPw" placeholder="PASSWORD">
-					
+					<input class = "login_ip" type="password" name="userPw" placeholder="PASSWORD">			
 					<p class="sign_up_ip">비밀번호 확인<font color="red">*</font></p>
-					<input class = "login_ip" type="password" name="checkPw" placeholder="PASSWORD_CHECK">
-					
+					<input class = "login_ip" type="password" name="checkPw" placeholder="PASSWORD_CHECK">					
 					<p class="sign_up_ip">이메일<font color="red">*</font></p>
 					<input class = "login_ip" type="email" name="userEmail" placeholder="e-mail">
 					<p class="sign_up_ip">전화번호('-'없이 입력)<font color="red">*</font></p>
@@ -36,5 +53,7 @@
 			</div>
 		</div>
 	</form>
+</div>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

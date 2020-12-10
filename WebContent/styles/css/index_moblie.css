@@ -1,14 +1,14 @@
-@charset "EUC-KR";
 @charset "utf-8";
 
 html { font-size: 16px;}
 body { font-size: 1rem;}
 
-/* Header �κ�*/
+header .mainheader {visibility: visible;}
+
 header > div .spot i { display:inline-block;font-size: 2.5rem;}
 header > div .total { display:inline-block;}
 header > div h1 { padding: .8125rem 0 .75rem .625rem;}
-header h1 img {width:2.8125rem;}
+header h1 img {width:7rem;}
 header > div nav {display: none;}
 header > div .spot { right:4.5rem; top:1.3rem;}
 header .total {display:inline-block; position: absolute; right: .75rem; top:0.7rem;; font-size: 2.5rem;}
@@ -19,6 +19,7 @@ header > div .spot li ~ li a:after{ display: none;}
 header > div .spot li:nth-child(2){display: none;}
 header .total span,
 header > div .spot li span { position: absolute; left:-40000%;}
+header > .mainheader {display: inline;}
 
 .visual > div div img{ width: 100%;}
 .visual > div div.img1 { min-width: 12rem; width: 40%; }
@@ -26,7 +27,7 @@ header > div .spot li span { position: absolute; left:-40000%;}
 .visual > div div.img3 { top: 22rem;min-width: 6rem; width: 18%; }
 .visual > div div.img4 { top: 21rem;min-width: 6rem; width: 18%; }
 
-/* ���� �Ұ� */
+/* 혜택 소개 */
 .membershiparticle > div div img{ width: 100%;}
 .membershiparticle > div div.img1{ display: none;}
 .membershiparticle > div > p{text-align: center; padding-top: 4rem; font-size: 0.9rem;}
@@ -38,20 +39,81 @@ header > div .spot li span { position: absolute; left:-40000%;}
 .membershipBenefits > div { position: relative; width:100%; max-width: 70rem; height: 100rem; margin: 0 auto;}
 .membershipBenefits > div div{ position: absolute;}
 .membershipBenefits > div div img{ width: 100%;}
-.membershipBenefits > div div.img1 { left : 12%; top: 0.5rem; width: 30%;}
-.membershipBenefits > div div.img2 { left : 59%; top: 1.22rem; width: 30%;}
-.membershipBenefits > div div.img3 { left : 12%; top: 15rem; width: 30%;}
-.membershipBenefits > div div.img4 { left : 59.5%; top: 14.2rem;width: 30%;}
-.membershipBenefits > div div.img5 { left : 12%; top: 30rem; width: 30%;}
-.membershipBenefits > div div.img6 { left : 59.5%; top: 29.3rem;width: 30%;}
+.membershipBenefits > div div.img1 { left : 12%; top: 0.5rem; width: 150px;}
+.membershipBenefits > div div.img2 { left : 59%; top: 1.22rem; width: 150px;}
+.membershipBenefits > div div.img3 { left : 12%; top: 15rem; width: 150px;}
+.membershipBenefits > div div.img4 { left : 59.5%; top: 14.2rem;width: 150px;}
+.membershipBenefits > div div.img5 { left : 12%; top: 30rem; width: 150px;}
+.membershipBenefits > div div.img6 { left : 59.5%; top: 29.3rem;width: 150px;}
 
 .membershipGrade > div div img { width: 100%;}
-.membershipGrade > div div.img1 { left : 8%; top: 12rem; width: 25%; z-index: 2;}
-.membershipGrade > div div.img2 { left : 28%; top: 12rem; width: 25%;z-index: 4;}
+.membershipGrade > div div.img1 { left : 8%; top: 12rem; width: 25%; z-index: 3;}
+.membershipGrade > div div.img2 { left : 28%; top: 12rem; width: 25%;z-index: 2;}
 .membershipGrade > div div.img3 { left : 48%; top: 12rem; width: 25%;z-index: 4;}
 .membershipGrade > div div.img4 { left : 70%; top: 11.8rem; width: 25%; z-index: 5;}
-/* ����ã�� */
-.find_store {position: relative; height: 32.3rem; background:url('../images/main/m_store_bk.PNG') no-repeat center top;}
+
+/* 멤버 소개 */
+.barista {position: relative;  height: 646px;}
+.barista div { position: relative; width:100%; max-width: 70rem; height: 35rem; }
+.barista > div div{ position: absolute;}
+.barista > div div.barista_img { top: 2rem; left : -100%;}
+.barista > div div.barista_img img{ display: none;}
+.barista > div div.barista_left_img { top: 10rem; left : 100%; width: 20%}
+.barista > div div.barista_left_img img{ transform:translateX(-27rem); transition: all 3s; width: 410px}
+.barista > div div.barista_btn { top: 23rem; left : 150%;}
+.barista > div div.barista_btn {display: inline-block; width:21rem; text-align: center;  font-size: 30px; color:#666666;}
+.barista > div div.barista_btn { transform: translateX(-41rem); transition: all 3s; }
+.barista > div div.barista_btn a:hover {width:6rem; padding: 0.5rem 0.5rem 0.5rem 0.5rem; color:#fff; background: #976D3F; transition: all 0.2s;}
+
+/* 멤버 소개 */
+.producer2 {position: relative;  height: 160rem;}
+.producer {position: relative;  height: 100rem;}
+.producer div { position: relative; width:100%; max-width: 70rem;  }
+.producer > div div{ position: absolute;}
+.producer > div div.barista_img1 { left : 15%;}
+
+.producer > div div.Written_deuk { top: 20rem; left : 15%;}
+.producer > div div.Written_deuk strong { font-size: 25px; color:#333;}
+.producer > div div.Written_deuk .belong { font-size: 20px; color:rgb(145, 88, 88);}
+.producer > div div.Written_deuk .field { font-size: 20px; color:#4c5459;}
+
+.producer > div div.barista_img3 { top: 58rem;left : 15%;}
+.producer > div div.Written_song { top: 78rem; left : 15%;}
+.producer > div div.Written_song strong { font-size: 25px; color:#333;}
+.producer > div div.Written_song .belong { font-size: 20px; color:rgb(145, 88, 88);}
+.producer > div div.Written_song .field { font-size: 20px; color:#4c5459;}
+
+.producer {position: relative;  height: 20rem;}
+.producer div { position: relative; width:100%; max-width: 70rem;  }
+.producer > div div{ position: absolute;}
+.producer > div div.barista_img2 { top: 40rem; left : 15%;}
+
+.producer > div div.Written_park { top: 60rem; left : 15%;}
+.producer > div div.Written_park strong { font-size: 25px; color:#333;}
+.producer > div div.Written_park .belong { font-size: 20px; color:rgb(145, 88, 88);}
+.producer > div div.Written_park .field { font-size: 20px; color:#4c5459;}
+
+.producer > div div.barista_img4 { top:98rem; left : 15%;}
+.producer > div div.Written_jung { top: 118rem; left : 15%;}
+.producer > div div.Written_jung strong { font-size: 25px; color:#333;}
+.producer > div div.Written_jung .belong { font-size: 20px; color:rgb(145, 88, 88);}
+.producer > div div.Written_jung .field { font-size: 20px; color:#4c5459;}
+
+/* 사용한 언어 설명 */
+.visual_m {position: relative; height: 20rem;}
+.visual_m > div { position: relative; width:100%;  height: 20rem;}
+.visual_m > div div{ position: absolute;}
+.visual_m > div div.img1 {top: 1rem; left : 28%;  z-index: 5;}
+
+.language {height: 5rem;}
+.language > .clear > .tit > p{ color:#70767a; text-align: center; font-size: 25px;}
+
+.block > div { width : 22rem;}
+
+.blick .tit h2 { font-size: 38px; color:#333; line-height:1;}
+
+/* 매장찾기 */
+.find_store {position: relative; height: 32.3rem; background:url('../../images/main/m_store_bk.PNG') no-repeat center top;}
 .find_store > div { position: relative; width:100%; max-width: 70rem; height: 32.3rem; margin: 0 auto;}
 .find_store > div div {position: absolute;}
 .find_store > div div {left: 8%;  top: 6rem; font-size: 0.8rem;}
@@ -69,6 +131,75 @@ header > div .spot li span { position: absolute; left:-40000%;}
 .btn {margin:.6rem 0 0 0;display: inline-block; min-width:6.25rem; height: 1.9rem; line-height: 1.9rem; font-size: .7rem; color:#fff; border:2px solid #fff; border-radius:3px; text-align: center;}
 .btn.type1 { border:2px solid #00704A; background: #00704A; color:#fff;}
 .btn.type2 { padding:0 2.3rem 0 2.3rem;}
+
+.companytitle {height: 6rem; margin-left: 9%;}
+.companytitle > .clear > .tit > h1{ color:#383f43;  font-size: 20px;}
+.companytitle > .clear > .tit > p{ color:#70767a;  font-size: 15px;}
+
+/* 소개 */
+.companystart {position: relative; width: 100%;height: 460px; background:url('../../images/main/company.PNG') no-repeat center top;}
+.companystart > div > p{text-align: center; padding-top: 7rem; font-size: 0.9rem; color:black;}
+.companystart > div .member_title{font-size:2.4rem; color:#464646;}
+.companyindex { position: relative;}
+.companyindex > div > p{ text-align:right; font-size:0.6rem; margin : 1rem 18rem 0 0;}
+
+/* 회사 소개 1*/
+.companyarticle {position: relative; height: 600px;  background:#fff;}
+.companyarticle > div div{ position: absolute;}
+.companyarticle > div div.img1{ left : 2%; top: 0.7rem;z-index: 5;}
+.companyarticle > div > p{text-align: center; padding-top: 4rem; font-size: 0.9rem;}
+.companyarticle > div .member_title{font-size:1.4rem; color: black;}
+.companyarticle > div div.info {position: absolute;   height: 17rem; left:2%; top: 24rem;}
+.companyarticle > div div.info span { font-size:1rem; color:#202023; line-height:100%;}
+.companyarticle > div div.info p { padding:.7rem 0 0 0; font-size:0.65rem; color:#464646; line-height:2rem;}
+
+/* 회사 소개 2 */
+.companyarticle2 {position: relative; height: 600px;  background:#fff;}
+.companyarticle2 > div div{ position: absolute;}
+.companyarticle2 > div div.img1{ left : 2%; top: 0.7rem;z-index: 5;}
+.companyarticle2 > div > p{text-align: center; padding-top: 4rem; font-size: 0.9rem;}
+.companyarticle2 > div .member_title{font-size:1.4rem; color: black;}
+.companyarticle2 > div div.info {position: absolute;  height: 17rem; left:2%; top: 24rem;}
+.companyarticle2 > div div.info span { font-size:1rem; color:#202023; line-height:100%;}
+.companyarticle2 > div div.info p { padding:.7rem 0 0 0; font-size:0.65rem; color:#464646; line-height:2rem;}
+
+/* 회사 소개 */
+.companylogoin {position: relative;  height: 35rem; text-align: center; margin-top: 1rem;}
+.companylogoin div { position: relative; }
+.companylogoin > div div{ position: absolute;}
+
+
+.companylogoin > div div.mind { top: 1rem; left : 19%;}
+.companylogoin > div div.mind strong { font-size: 18px; color:#333;}
+.companylogoin > div div.mind .field { font-size: 13px; color:#4c5459;}
+
+.companylogoin > div div.love { top: 10rem; left : 24%;}
+.companylogoin > div div.love strong { font-size: 18px; color:#333; }
+.companylogoin > div div.love .field { font-size: 13px; color:#4c5459;}
+
+.companylogoin > div div.lock { top: 20rem; left : 21%;}
+.companylogoin > div div.lock strong { font-size: 18px; color:#333;}
+.companylogoin > div div.lock .field { font-size: 13px; color:#4c5459;}
+
+.mainheader > div a{display: inline-block; min-width:13rem; height: 1.9rem; line-height: 1.9rem; font-size: 1rem; border:2px solid #7A7A7A; border-radius:3px; text-align: center; color:#7A7A7A; }
+.mainheader > div a{margin-top: 2rem; margin-left: 1rem;}
+.mainheader > div a img{margin-left: 10rem;}
+
+
+input[id*="hambu"] {display: none;}
+input[id*="hambu"] + label + div {display: none;}
+input[id*="hambu"]:checked + label + div {display: block; }
+input[id*="hambu"] + label {display: inline-block; padding: 5px;  color:  rgba(255,255,255,.9); }
+input[id*="hambu"] + label + div {position: fixed; top: 0; left: 50%; width: 100%; height: 100%; z-index: 100; }
+input[id*="hambu"] + label + div > div {position: absolute; top:10%; left:0%;  width: 20rem; height: 22.5rem; background: rgba(255,255,255,.9); z-index: 2; }
+input[id*="hambu"] + label + div > div > label {position: absolute; left:50%; width: 20rem; height: 1.5rem; transform: translate(-50%, -50%);  background:  rgba(255,255,255,.9); z-index: 1;text-align: left; margin-left: 1rem; font-size: 1.2rem; }
+input[id*="hambu"] + label + div > div > p{font-size:0.8rem; text-align: left; padding-left: 1rem; padding-right: 1rem;}
+input[id*="hambu"] + label + div > div > span{font-size:1.5rem; text-align: center; color:#000;}
+input[id*="hambu"] + label + div > label {position: absolute; top:0%; left:0%; width:100%; height: 100%; background: rgba(255,255,255,.9); z-index: 1; }
+
+
+
+
 
 /* footer */
 footer .top {display: none;}

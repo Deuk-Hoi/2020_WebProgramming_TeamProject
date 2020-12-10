@@ -3,6 +3,7 @@
 <%@ page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page import= "java.io.PrintWriter"%>
 <% request.setCharacterEncoding("UTF-8"); %>
+<jsp:useBean id="loginDAO"  class = "com.webprogramming.project.LoginDAO"/>
 <jsp:useBean id="user" class="com.webprogramming.project.DB_DTO" scope="page"/>
 <jsp:setProperty name="user" property="userName" />
 <jsp:setProperty name="user" property="userId" />
@@ -26,8 +27,7 @@
 			script.println("history.back()");
 			script.println("</script>");
 		}else{
-			DatabaseManager dm = new DatabaseManager();
-			int result = dm.register(user);
+			int result = loginDAO.register(user);
 			if(result==-3){
 				PrintWriter script = response.getWriter();
 				script.println("<script>");

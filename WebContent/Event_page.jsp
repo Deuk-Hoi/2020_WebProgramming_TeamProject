@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page import="com.webprogramming.project.Event_DTO"%>
 <%@ page import="java.util.ArrayList" %>
+<jsp:useBean id="EDAO" class = "com.webprogramming.project.EventDAO"/>
 <!DOCTYPE html>
 <html>
 <%
@@ -18,20 +18,21 @@
 		response.sendRedirect("Event_page.jsp");
 		return;
 	}
-	DatabaseManager dao = new DatabaseManager();
-	ArrayList<Event_DTO> list = dao.getList(pageNum);
+	ArrayList<Event_DTO> list = EDAO.getList(pageNum);
 %>
 <head>
 <meta charset="UTF-8">
 <title>이벤트</title>
-<link rel="stylesheet" type="text/css" href="styles/Event_page.css?v=3">
+<link rel="stylesheet" type="text/css" href="styles/Event_page.css?v=5">
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+<div class="main" >
 	<div class="main_head" align="center">
 		<div class="main_font">
-			<p style="font-size:50px;">이벤트</p>
-			<hr>
-			<p>호서대를 선도하는<br><br> H.T.C에서 준비한 이벤트에 참여하세요.</p>
+			<p style="font-size:60px;color:#000000;">이벤트</p>
+			<hr style="margin:40px 0 40px 0;background-color:black">
+			<p style="font-size:19px;color:#000000;">호서대를 선도하는<br><br> H.T.C에서 준비한 이벤트에 참여하세요.</p>
 		</div>
 	</div>
 	<div class="main_body" align="center">
@@ -66,12 +67,14 @@
 			</table>
 			<br>
 			<%
-				for(int j=0;j<dao.maxPage()+1;j++){
+				for(int j=0;j<EDAO.maxPage()+1;j++){
 			%>
 				<a href="Event_page.jsp?pageNum=<%out.print(j+1);%>" style="margin:8px;">[<%out.print(j+1);%>]</a>
 			<%
 				}
 			%>
 		</div>
+</div>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

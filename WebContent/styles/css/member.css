@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+html { font-size : 20px;}
+body { font-size : 1rem;}
+
+
+
+/*멤버 소개 제목 */
+.memberstart {position: relative; width: 100%;height: 460px; background:url('../../images/main/memberbk.PNG') no-repeat center top;}
+.memberstart > div > p{text-align: center; padding-top: 4rem; font-size: 1.1rem; color:white;}
+.memberstart > div .member_title{font-size:2.4rem; color: white;}
+.memberstart > div a{display: inline-block; min-width:6.25rem; height: 1.9rem; line-height: 1.9rem; font-size: .9rem; color:#fff; border:2px solid #fff; border-radius:3px; text-align: center;}
+.memberstart > div a{margin-top: 2rem;}
+.memberindex { position: relative;}
+.memberindex > div > p{ text-align:right; font-size:0.6rem; margin : 1rem 18rem 0 0;}
+
+.block > div {margin : 0 auto; padding: 2rem 0 0; width : 60rem;}
+.block .tit {text-align: center;}
+.blick .tit h2 {padding: 0 0 1.4rem; font-size: 38px; color:#333; line-height:1;}
+
+.member {height: 10rem;}
+.member > .clear > .tit > h1{ color:#383f43; text-align: center; font-size: 25px;}
+.member > .clear > .tit > p{ color:#70767a; text-align: center; font-size: 25px;}
+
+/* 멤버 소개 */
+.producer div { position: relative; width:100%; max-width: 70rem;  }
+.producer > div div{ position: absolute;}
+.producer > div div.barista_img1 { left : 20%;}
+
+.producer > div div.Written_deuk { top: 1rem; left : 44%;}
+.producer > div div.Written_deuk strong { font-size: 25px; color:#333;}
+.producer > div div.Written_deuk .belong { font-size: 20px; color:rgb(145, 88, 88);}
+.barista > div div.Written_deuk .field { font-size: 20px; color:#4c5459;}
+
+.producer > div div.barista_img3 { left : 20%;}
+.producer > div div.Written_song { top: 1rem; left : 44%;}
+.producer > div div.Written_song strong { font-size: 25px; color:#333;}
+.producer > div div.Written_song .belong { font-size: 20px; color:rgb(145, 88, 88);}
+.barista > div div.Written_song .field { font-size: 20px; color:#4c5459;}
+
+.producer {position: relative;  height: 20rem;}
+.producer div { position: relative; width:100%; max-width: 70rem;  }
+.producer > div div{ position: absolute;}
+.producer > div div.barista_img2 { left : 74%;}
+
+.producer > div div.Written_park { top: 1rem; left : 68rem;}
+.producer > div div.Written_park strong { font-size: 25px; color:#333;}
+.producer > div div.Written_park .belong { font-size: 20px; color:rgb(145, 88, 88);}
+.producer > div div.Written_park .field { font-size: 20px; color:#4c5459;}
+
+.producer > div div.barista_img4 { left : 74%;}
+.producer > div div.Written_jung { top: 1rem; left : 68rem;}
+.producer > div div.Written_jung strong { font-size: 25px; color:#333;}
+.producer > div div.Written_jung .belong { font-size: 20px; color:rgb(145, 88, 88);}
+.producer > div div.Written_jung .field { font-size: 20px; color:#4c5459;}
+
+/* 사용한 언어 설명 */
+.visual_m {position: relative; height: 20rem;}
+.visual_m > div { position: relative; width:100%;  height: 20rem;}
+.visual_m > div div{ position: absolute;}
+.visual_m > div div.img1 {top: 2rem; left : 40%;  z-index: 5;}
+
+.language {height: 100px;}
+.language > .clear > .tit > p{ color:#70767a; text-align: center; font-size: 25px;}
+
+
+
+/* footer */
+footer .top {background: #383f43;}
+footer .top > div { width: 59rem; margin: 0 auto; padding:.65rem 0;}
+footer .top > div ul { float: left;}
+footer .top > div ul li { float: left; position: relative; padding: 0 .95rem 0 0;}
+footer .top > div ul li:after {content:""; position: absolute; right: .45rem; top: 50%; margin-top: -0.2rem; width: 0.05rem; height: 0.4rem; background: #70767a;}
+footer .top > div ul li a { color: #fff; font-size: 13px; line-height: 2.25rem;}
+footer .top > div ul li:last-child::after {display: none;}
+footer .top > div div { float: right;}
+footer .top > div div p { display: inline-block; width: 12.1rem; height: 2.2rem; text-align: center; background: #2a3033; color:#fff; line-height: 2.25rem;}
+footer .top > div div p strong { padding: 0 0 0 0.75rem; font-size: 1rem;}
+footer .top > div div select {padding : 0 0 0 1.05rem; width: 10rem; height: 2.25rem; color: #191919; font-size:12px; box-sizing: border-box; border:none; vertical-align: 0.15rem;}
+footer .btm  { padding: 2rem 0 2.2rem; background: #4c5459; text-align: center;}
+footer .btm p {font-size: 25px; text-align: center; color:#fff;}
+footer .btm img {display: inline-block; width: 7.5rem; height: 7.5rem; }
+footer .btm ul { padding: 1.6rem 0 0.7rem;}
+footer .btm li {display: inline-block; position:relative; padding: 0 0.5rem; color :#fff; font-size:14px;}
+footer .btm li:after { content:""; position: absolute; right: 0; top:50%; margin-top: -0.2rem; width: 0.05rem; height: 0.4rem; background: #70767a;}
+footer .btm address { font-size: 14px; color:#fff;}

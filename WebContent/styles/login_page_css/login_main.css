@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
-body{
+.main{
 	margin:0;
 	background-image: url('../../images/login_Event_Img/main.jpg');
 	background-size:cover;
-	padding:0;
+	padding:30px 0 200px 0;
 	font-family : '맑은 고딕', sans-serif;
 	
 }
 
-.entire .box {
+.main .entire .box {
 	width:600px;
 	height:400px;
 	background-color:white;
@@ -18,10 +18,10 @@ body{
 	border-radius:5px;
 	margin:180px 0 0 0;
 }
-.entire .box .ip{
+.main .entire .box .ip{
 	padding:50px 0 0 0;
 }
-.entire .box .ip .login_ip{
+.main .entire .box .ip .login_ip{
 	color:#4d4b46;
 	font-size:14px;
 	letter-spacing:2px;
@@ -34,11 +34,11 @@ body{
 	margin: 15px 30px 3px;
 	padding: 10px 10px;
 }
-.entire .box .ip .login_ip:focus{
+.main .entire .box .ip .login_ip:focus{
 	outline:0;
 	border:2px solid #a67107;
 }
-.entire .box .ip_2 #login_button{
+.main .entire .box .ip_2 #login_button{
 	border:0;
 	outline:0;
 	margin:28px 0 20px 0;
@@ -50,7 +50,7 @@ body{
 	font-size:20px;
 	border-radius:2px;
 }
-.entire .box .ip_2 .small_button{
+.main .entire .box .ip_2 .small_button{
 	border:0.7px solid #b3b0ab;
 	border-radius:2px;
 	margin:0 6px 0;
