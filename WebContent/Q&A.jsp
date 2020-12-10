@@ -11,8 +11,13 @@
 <jsp:useBean id="InsertQnA" class = "com.webprogramming.project.QnaDAO"/>
 <jsp:setProperty name="setQnA" property="*"/>
 <%
-	userinfo.setUserId((String)session.getAttribute("userId"));
-	JSONObject element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
+	JSONObject element = null;
+	if((String)session.getAttribute("userId")!=null){
+		userinfo.setUserId((String)session.getAttribute("userId"));
+		element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
+	}else{
+		out.print("<script>alert('히히');location.href='./index.jsp';</script>");
+	}
 %>
 <%
 	if((setQnA.getTitle() != null) && (setQnA.getContents() != null)){
