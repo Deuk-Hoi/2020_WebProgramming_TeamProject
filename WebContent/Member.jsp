@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,7 +10,7 @@
 	    <meta name="format-detection" content="telephone=no">
 	    <title>Hoseo TimeOut Cafe</title>
 	    <link rel="stylesheet" type="text/css" href="styles/css/XEIcon-2.2.0/xeicon.min.css">
-	    <link rel="stylesheet" href="styles/css/default.css">
+	    <link rel="stylesheet" href="styles/css/default2.css">
 	    <link rel="stylesheet" href="styles/css/member.css">
 	    <link rel="stylesheet" href="styles/css/index_tablet.css" media="all and (max-width:1120px)">
 	    <link rel="stylesheet" href="styles/css/index_moblie.css" media="all and (max-width:960px)">
@@ -22,10 +23,10 @@
         <section class="memberstart">
             <div>
                 <p>
-                    <span class = "member_title">H.T.C ¸â¹ö</span><br><br>
-                    H.T.C Ä¿ÇÇÀÇ Æ¯º°ÇÑ ¸â¹ö¸¦ ¼Ò°³ÇÕ´Ï´Ù.<br>
-                    H.T.C Æ¯º°ÇÑ À¥ µðÀÚÀÌ³ÊµéÀ» ¸¸³ªº¸¼¼¿ä.<br>
-                    <a href="#memberSo">¸â¹ö º¸±â</a>
+                    <span class = "member_title">H.T.C ë©¤ë²„</span><br><br>
+                    H.T.C ì»¤í”¼ì˜ íŠ¹ë³„í•œ ë©¤ë²„ë¥¼ ì†Œê°œí•©ë‹ˆë‹¤.<br>
+                    H.T.C íŠ¹ë³„í•œ ì›¹ ë””ìžì´ë„ˆë“¤ì„ ë§Œë‚˜ë³´ì„¸ìš”.<br>
+                    <a href="#memberSo">ë©¤ë²„ ë³´ê¸°</a>
                 </p>
             </div>
         </section>
@@ -33,7 +34,7 @@
         <section class="memberindex">
             <div>
                 <p>
-                    <span class = "member_index">HOME  >  H.T.C ¸â¹ö  >  ¸â¹ö ¼Ò°³</span><br><br>
+                    <span class = "member_index">HOME  >  H.T.C ë©¤ë²„  >  ë©¤ë²„ ì†Œê°œ</span><br><br>
                 </p>
             </div>
         </section>
@@ -42,8 +43,8 @@
             <div class="member block">
                 <div class="clear">
                     <div class="tit">
-                        <h1>¸â¹ö ¼Ò°³</h1>
-                        <p>H.T.C Á¦ÀÛÇÑ ÀÎ¹°À» ¼Ò°³ÇÕ´Ï´Ù!</p>
+                        <h1>ë©¤ë²„ ì†Œê°œ</h1>
+                        <p>H.T.C ì œìž‘í•œ ì¸ë¬¼ì„ ì†Œê°œí•©ë‹ˆë‹¤!</p>
         </section>
 
         <section ID="memberSo">
@@ -54,13 +55,13 @@
                 <div class="barista_img1"><img src="images/main/deuk.PNG" width="300" height="300"></div>
                 <div class=" Written_deuk">
                       <a>
-                          <strong>À¥ Á¦ÀÛÀÚ : ±èµæÈ¸</strong><br><br>
-                          <p class="belong">¼Ò¼Ó : È£¼­´ëÇÐ±³ ÄÄÇ»ÅÍ °øÇÐ°ú<br><br></p>
+                          <strong>ì›¹ ì œìž‘ìž : ê¹€ë“íšŒ</strong><br><br>
+                          <p class="belong">ì†Œì† : í˜¸ì„œëŒ€í•™êµ ì»´í“¨í„° ê³µí•™ê³¼<br><br></p>
                           <p class="field">
-                              [ ´ã´ç ºÐ¾ß ]<br>
-                              - H.T.C °øÁö»çÇ× ÆäÀÌÁö<br>
-                              - H.T.C ¹®ÀÇ»çÇ× ÆäÀÌÁö<br>
-                              - H.T.C ¸¶ÀÌÆäÀÌÁö ÆäÀÌÁö<br>
+                              [ ë‹´ë‹¹ ë¶„ì•¼ ]<br>
+                              - H.T.C ê³µì§€ì‚¬í•­ íŽ˜ì´ì§€<br>
+                              - H.T.C ë¬¸ì˜ì‚¬í•­ íŽ˜ì´ì§€<br>
+                              - H.T.C ë§ˆì´íŽ˜ì´ì§€ íŽ˜ì´ì§€<br>
                           </p>
                           
                       </a>
@@ -71,13 +72,13 @@
                   <div class="barista_img2"><img src="images/main/park.png" width="300" height="300"></div>
                   <div class=" Written_park">
                         <a>
-                            <strong>À¥ Á¦ÀÛÀÚ : ¹Ú¿ì½Ä</strong><br><br>
-                            <p class="belong">¼Ò¼Ó : È£¼­´ëÇÐ±³ ÄÄÇ»ÅÍ °øÇÐ°ú<br><br></p>
+                            <strong>ì›¹ ì œìž‘ìž : ë°•ìš°ì‹</strong><br><br>
+                            <p class="belong">ì†Œì† : í˜¸ì„œëŒ€í•™êµ ì»´í“¨í„° ê³µí•™ê³¼<br><br></p>
                             <p class="field">
-                                [ ´ã´ç ºÐ¾ß ]<br>
-                                - H.T.C ·Î±×ÀÎ ÆäÀÌÁö<br>
-                                - H.T.C È¸¿ø°¡ÀÔ ÆäÀÌÁö<br>
-                                - H.T.C ÀÌº¥Æ® ÆäÀÌÁö<br>
+                                [ ë‹´ë‹¹ ë¶„ì•¼ ]<br>
+                                - H.T.C ë¡œê·¸ì¸ íŽ˜ì´ì§€<br>
+                                - H.T.C íšŒì›ê°€ìž… íŽ˜ì´ì§€<br>
+                                - H.T.C ì´ë²¤íŠ¸ íŽ˜ì´ì§€<br>
                             </p>
                             
                         </a>
@@ -90,13 +91,13 @@
                 <div class="barista_img3"><img src="images/main/song.png" width="300" height="300"></div>
                 <div class=" Written_song">
                       <a>
-                          <strong>À¥ Á¦ÀÛÀÚ : ¼ÛÁØÇÏ</strong><br><br>
-                          <p class="belong">¼Ò¼Ó : È£¼­´ëÇÐ±³ ÄÄÇ»ÅÍ °øÇÐ°ú<br><br></p>
+                          <strong>ì›¹ ì œìž‘ìž : ì†¡ì¤€í•˜</strong><br><br>
+                          <p class="belong">ì†Œì† : í˜¸ì„œëŒ€í•™êµ ì»´í“¨í„° ê³µí•™ê³¼<br><br></p>
                           <p class="field">
-                              [ ´ã´ç ºÐ¾ß ]<br>
-                              - H.T.C ¸ÞÀÎ ÆäÀÌÁö<br>
-                              - H.T.C ¸â¹ö ¼Ò°³ ÆäÀÌÁö<br>
-                              - H.T.C ¸â¹ö½º ¼Ò°³ ÆäÀÌÁö<br>
+                              [ ë‹´ë‹¹ ë¶„ì•¼ ]<br>
+                              - H.T.C ë©”ì¸ íŽ˜ì´ì§€<br>
+                              - H.T.C ë©¤ë²„ ì†Œê°œ íŽ˜ì´ì§€<br>
+                              - H.T.C ë©¤ë²„ìŠ¤ ì†Œê°œ íŽ˜ì´ì§€<br>
                           </p>
                           
                       </a>
@@ -107,13 +108,13 @@
                   <div class="barista_img4"><img src="images/main/jung.png" width="300" height="300"></div>
                   <div class=" Written_jung">
                         <a>
-                            <strong>À¥ Á¦ÀÛÀÚ : Á¤½Â¿ø</strong><br><br>
-                            <p class="belong">¼Ò¼Ó : È£¼­´ëÇÐ±³ ÄÄÇ»ÅÍ °øÇÐ°ú<br><br></p>
+                            <strong>ì›¹ ì œìž‘ìž : ì •ìŠ¹ì›</strong><br><br>
+                            <p class="belong">ì†Œì† : í˜¸ì„œëŒ€í•™êµ ì»´í“¨í„° ê³µí•™ê³¼<br><br></p>
                             <p class="field">
-                                [ ´ã´ç ºÐ¾ß ]<br>
-                                - H.T.C À½·á ÆäÀÌÁö<br>
-                                - H.T.C ÁÖ¹® ÆäÀÌÁö<br>
-                                - H.T.C ¿¹¾à ÆäÀÌÁö<br>
+                                [ ë‹´ë‹¹ ë¶„ì•¼ ]<br>
+                                - H.T.C ìŒë£Œ íŽ˜ì´ì§€<br>
+                                - H.T.C ì£¼ë¬¸ íŽ˜ì´ì§€<br>
+                                - H.T.C ì˜ˆì•½ íŽ˜ì´ì§€<br>
                             </p>
                             
                         </a>
@@ -128,7 +129,7 @@
                 <div class="clear">
                     <div class="tit">
                         <h1>Computer Language</h1>
-                        <p>H.T.C Á¦ÀÛ¿¡ »ç¿ëÇÑ ¾ð¾î¸¦ ¼Ò°³ÇÕ´Ï´Ù!</p>
+                        <p>H.T.C ì œìž‘ì— ì‚¬ìš©í•œ ì–¸ì–´ë¥¼ ì†Œê°œí•©ë‹ˆë‹¤!</p>
                     </div>
                 </div>
             </div>
@@ -136,7 +137,7 @@
 
         <section class="visual_m">
             <div>
-                <div class="img1"><img src="images/main/language.png" alt="¾ð¾î" width="300" height="300"></div>
+                <div class="img1"><img src="images/main/language.png" alt="ì–¸ì–´" width="300" height="300"></div>
             </div>
         </section>
 

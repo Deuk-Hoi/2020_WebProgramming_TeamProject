@@ -21,9 +21,9 @@
 					<input id="login_button" type="submit" value="로그인"><br>
 					<input class = "small_button" type="button" value="회원가입" onclick="location.href='sign_up.jsp'">
 					<input class = "small_button" type="button" value="ID 찾기" onclick="location.href='search_id.jsp'">
-					<input class = "small_button" type="button" value="PW 찾기" onclick="location.href='search_pw.jsp'">
+					<input class = "small_button" type="button" value="PW 찾기" onclick="location.href='search_pw_check.jsp'">
 				</div>
-			</div>
+			</div>                 
 		</div>
 	</form>
 </div>

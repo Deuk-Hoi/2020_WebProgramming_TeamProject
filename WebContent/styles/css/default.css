@@ -3,21 +3,19 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 /* Reset */
- * {outline:0 !important;}
-header html,body,h1,h2,h3,h4,h5,h6,blockquote,pre,code,address,ul,ol,li,menu,nav,section,article,aside {margin:0;padding:0;}
+body > header{width:100%;}
 
-header html, body{width:100%;}
-header html{-webkit-touch-callout:none; -webkit-user-select:none; -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
-header body{width:100%; background:#fff; min-width:320px; -webkit-text-size-adjust:none;word-wrap:break-word;word-break:break-all;}
-header body,input,select,textarea,button {border:none;font-size:12px; font-family:'Noto Sans KR', sans-serif;color:#727272;}
-header ul,ol,li{list-style:none;}
 
-header img,fieldset{border:0;}
-header label,img,input,select,textarea,button{vertical-align:middle;}
-header .hide,caption,legend{line-height:0;font-size:1px;overflow:hidden;}
-header hr{display:none;}
+body > header,input,select,textarea,button {border:none;font-size:12px; font-family:'Noto Sans KR', sans-serif;color:#727272;}
 
-header a{color:#000;text-decoration:none;}
+body > header ul,ol,li{list-style:none;}
+
+body > header img,fieldset{border:0;}
+body > header label,img,input,select,textarea,button{vertical-align:middle;}
+body > header .hide,caption,legend{line-height:0;font-size:1px;overflow:hidden;}
+body > header hr{display:none;}
+
+body > header a{color:#000;text-decoration:none;}
  
 
-header .clear:after { content:""; display:block; clear:both;}
+body > header .clear:after { content:""; display:block; clear:both;}

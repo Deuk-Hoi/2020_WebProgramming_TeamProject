@@ -28,7 +28,7 @@
 	<header>
       <div>
         <h1><a href="Main.jsp"><img src="images/main/logo.PNG" alt="Hoseo TimeOut Cafe LOGO"></a></h1>
-        <h2 class="hide">¥Î∏ﬁ¥∫</h2>
+        <h2 class="hide">ÎåÄÎ©îÎâ¥</h2>
         <nav>
             <ul>
                 <li><a href="#a">COFFEE</a></li>
@@ -45,11 +45,27 @@
             <li><a href="sign_up.jsp"><i class="xi-user-plus-o"></i>  Sign Up</a></li>
             <li><a href="#a"><i class="xi-map-o"></i><span>  Find a Store</span></a></li>
             <%}else{%>
-            <li><a><span><%out.print(id);%> ¥‘ »Øøµ«’¥œ¥Ÿ.</span></a></li>
+            <li><a><span><%out.print(id);%> Îãò ÌôòÏòÅÌï©ÎãàÎã§.</span></a></li>
             <li><a><span><input type="button" value="Log out" onclick="Logout()" style="background-color:rgba( 255, 255, 255, 0 );font-size:13px;"></span></a></li>
             <%} %>
           </ul>
-          <a href="#a" class="total"><i class="xi-bars"></i><span>¿¸√º∏ﬁ¥∫∫∏±‚</span></a>
+              <section class="mainheader">
+		            <input type="checkbox" id="hambu">
+		                <label for="hambu"><a class="total"><i class="xi-bars"></i></a></label>
+		                <div>
+		                  <div>
+		                    <label for="hambu">close</label>
+		                    <a href="#a">COFFEE</a>
+		                    <a href="#a">ORDER</a>
+		                    <a href="Notice.jsp">Notice</a>
+		                    <a href="Membership.jsp">MEMBERSHIP</a>
+		                    <a href="Event_page.jsp">EVENT</a>
+		                    <a href="Customer_Sound.jsp">Service Center</a>
+		                  </div>
+		                  <label for="hambu"></label>
+		                </div>
+		          </section>
+          <a href="#a" class="total"><i class="xi-bars"></i><span>Ï†ÑÏ≤¥Î©îÎâ¥Î≥¥Í∏∞</span></a>
       </div>
     </header>
     

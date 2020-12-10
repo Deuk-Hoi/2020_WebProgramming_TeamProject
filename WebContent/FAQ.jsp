@@ -20,17 +20,20 @@
 <link rel="stylesheet" type="text/css" href="styles/Support_page_css/FAQ.css">
 </head>
 <body>
-	<header>
-		<jsp:include page="header.jsp"></jsp:include>
-	</header>
-	<main>
-		<section>
-			<div id="pageImg">
-				<div id = "pageImgTxt" align="center">
-					<p class="page_title">고객의 소리</p>
-					<hr width="50px">
-					<P class="page_letter">H.T.C 카페 고객님들이 자주하는 질문들입니다!</P>
-				</div>
+
+<jsp:include page="header.jsp"></jsp:include>
+	<section>
+		<div id="pageImg">
+			<div id = "pageImgTxt" align="center">
+				<p class="page_title">고객의 소리</p>
+				<hr width="50px">
+				<P class="page_letter">H.T.C 카페 고객님들이 자주하는 질문들입니다!</P>
+			</div>
+		</div>
+		<div class="contents">
+			<div id="pageLocation">
+				<p>Home > 고객센터 > FAQ</p>
+
 			</div>
 			<div class="contents">
 				<div id="pageLocation">

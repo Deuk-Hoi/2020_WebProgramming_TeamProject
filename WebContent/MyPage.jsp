@@ -17,23 +17,170 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>마이 페이지</title>
-<link rel="stylesheet" type="text/css" href="styles/User_page_css/MyPage.css">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="styles/MyPage.css">
+<style>
+	#userSummary{
+		text-align: center;
+	}
+	.summaryLeft{
+		display: inline-block;
+		margin-right: 100px;
+	}
+	.summaryLeft .currentStamp{
+		font-size: 45px;
+		font-weight: 700;
+		color : #b461ff;
+	}
+	.summaryLeft .totalStamp{
+		font-size: 30px;
+	}
+	.summaryLeft .currentCoupon{
+		font-size: 45px;
+		font-weight: 700;
+		color : #b461ff;
+	}
+	.stamp_info{
+		font-size: 20px;
+		padding: 60px;
+	}
+	.summaryRight{
+		display: inline-block;
+	}
+	.summaryRight table{
+		margin-top: 100px;
+	}
+	.summaryRight td{
+		text-align: left;
+		font-size: 30px;
+		padding: 10px;
+	}
+
+	.rank_color{
+		color: #f7a300;
+		font-weight: bold;
+		font-size: 45px;
+	}
+	.userinfo{
+		text-align: left;
+		margin-top: 30px;
+		font-size: 15px;
+		color: #7a7a7a;
+		padding: 40px;
+		line-height: 10px;
+		font-weight: bold;
+	}
+	
+	#modifyButton{
+		text-align: right;
+	}
+	
+	#modifyButton input{
+		background-color: #253b84;
+		color: white;
+		font-weight: bold;
+		padding : 5px 20px 5px 20px;
+		border-radius: 5px;
+		border: 1px solid #253b84;
+	}
+	#stamp_area{
+		margin-bottom: 100px;
+	}
+	
+	#coupon{
+		margin: auto;
+	}
+	
+	#coupon .couponList{
+		text-align: center;
+		margin: 0 6em 0 6em;
+	}
+	
+	#coupon .couponList img{
+		padding: 10px;
+	}
+	#stamp_area .stamp_notice{
+		border-bottom: 1px solid #dadada;
+		margin-top: 150px;
+		margin-bottom: 50px;
+		padding-bottom: 17px;
+	}
+	#stamp_area .stamp_notice>h2{
+		display: inline-block;
+	}
+	#stamp_area .stamp_notice>span{
+		font-size: 15px;
+		font-weight: bold;
+		color: #7b7b7b;
+	}
+	#MemberShip {
+		margin-top: 150px;
+		margin-bottom: 150px;
+	}
+	#MemberShip table{
+		margin:auto;
+		text-align: center;
+	}
+	#MemberShip .Benefits{
+		border-bottom: 1px solid #dadada;
+		padding-bottom: 17px;
+		margin-bottom: 30px;
+	}
+	#MemberShip .Benefit_img{
+		padding: 30px;
+	}
+	
+	#MemberShip .Benefit_contents{
+		padding : 30px;
+	}
+	#UsageGuide .Benefits{
+		border-bottom: 1px solid #dadada;
+		padding-bottom: 17px;
+		margin-bottom: 30px;
+	}
+	#UsageGuide table{
+		margin: 20px;
+	}
+	#UsageGuide .Benefit_img{
+		padding: 30px;
+		text-align: center;
+	}
+	#UsageGuide .Benefit_contents{
+		padding : 30px 30px 30px 50px;
+	}
+	#UsageGuide .Benefit_contents>span{
+		color: #666666;
+	}
+	
+	@media screen and (max-width:1440px) { 
+		.summaryLeft{
+			margin-right: 0;
+		}
+		#coupon .couponList{
+			text-align: center;
+			margin: 0 5em 0 5em;
+		}
+		#MemberShip .Benefit_contents{
+			padding : 30px 0px 30px 0px;
+			font-size: 14px;
+		}
+		#UsageGuide .Benefit_contents{
+			font-size: 14px;
+		}
+	}
+
+		
+</style>
 </head>
 <body>
-	<!-- <header>
-		<jsp:include page="header.jsp"></jsp:include>
-	</header> -->
-	<jsp:include page="header.jsp"></jsp:include>
-	<main>
-		<section id="mypageSection">
-			<div id="pageImg">
-				<div id = "pageImgTxt" align="center">
-					<p class="page_title">나의 멤버십 이용현황</p>
-					<hr width="50px">
-					<P class="page_letter">My Member's Status</P>
-					<P class="page_letter">고객님의 H.T.C 카페 멤버스 서비스 이용현황입니다.</P>
-				</div>
+<jsp:include page="header.jsp"></jsp:include>
+	<section id="mypageSection">
+		<div id="pageImg">
+			<div id = "pageImgTxt" align="center">
+				<p class="page_title">나의 멤버십 이용현황</p>
+				<hr width="50px">
+				<P class="page_letter">My Member's Status</P>
+				<P class="page_letter">고객님의 H.T.C 카페 멤버스 서비스 이용현황입니다.</P>
 			</div>
 			<div class="contents">
 				<div id="userSummary">
