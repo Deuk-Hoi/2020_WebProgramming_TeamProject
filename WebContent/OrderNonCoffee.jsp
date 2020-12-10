@@ -23,9 +23,13 @@
     <link rel="stylesheet" href="styles/Order.css">
 </head>
 <body>
-    <div class="banner">
-        <p class="bannertext">Order</p>
-    </div>
+    <div id="pageImg">
+		<div id = "pageImgTxt" align="center">
+			<p class="page_title">Order</p>
+			<hr width="50px">
+			<P class="page_letter">H.T.C Cafe에서 함께하는 한잔의 여유</P>
+		</div>
+	</div>
     <ul id="menu">
         <li class="menubar"><a href="OrderHot.jsp">Hot</a></li>
         <li class="menubar"><a href="OrderIce.jsp">Ice</a></li>
@@ -33,8 +37,9 @@
         <li class="menubar"><a href="OrderBakery.jsp">Bakery</a></li>
     </ul>
     <hr width="800px">
+    <form action="Orderaction.jsp" method=post>
     <div class="moly">
-        <%
+            <%
 				JSONParser parser = new JSONParser();
 				Object o = parser.parse(menu);
 				JSONArray ja = (JSONArray)o;
@@ -44,18 +49,18 @@
 			%>
 			<div class="cof">
 				<img src="images/coffee/<%=(String)element.get("img")%>" alt=""><br>
-            	<label><input type="checkbox" name="world"><%=(String)element.get("menuName")%></label>
+            	<label><input type="checkbox" name="world" value="<%=(String)element.get("menuName")%> <%=(String)element.get("price")%>"><%=(String)element.get("menuName")%></label>
+            	<br>
+            	<%=(String)element.get("price")%>원
             </div>
         	<%
 				}
         	%>
     </div>
     <div align="center">
-    	<a href="Orderchoose.jsp" onclick="window.open(this.href, '_blank', 'width=500px, height=500px, toolbars=no, scrollbars=yes'); return false">
-			<input type="button" value="주문하기" class="orderbtn">
-    	</a>
-    
-		<input type="button" value="장바구니 이동" class="orderbtn" onclick="window.open('Orderlist.jsp')">
+    	<input type="submit" value="주문하기" class="orderbtn" >
+    	<input type="button" value="장바구니 이동" class="orderbtn" onclick="window.open('Orderlist.jsp')">
     </div>
+    </form>
 </body>
 </html>

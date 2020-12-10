@@ -26,6 +26,24 @@ public class DatabaseManager {
 		dbID = "root";
 		dbPW = "qwerty12";
 	}
+	public String Loadseat() {
+		JSONArray Jarray = new JSONArray();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+			pstmt = conn.prepareStatement("SELECT csname FROM Cafeseat");
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("csname",rs.getString("csname"));
+				Jarray.add(obj);
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Jarray.toString();
+	}
 	
 	public String LoadorderHot() {
 		JSONArray Jarray = new JSONArray();
@@ -39,6 +57,7 @@ public class DatabaseManager {
 				JSONObject obj = new JSONObject();
 				obj.put("menuName",rs.getString("menuName"));
 				obj.put("img",rs.getString("img"));
+				obj.put("price",rs.getString("price"));
 				Jarray.add(obj);
 			}
 		}catch (Exception e) {
@@ -59,6 +78,7 @@ public class DatabaseManager {
 				JSONObject obj = new JSONObject();
 				obj.put("menuName",rs.getString("menuName"));
 				obj.put("img",rs.getString("img"));
+				obj.put("price",rs.getString("price"));
 				Jarray.add(obj);
 			}
 		}catch (Exception e) {
@@ -79,6 +99,7 @@ public class DatabaseManager {
 				JSONObject obj = new JSONObject();
 				obj.put("menuName",rs.getString("menuName"));
 				obj.put("img",rs.getString("img"));
+				obj.put("price",rs.getString("price"));
 				Jarray.add(obj);
 			}
 		}catch (Exception e) {
@@ -99,6 +120,7 @@ public class DatabaseManager {
 				JSONObject obj = new JSONObject();
 				obj.put("menuName",rs.getString("menuName"));
 				obj.put("img",rs.getString("img"));
+				obj.put("price",rs.getString("price"));
 				Jarray.add(obj);
 			}
 		}catch (Exception e) {

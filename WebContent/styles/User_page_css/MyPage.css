@@ -150,6 +150,7 @@ body{
 	
 	#MemberShip .Benefit_contents{
 		padding : 30px;
+		font-size:14px;
 	}
 	#UsageGuide .Benefits{
 		border-bottom: 1px solid #dadada;
@@ -165,6 +166,7 @@ body{
 	}
 	#UsageGuide .Benefit_contents{
 		padding : 30px 30px 30px 50px;
+		font-size:17px;
 	}
 	#UsageGuide .Benefit_contents>span{
 		color: #666666;
@@ -184,6 +186,7 @@ body{
 					}
 					.qna_row_width{
 						width: 100%;
+						font-size:17px;
 					}
 					.qna_row_width td:nth-child(1){
 						width: 10%;
@@ -235,6 +238,7 @@ body{
 					
 					.order_row_width{
 						width: 100%;
+						font-size:17px;
 					}
 					.order_row_width td:nth-child(1){
 						width: 10%;
