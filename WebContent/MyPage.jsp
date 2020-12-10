@@ -5,6 +5,7 @@
 <jsp:useBean id="userinfo" class="com.webprogramming.project.UserInfoDO"/>
 <jsp:useBean id="userinfoDAO" class="com.webprogramming.project.UserInfoDAO"/>
 <jsp:useBean id="QnaDAO" class="com.webprogramming.project.QnaDAO"/>
+<jsp:useBean id="OrderDAO" class="com.webprogramming.project.OrderDAO"/>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
@@ -12,6 +13,7 @@
 	userinfo.setUserId((String)session.getAttribute("userId"));
 	JSONObject element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
 	JSONArray myqna = QnaDAO.SelectQna_Mypage((String)session.getAttribute("userId"));
+	JSONArray myorder = OrderDAO.SelectUserOrder((String)session.getAttribute("userId"));
 %>
 <!DOCTYPE html>
 <html>
@@ -147,12 +149,19 @@
 								<td><strong>총 가격</strong></td>
 								<td><strong>영수증 보기</strong></td>
 							</tr>
-							<tr class="order_row_width order_list">
-								<td><strong>1</strong></td>
-								<td><strong>아이스 아메리카노</strong></td>
-								<td><strong>3200</strong></td>
-								<td><input type="button" value = "영수증 >"/></td>
-							</tr>
+							<%
+								for(int i = 0; i<myorder.size(); i++){
+									JSONObject order = (JSONObject)myorder.get(i);
+							%>
+									<tr class="order_row_width order_list">
+										<td><strong><%= (String)order.get("oid") %></strong></td>
+										<td><strong><%= (String)order.get("orderList") %></strong></td>
+										<td><strong><%= (String)order.get("totalCost") %></strong></td>
+										<td><input type="button" value = "영수증 >" onclick= "bill(<%= (String)order.get("oid") %>)"/></td>
+									</tr>
+							<%
+								}
+							%>
 						</table>
 					</div>
 					
@@ -222,6 +231,13 @@
 			document.getElementById("rankImg").src="./images/userInfoImg/Platinum.png";
 			document.getElementById("rankColor").style.color = "#00bfff";
 			break;
+	}
+	
+	function bill(oid){
+		var url = "Bill_order.jsp?oid="+oid;
+        var name = "영수증";
+        var option = "width = 540, height = 660, top = 100, left = 200, location = no";
+		window.open(url, name, option);
 	}
 	
 </script>
