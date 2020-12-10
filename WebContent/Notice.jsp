@@ -24,17 +24,22 @@
 <link rel="stylesheet" type="text/css" href="styles/Support_page_css/Notice.css">
 </head>
 <body>
-	<header>
-		<jsp:include page="header.jsp"></jsp:include>
-	</header>
-	<main>
-		<section id="noticeSection">
-			<div id="pageImg">
-				<div id = "pageImgTxt" align="center">
-					<p class="page_title">공지사항</p>
-					<hr width="50px">
-					<P class="page_letter">H.T.C 카페는 고객님들에게 최상의 커피를<br>제공하기 위해 노력 하겠습니다.</P>
-				</div>
+
+<jsp:include page="header.jsp"></jsp:include>
+	<section id="noticeSection">
+		<div id="pageImg">
+			<div id = "pageImgTxt" align="center">
+				<p class="page_title">공지사항</p>
+				<hr width="50px">
+				<P class="page_letter">H.T.C 카페는 고객님들에게 최상의 커피를<br>제공하기 위해 노력 하겠습니다.</P>
+			</div>
+		</div>
+		<div class="contents">
+			<div id="pageLocation">
+				<p>Home > 카페 소식 > 공지사항</p>
+			</div>
+			<div>
+				<h1 id="subtitle">공지사항</h1>
 			</div>
 			<div class="contents">
 				<div id="pageLocation">

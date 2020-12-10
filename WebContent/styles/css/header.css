@@ -1,10 +1,8 @@
-@charset "EUC-KR";
 @charset "utf-8";
 
 html { font-size : 20px;}
-body { font-size : 1rem;}
 
-/* Çì´õ */
+/* í—¤ë” */
 header {background: #f6f5ef; border: top 2px solid #000;}
 header > div { position: relative; width : 54.5rem; margin : 0 auto;}
 header > div:after { content: ""; display: block; clear: both;}
@@ -17,3 +15,5 @@ header > div .spot li { float: left; position: relative;}
 header > div .spot a { padding: 0 .95rem; font-size: .7rem; color:#333;}
 header > div .spot li ~ li a:after { content: ""; position: absolute; left: 0; top: 50%; width: 1px; height: .6rem; background: #504d4d; transform: translateY(-25%);}
 header > div .total { display:none;}
+
+header .mainheader {visibility: hidden;}

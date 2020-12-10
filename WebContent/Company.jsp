@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,9 +23,9 @@
         <section class="companystart">
             <div>
                 <p>
-                    <span class = "member_title">H.T.C È¸»ç</span><br><br>
-                    Æ¯º°ÇÑ H.T.CÀÇ È¸»ç¸¦ ¼Ò°³ÇÕ´Ï´Ù.<br>
-                    È¸»çÀÇ ·Î°í¿Í ¸¶ÀÎµå¿¡ ´ëÇØ¼­ ¼Ò°³µå¸³´Ï´Ù.<br>
+                    <span class = "member_title">H.T.C íšŒì‚¬</span><br><br>
+                    íŠ¹ë³„í•œ H.T.Cì˜ íšŒì‚¬ë¥¼ ì†Œê°œí•©ë‹ˆë‹¤.<br>
+                    íšŒì‚¬ì˜ ë¡œê³ ì™€ ë§ˆì¸ë“œì— ëŒ€í•´ì„œ ì†Œê°œë“œë¦½ë‹ˆë‹¤.<br>
                 </p>
             </div>
         </section>
@@ -32,7 +33,7 @@
         <section class="companyindex">
             <div>
                 <p>
-                    <span class = "member_index">HOME  >  ¸ÅÀå¼Ò°³  >  H.T.C</span><br><br>
+                    <span class = "member_index">HOME  >  ë§¤ìž¥ì†Œê°œ  >  H.T.C</span><br><br>
                 </p>
             </div>
         </section>
@@ -41,8 +42,8 @@
             <div class="companytitle">
                 <div class="clear">
                     <div class="tit">
-                        <h1>H.T.C Ä¿ÇÇ</h1><br>
-                        <p>Always Beside You, H.T.C Ä¿ÇÇ´Â ¾ðÁ¦³ª ´ç½Å °ç¿¡ ÇÔ²² ÇÕ´Ï´Ù.</p><br>
+                        <h1>H.T.C ì»¤í”¼</h1><br>
+                        <p>Always Beside You, H.T.C ì»¤í”¼ëŠ” ì–¸ì œë‚˜ ë‹¹ì‹  ê³ì— í•¨ê»˜ í•©ë‹ˆë‹¤.</p><br>
                     </div>
                   </div>
             </div>
@@ -50,15 +51,15 @@
 
         <section class="companyarticle">
           <div>
-              <div class="img1"><img src="images/main/combk.PNG" alt="¼Ò°³ ¹è°æ 1" width="450" height="350"></div>
+              <div class="img1"><img src="images/main/combk.PNG" alt="ì†Œê°œ ë°°ê²½ 1" width="450" height="350"></div>
           </div>
           <div>
             <div class="info">
-              <span>"Ä¿ÇÇ ÇÑÀÜÀÇ Áø½É"</strong></span>
+              <span>"ì»¤í”¼ í•œìž”ì˜ ì§„ì‹¬"</strong></span>
               <p>
                 ___________<br>
-                ÇØ¿Ü¿¡ ·Î¿­Æ¼¸¦ ³»Áö ¾Ê´Â ¼ø¼ö ±¹³» ºê·£µå H.T.CÄ¿ÇÇ, Ç°Áú ÁÁ°í ¸ÀÀÖ´Â Ä¿ÇÇ¸¦ ÇÕ¸®ÀûÀÎ °¡°ÝÀ¸·Î<br>¼ÒºñÀÚ¿¡°Ô Á¦°øÇÏ´Â °ÍÀ» ¿ì¸®ÀÇ Áø½ÉÀÌ¶ó ¹Ï½À´Ï´Ù.
-                ´õ ¸ÀÀÖ´Â Ä¿ÇÇ¸¦ ¸¸µé±âÀ§ÇØ 2010³â Ä¿ÇÇ¿¬±¸¼Ò<br>¼³¸³À» ½ÃÀÛÀ¸·Î 2016³â 4¿ù ¡®°í°´°ú ¼ÒÅëÇÏ´Â Ä¿ÇÇ¿¬±¸¼Ò¡¯¸¦ Å×¸¶·Î [H.T.CÄ¿ÇÇ·¦]À» ¿ÀÇÂÇÏ¿© ´õ ³ªÀº<br>Ä¿ÇÇ¸¦ À§ÇØ ²÷ÀÓ¾ø´Â ¿¬±¸ °³¹ßÀ» ÁøÇàÇÏ°í ÀÖ½À´Ï´Ù.<br>
+                í•´ì™¸ì— ë¡œì—´í‹°ë¥¼ ë‚´ì§€ ì•ŠëŠ” ìˆœìˆ˜ êµ­ë‚´ ë¸Œëžœë“œ H.T.Cì»¤í”¼, í’ˆì§ˆ ì¢‹ê³  ë§›ìžˆëŠ” ì»¤í”¼ë¥¼ í•©ë¦¬ì ì¸ ê°€ê²©ìœ¼ë¡œ<br>ì†Œë¹„ìžì—ê²Œ ì œê³µí•˜ëŠ” ê²ƒì„ ìš°ë¦¬ì˜ ì§„ì‹¬ì´ë¼ ë¯¿ìŠµë‹ˆë‹¤.
+                ë” ë§›ìžˆëŠ” ì»¤í”¼ë¥¼ ë§Œë“¤ê¸°ìœ„í•´ 2010ë…„ ì»¤í”¼ì—°êµ¬ì†Œ<br>ì„¤ë¦½ì„ ì‹œìž‘ìœ¼ë¡œ 2016ë…„ 4ì›” â€˜ê³ ê°ê³¼ ì†Œí†µí•˜ëŠ” ì»¤í”¼ì—°êµ¬ì†Œâ€™ë¥¼ í…Œë§ˆë¡œ [H.T.Cì»¤í”¼ëž©]ì„ ì˜¤í”ˆí•˜ì—¬ ë” ë‚˜ì€<br>ì»¤í”¼ë¥¼ ìœ„í•´ ëŠìž„ì—†ëŠ” ì—°êµ¬ ê°œë°œì„ ì§„í–‰í•˜ê³  ìžˆìŠµë‹ˆë‹¤.<br>
               </p>
             </div>
           </div>
@@ -66,16 +67,16 @@
 
         <section class="companyarticle2">
             <div>
-                <div class="img1"><img src="images/main/combk2.PNG" alt="¼Ò°³ ¹è°æ2" width="450" height="350"></div>
+                <div class="img1"><img src="images/main/combk2.PNG" alt="ì†Œê°œ ë°°ê²½2" width="450" height="350"></div>
             </div>
             <div>
               <div class="info">
-                <span>"ÇÔ²² Çàº¹ÇÏ±â À§ÇÑ »ó»ýÇù·Â"</strong></span>
+                <span>"í•¨ê»˜ í–‰ë³µí•˜ê¸° ìœ„í•œ ìƒìƒí˜‘ë ¥"</strong></span>
                 <p>
                   ___________<br>
-                    H.T.CÄ¿ÇÇ´Â °í°´, °¡¸ÍÁ¡ÁÖ, Çù·Â»ç¿ÍÀÇ »ó»ýÇù·ÂÀ» ¹«¾ùº¸´Ù ¼ÒÁßÇÏ°Ô »ý°¢ÇÕ´Ï´Ù.
-                    H.T.CÄ¿ÇÇÀÇ<br> ¡®»ó»ýÇù·Â¡¯Àº Á¤Á÷°ú ½Å·Ú¸¦ ±â¹ÝÀ¸·Î Àå±âÀûÀ¸·Î ±¸ÃàµÇ¾ú½À´Ï´Ù. 
-                    °í°´µé¿¡°Õ ¿ì¸®ÀÇ Áø½ÉÀ» Á¦°øÇÏ°í,<br>°¡¸ÍÁ¡ÁÖ¿¡°Ô´Â ´Ù¾çÇÑ Áö¿øÁ¤Ã¥À¸·Î ¹Ì·¡ÀÇ Çàº¹À¸·Î ÀÎµµÇÏ¸ç, Çù·Â»ç¿Í´Â ¿À·£±â°£ ½×¾Æ¿Â ±»°ÇÇÑ ½Å·Ú·Î<br>¾çÁúÀÇ ¿øºÎÀÚÀç¸¦ °ø±Þ¹Þ°í ÀÖ½À´Ï´Ù.
+                    H.T.Cì»¤í”¼ëŠ” ê³ ê°, ê°€ë§¹ì ì£¼, í˜‘ë ¥ì‚¬ì™€ì˜ ìƒìƒí˜‘ë ¥ì„ ë¬´ì—‡ë³´ë‹¤ ì†Œì¤‘í•˜ê²Œ ìƒê°í•©ë‹ˆë‹¤.
+                    H.T.Cì»¤í”¼ì˜<br> â€˜ìƒìƒí˜‘ë ¥â€™ì€ ì •ì§ê³¼ ì‹ ë¢°ë¥¼ ê¸°ë°˜ìœ¼ë¡œ ìž¥ê¸°ì ìœ¼ë¡œ êµ¬ì¶•ë˜ì—ˆìŠµë‹ˆë‹¤. 
+                    ê³ ê°ë“¤ì—ê² ìš°ë¦¬ì˜ ì§„ì‹¬ì„ ì œê³µí•˜ê³ ,<br>ê°€ë§¹ì ì£¼ì—ê²ŒëŠ” ë‹¤ì–‘í•œ ì§€ì›ì •ì±…ìœ¼ë¡œ ë¯¸ëž˜ì˜ í–‰ë³µìœ¼ë¡œ ì¸ë„í•˜ë©°, í˜‘ë ¥ì‚¬ì™€ëŠ” ì˜¤ëžœê¸°ê°„ ìŒ“ì•„ì˜¨ êµ³ê±´í•œ ì‹ ë¢°ë¡œ<br>ì–‘ì§ˆì˜ ì›ë¶€ìžìž¬ë¥¼ ê³µê¸‰ë°›ê³  ìžˆìŠµë‹ˆë‹¤.
                 </p>
               </div>
             </div>
@@ -86,8 +87,8 @@
                 <div class="companytitle">
                     <div class="clear">
                         <div class="tit">
-                            <h1>°æ¿µÃ¶ÇÐ</h1><br>
-                            <p>°í°´°ú °¡¸ÍÁ¡ÁÖ, Çù·Â»çÀÇ »ó»ýÀÇ °¡Ä¡¸¦ ½ÇÃµÇÕ´Ï´Ù.</p><br>
+                            <h1>ê²½ì˜ì² í•™</h1><br>
+                            <p>ê³ ê°ê³¼ ê°€ë§¹ì ì£¼, í˜‘ë ¥ì‚¬ì˜ ìƒìƒì˜ ê°€ì¹˜ë¥¼ ì‹¤ì²œí•©ë‹ˆë‹¤.</p><br>
                         </div>
                       </div>
                 </div>
@@ -98,11 +99,11 @@
                 
                 <div class="mind">
                       <a>
-                          <strong>±âº»À» ÁöÅ°´Â Á¤Á÷ÇÑ ±â¾÷</strong><br><br>
+                          <strong>ê¸°ë³¸ì„ ì§€í‚¤ëŠ” ì •ì§í•œ ê¸°ì—…</strong><br><br>
                           <p class="field">
-                              °í°´¿¡°Ô ¿ì¼öÇÑ Ç°ÁúÀÇ Ä¿ÇÇ¸¦ ÇÕ¸®ÀûÀÎ °¡°Ý¿¡<br>
-                              Á¦°øÇÏ°í, °¡¸ÍÁ¡ÁÖ¸¦ À§ÇØ ¸ÅÀå ¼öÀÍÀ» ÃÖ¿ì¼±ÇÏ¸ç,<br>
-                              Çù·Â¾÷Ã¼¿ÍÀÇ ¿À·£ ½Å·Ú¸¦ ÀÌ¾î°©´Ï´Ù.<br>
+                              ê³ ê°ì—ê²Œ ìš°ìˆ˜í•œ í’ˆì§ˆì˜ ì»¤í”¼ë¥¼ í•©ë¦¬ì ì¸ ê°€ê²©ì—<br>
+                              ì œê³µí•˜ê³ , ê°€ë§¹ì ì£¼ë¥¼ ìœ„í•´ ë§¤ìž¥ ìˆ˜ìµì„ ìµœìš°ì„ í•˜ë©°,<br>
+                              í˜‘ë ¥ì—…ì²´ì™€ì˜ ì˜¤ëžœ ì‹ ë¢°ë¥¼ ì´ì–´ê°‘ë‹ˆë‹¤.<br>
                           </p>
                           
                       </a>
@@ -113,11 +114,11 @@
                  
                   <div class="love">
                         <a>
-                            <strong>»ç¶÷À» »ý°¢ÇÏ´Â µû¶æÇÑ ±â¾÷</strong><br><br>
+                            <strong>ì‚¬ëžŒì„ ìƒê°í•˜ëŠ” ë”°ëœ»í•œ ê¸°ì—…</strong><br><br>
                             <p class="field">
-                                ´Ã °í°´ÀÇ ÀÔÀå¿¡¼­ ¸ÕÀú »ý°¢ÇÏ°í,<br>
-                                °¡¸ÍÁ¡ÁÖÀÇ ÀÔÀåÀ» ¹è·ÁÇÏ¸ç,<br>
-                                »çÈ¸¿Í ÇÔ²²ÇÏ·Á°í ³ë·ÂÇÕ´Ï´Ù.<br>
+                                ëŠ˜ ê³ ê°ì˜ ìž…ìž¥ì—ì„œ ë¨¼ì € ìƒê°í•˜ê³ ,<br>
+                                ê°€ë§¹ì ì£¼ì˜ ìž…ìž¥ì„ ë°°ë ¤í•˜ë©°,<br>
+                                ì‚¬íšŒì™€ í•¨ê»˜í•˜ë ¤ê³  ë…¸ë ¥í•©ë‹ˆë‹¤.<br>
                             </p>
                             
                         </a>
@@ -128,11 +129,11 @@
                    
                     <div class="lock">
                           <a>
-                              <strong>½Å³ª°í Çàº¹ÇÑ Áñ°Å¿î ±â¾÷</strong><br><br>
+                              <strong>ì‹ ë‚˜ê³  í–‰ë³µí•œ ì¦ê±°ìš´ ê¸°ì—…</strong><br><br>
                               <p class="field">
-                                ¼öÆòÀû ¼ÒÅëÀÌ ÀÌ·ç¾îÁö´Â ÀþÀº ±â¾÷¹®È­<br>
-                                ¾÷°è ÃÖ°í ¼öÁØÀÇ º¹ÁöÇýÅÃÀ» ÅëÇØ<br>
-                                Á÷¿ø ¸ðµÎ°¡ Áñ°Ì°Ô ÀÏÇÏ´Â ±â¾÷À» ¸¸µì´Ï´Ù.<br>
+                                ìˆ˜í‰ì  ì†Œí†µì´ ì´ë£¨ì–´ì§€ëŠ” ì Šì€ ê¸°ì—…ë¬¸í™”<br>
+                                ì—…ê³„ ìµœê³  ìˆ˜ì¤€ì˜ ë³µì§€í˜œíƒì„ í†µí•´<br>
+                                ì§ì› ëª¨ë‘ê°€ ì¦ê²ê²Œ ì¼í•˜ëŠ” ê¸°ì—…ì„ ë§Œë“­ë‹ˆë‹¤.<br>
                               </p>
                           </a>
                     </div>

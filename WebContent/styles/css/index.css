@@ -56,8 +56,8 @@ header > div .total { display:none;}
 .barista > div div{ position: absolute;}
 .barista > div div.barista_img { top: 2rem; left : -100%;}
 .barista > div div.barista_img img{ transform: translateX(85rem); transition: all 2.3s;}
-.barista > div div.barista_left_img { top: 10rem; left : 100%;}
-.barista > div div.barista_left_img img{ transform: translateX(-25rem); transition: all 3s; }
+.barista > div div.barista_left_img { top: 10rem; left : 65%; width: 49rem;}
+
 .barista > div div.barista_btn { top: 20rem; left : 150%;}
 .barista > div div.barista_btn {display: inline-block; width:21rem; text-align: center;  font-size: 30px; color:#666666;}
 .barista > div div.barista_btn { transform: translateX(-62rem); transition: all 3s; }
@@ -76,7 +76,7 @@ header > div .total { display:none;}
 .rewards { position: relative; height: 18rem; background:#1E3932 no-repeat center top;}
 .rewards > div {  position: absolute;; width : 100%; }
 .rewards > div div.rewardimg1 img {  position: absolute; display: block; left:25%; top: 1.7rem; height: 15rem;} 
-.rewards > div div.info {position: absolute;  width:100%; height: 17rem; left:55%; top: 1.8rem;}
+.rewards > div div.info {position: absolute;  height: 17rem; left:55%; top: 1.8rem;}
 .rewards > div div.info span { font-size:1.15rem; color:#FFF; line-height:100%;}
 .rewards > div div.info p { padding:.7rem 0 0 0; font-size:.7rem; color:#FFF; line-height:1rem;}
 .btn {margin:.6rem 0 0 0;display: inline-block; min-width:6.25rem; height: 1.9rem; line-height: 1.9rem; font-size: .7rem; color:#fff; border:2px solid #fff; border-radius:3px; text-align: center;}

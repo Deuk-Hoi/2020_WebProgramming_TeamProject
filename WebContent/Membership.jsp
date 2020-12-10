@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,22 +10,23 @@
     <meta name="format-detection" content="telephone=no">
     <title>Hoseo TimeOut Cafe</title>
     <link rel="stylesheet" type="text/css" href="styles/css/XEIcon-2.2.0/xeicon.min.css">
-    <link rel="stylesheet" href="styles/css/default.css">
+    <link rel="stylesheet" href="styles/css/default2.css">
     <link rel="stylesheet" href="styles/css/membership.css">
     <link rel="stylesheet" href="styles/css/index_tablet.css" media="all and (max-width:1120px)">
     <link rel="stylesheet" href="styles/css/index_moblie.css" media="all and (max-width:960px)">
   </head>
   <body>
+  
     <jsp:include page="header.jsp"></jsp:include>
 
     <main>
         <section class="membershipstart">
             <div>
                 <p>
-                    <span class = "member_title">H.T.C ¸â¹ö½º</span><br><br>
-                    H.T.C Ä¿ÇÇÀÇ Æ¯º°ÇÑ ¸â¹ö½Ê ¼­ºñ½º¸¦ ¼Ò°³ÇÕ´Ï´Ù.<br>
-                    ½ºÅÆÇÁ Àû¸³, FREE ÄíÆù, ÀÌº¥Æ® ÇýÅÃ µî Áö±Ý H.T.C ¸â¹ö½º¿¡¼­ ¸¸³ªº¸¼¼¿ä<br>
-                    <a href="MyPage.jsp">³ªÀÇ ¸â¹ö½Ê º¸±â</a>
+                    <span class = "member_title">H.T.C ë©¤ë²„ìŠ¤</span><br><br>
+                    H.T.C ì»¤í”¼ì˜ íŠ¹ë³„í•œ ë©¤ë²„ì‹­ ì„œë¹„ìŠ¤ë¥¼ ì†Œê°œí•©ë‹ˆë‹¤.<br>
+                    ìŠ¤íƒ¬í”„ ì ë¦½, FREE ì¿ í°, ì´ë²¤íŠ¸ í˜œíƒ ë“± ì§€ê¸ˆ H.T.C ë©¤ë²„ìŠ¤ì—ì„œ ë§Œë‚˜ë³´ì„¸ìš”<br>
+                    <a href="MyPage.jsp">ë‚˜ì˜ ë©¤ë²„ì‹­ ë³´ê¸°</a>
                 </p>
             </div>
         </section>
@@ -32,22 +34,22 @@
         <section class="membershipindex">
             <div>
                 <p>
-                    <span class = "member_index">HOME  >  H.T.C ¸â¹ö½º  >  ¸â¹ö½º ¼Ò°³</span><br><br>
+                    <span class = "member_index">HOME  >  H.T.C ë©¤ë²„ìŠ¤  >  ë©¤ë²„ìŠ¤ ì†Œê°œ</span><br><br>
                 </p>
             </div>
         </section>
 
         <section class="membershiparticle">
           <div>
-              <div class="img1"><img src="images/main/moblie_benefit.PNG" alt="ÈÞ´ëÆù"></div>
+              <div class="img1"><img src="images/main/moblie_benefit.PNG" alt="íœ´ëŒ€í°"></div>
           </div>
           <div>
             <div class="info">
-              <span>H.T.C ¸â¹ö½º¶õ?</strong></span>
+              <span>H.T.C ë©¤ë²„ìŠ¤ëž€?</strong></span>
               <p>
-                  À½·á ±¸¸Å ½Ã ½ºÅÆÇÁ Àû¸³ ¹× FREE ÄíÆùÀÇ ÇýÅÃÀ» µå¸®´Â H.T.C¸¸ÀÇ<br>
-                  ¸ð¹ÙÀÏ ¸â¹ö½Ê ¼­ºñ½ºÀÔ´Ï´Ù. H.T.C ÄíÆù, ¼±¹°ÇÏ±â, H.T.C ¿À´õ µî ´Ù¾çÇÑ<br>
-                  ¼­ºñ½º¸¦ Áö±Ý ¹Ù·Î ÀÌ¿ëÇÏ¼¼¿ä!<br>
+                  ìŒë£Œ êµ¬ë§¤ ì‹œ ìŠ¤íƒ¬í”„ ì ë¦½ ë° FREE ì¿ í°ì˜ í˜œíƒì„ ë“œë¦¬ëŠ” H.T.Cë§Œì˜<br>
+                  ëª¨ë°”ì¼ ë©¤ë²„ì‹­ ì„œë¹„ìŠ¤ìž…ë‹ˆë‹¤. H.T.C ì¿ í°, ì„ ë¬¼í•˜ê¸°, H.T.C ì˜¤ë” ë“± ë‹¤ì–‘í•œ<br>
+                  ì„œë¹„ìŠ¤ë¥¼ ì§€ê¸ˆ ë°”ë¡œ ì´ìš©í•˜ì„¸ìš”!<br>
               </p>
             </div>
           </div>
@@ -55,43 +57,43 @@
 
         <section class="membershipBenefits">
           <div>
-              <div class="img1"><img src="images/main/stamp.PNG" alt="½ºÅÆÇÁ"></div>
-              <div class="img2"><img src="images/main/coupon.PNG" alt="ÄíÆù"></div>
-              <div class="img3"><img src="images/main/grade.PNG" alt="µî±Þ"></div>
-              <div class="img4"><img src="images/main/gift.PNG" alt="¼±¹°"></div>
-              <div class="img5"><img src="images/main/card.PNG" alt="Ä«µå"></div>
-              <div class="img6"><img src="images/main/phone.PNG" alt="ÈÞ´ëÆù"></div>
+              <div class="img1"><img src="images/main/stamp.PNG" alt="ìŠ¤íƒ¬í”„"></div>
+              <div class="img2"><img src="images/main/coupon.PNG" alt="ì¿ í°"></div>
+              <div class="img3"><img src="images/main/grade.PNG" alt="ë“±ê¸‰"></div>
+              <div class="img4"><img src="images/main/gift.PNG" alt="ì„ ë¬¼"></div>
+              <div class="img5"><img src="images/main/card.PNG" alt="ì¹´ë“œ"></div>
+              <div class="img6"><img src="images/main/phone.PNG" alt="íœ´ëŒ€í°"></div>
           </div>
         </section>
 
         <section class="membershipGrade">
           <div>
-                  <span class = "member_title">µî±Þ ¹× ÇýÅÃ</span><br><br>
+                  <span class = "member_title">ë“±ê¸‰ ë° í˜œíƒ</span><br><br>
               <p>
-                  H.T.C ¸â¹ö½º´Â ½ºÅÆÇÁ°¡ Àû¸³µÉ ¶§¸¶´Ù ÇýÅÃµµ Â÷°îÂ÷°î ½×ÀÔ´Ï´Ù.<br>
-                  »ç¿ëÇÒ¼ö·Ï ¸ðÀÌ´Â H.T.C Ä¿ÇÇ¸¸ÀÇ Æ¯º°ÇÑ ÇýÅÃ, H.T.C ¸â¹ö½º È¸¿ø µî±ÞÀ» ¼Ò°³ÇÕ´Ï´Ù.<br>
+                  H.T.C ë©¤ë²„ìŠ¤ëŠ” ìŠ¤íƒ¬í”„ê°€ ì ë¦½ë  ë•Œë§ˆë‹¤ í˜œíƒë„ ì°¨ê³¡ì°¨ê³¡ ìŒ“ìž…ë‹ˆë‹¤.<br>
+                  ì‚¬ìš©í• ìˆ˜ë¡ ëª¨ì´ëŠ” H.T.C ì»¤í”¼ë§Œì˜ íŠ¹ë³„í•œ í˜œíƒ, H.T.C ë©¤ë²„ìŠ¤ íšŒì› ë“±ê¸‰ì„ ì†Œê°œí•©ë‹ˆë‹¤.<br>
               </p>
-              <div class="img1"><img src="images/main/bronze.PNG" alt="ºê·ÐÁî"></div>
-              <div class="img2"><img src="images/main/silver.PNG" alt="½Ç¹ö"></div>
-              <div class="img3"><img src="images/main/gold.PNG" alt="°ñµå"></div>
-              <div class="img4"><img src="images/main/plere.PNG" alt="ÇÃ·¹Æ¼³Ñ"></div>
+              <div class="img1"><img src="images/main/bronze.PNG" alt="ë¸Œë¡ ì¦ˆ"></div>
+              <div class="img2"><img src="images/main/silver.PNG" alt="ì‹¤ë²„"></div>
+              <div class="img3"><img src="images/main/gold.PNG" alt="ê³¨ë“œ"></div>
+              <div class="img4"><img src="images/main/plere.PNG" alt="í”Œë ˆí‹°ë„˜"></div>
 
               <div class="info">
                 <p>
-                  <span>ÇýÅÃ¾È³»</span><br><br>
-                    -½ºÅÆÇÁ 12°³ Àû¸³ ½Ã, ¾Æ¸Þ¸®Ä«³ë(R) FREEÄíÆù ÁõÁ¤<br>
-                    -µî±Þº° ´Ù¾çÇÑ ÇÁ·Î¸ð¼Ç ¹× ÀÌº¥Æ® Âü¿©±âÈ¸ Á¦°ø<br>
+                  <span>í˜œíƒì•ˆë‚´</span><br><br>
+                    -ìŠ¤íƒ¬í”„ 12ê°œ ì ë¦½ ì‹œ, ì•„ë©”ë¦¬ì¹´ë…¸(R) FREEì¿ í° ì¦ì •<br>
+                    -ë“±ê¸‰ë³„ ë‹¤ì–‘í•œ í”„ë¡œëª¨ì…˜ ë° ì´ë²¤íŠ¸ ì°¸ì—¬ê¸°íšŒ ì œê³µ<br>
                 </p>
               </div>
 
               <div class="info2">
                 <p>
-                  <span>ÀÌ¿ë¾È³»</span><br><br>
-                    -½ºÅÆÇÁ À¯È¿±â°£Àº ½ºÅÆÇÁ º° 1³âÀÌ¸ç, ÄíÆù À¯È¿±â°£Àº ¹ßÇàÀÏ ±âÁØ 1°³¿ùÀÔ´Ï´Ù.<br>
-                    -µî±Þ»ó½Â : ÇØ´ç ½Â±ÞÁ¶°Ç ÃæÁ· ½Ã ÀÍÀÏºÎÅÍ Àû¿ëµË´Ï´Ù.<br>
-                    -µî±Þ±â°£ : ½Â±Þ ÀÏÀÚ·ÎºÎÅÍ 1³â°£ À¯È¿ÇÕ´Ï´Ù.<br>
-                    -µî±Þº¯°æ : ½Â±Þ ÀÏÀÚ·ÎºÎÅÍ 1³â°£ µî±Þ À¯Áö ÈÄ ½Â±ÞÁ¶°Ç¿¡ ÇØ´çÇÏ´Â µî±ÞÀ¸·Î º¯°æµË´Ï´Ù.<br>
-                    -È¸¿ø Àü¿ë ÇÁ·Î¸ð¼ÇÀº ¿î¿µ¿¡ µû¶ó º¯°æµÉ ¼ö ÀÖ½À´Ï´Ù.<br>
+                  <span>ì´ìš©ì•ˆë‚´</span><br><br>
+                    -ìŠ¤íƒ¬í”„ ìœ íš¨ê¸°ê°„ì€ ìŠ¤íƒ¬í”„ ë³„ 1ë…„ì´ë©°, ì¿ í° ìœ íš¨ê¸°ê°„ì€ ë°œí–‰ì¼ ê¸°ì¤€ 1ê°œì›”ìž…ë‹ˆë‹¤.<br>
+                    -ë“±ê¸‰ìƒìŠ¹ : í•´ë‹¹ ìŠ¹ê¸‰ì¡°ê±´ ì¶©ì¡± ì‹œ ìµì¼ë¶€í„° ì ìš©ë©ë‹ˆë‹¤.<br>
+                    -ë“±ê¸‰ê¸°ê°„ : ìŠ¹ê¸‰ ì¼ìžë¡œë¶€í„° 1ë…„ê°„ ìœ íš¨í•©ë‹ˆë‹¤.<br>
+                    -ë“±ê¸‰ë³€ê²½ : ìŠ¹ê¸‰ ì¼ìžë¡œë¶€í„° 1ë…„ê°„ ë“±ê¸‰ ìœ ì§€ í›„ ìŠ¹ê¸‰ì¡°ê±´ì— í•´ë‹¹í•˜ëŠ” ë“±ê¸‰ìœ¼ë¡œ ë³€ê²½ë©ë‹ˆë‹¤.<br>
+                    -íšŒì› ì „ìš© í”„ë¡œëª¨ì…˜ì€ ìš´ì˜ì— ë”°ë¼ ë³€ê²½ë  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.<br>
                 </p>
               </div>
           </div>
@@ -100,35 +102,35 @@
 
       <section class="membershipterms">
         <div>
-                <span class = "member_title">H.T.C ¸â¹ö½º ÀÌ¿ë¾à°ü</span><br><br>
+                <span class = "member_title">H.T.C ë©¤ë²„ìŠ¤ ì´ìš©ì•½ê´€</span><br><br>
             <p>
-               ÀÚ¼¼ÇÑ ³»¿ëÀº ¾Æ·¡ ¾à°ü º° Àü¹® º¸±â¸¦ ÅëÇØ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.
+               ìžì„¸í•œ ë‚´ìš©ì€ ì•„ëž˜ ì•½ê´€ ë³„ ì „ë¬¸ ë³´ê¸°ë¥¼ í†µí•´ í™•ì¸í•˜ì‹¤ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
             </p>
             <input type="checkbox" id="popup">
-            <label for="popup"><a>H.T.C ÀÌ¿ë¾à°ü</a></label>
+            <label for="popup"><a>H.T.C ì´ìš©ì•½ê´€</a></label>
             <div>
               <div>
                 <label for="popup">X</label>
-                <br><br><span>H.T.C ¸â¹ö½º ÀÌ¿ë¾à°ü</span><br><br>
-                Á¦ 1 Àå ÃÑÄ¢<br><br>
-                Á¦ 1 Á¶ (¸ñÀû)<br><br>
+                <br><br><span>H.T.C ë©¤ë²„ìŠ¤ ì´ìš©ì•½ê´€</span><br><br>
+                ì œ 1 ìž¥ ì´ì¹™<br><br>
+                ì œ 1 ì¡° (ëª©ì )<br><br>
                 <p>
-                ÀÌ ¾à°üÀº (ÁÖ)H.T.C(ÀÌÇÏ ¡®È¸»ç¡¯ ¶Ç´Â ¡®H.T.C¡¯¶ó°í ÇÔ)°¡ Á¦°øÇÏ´Â ¸â¹ö½Ê ¼­ºñ½º(ÀÌÇÏ ¡®H.T.C¸â¹ö½º¡¯¶ó°í ÇÔ)ÀÇ ÀÌ¿ë°ú °ü·ÃÇÏ¿© ÇÊ¿äÇÑ ÀÌ¿ë Á¶°Ç, ÀýÂ÷ ¹× ¡¯È¸»ç¡¯¿Í ¡®È¸¿ø¡¯°£ÀÇ ±Ç¸®, ÀÇ¹« µî ±âº»ÀûÀÎ »çÇ×À» ±ÔÁ¤ÇÏ´Â °ÍÀ» ¸ñÀûÀ¸·Î ÇÕ´Ï´Ù.
+                ì´ ì•½ê´€ì€ (ì£¼)H.T.C(ì´í•˜ â€˜íšŒì‚¬â€™ ë˜ëŠ” â€˜H.T.Câ€™ë¼ê³  í•¨)ê°€ ì œê³µí•˜ëŠ” ë©¤ë²„ì‹­ ì„œë¹„ìŠ¤(ì´í•˜ â€˜H.T.Cë©¤ë²„ìŠ¤â€™ë¼ê³  í•¨)ì˜ ì´ìš©ê³¼ ê´€ë ¨í•˜ì—¬ í•„ìš”í•œ ì´ìš© ì¡°ê±´, ì ˆì°¨ ë° â€™íšŒì‚¬â€™ì™€ â€˜íšŒì›â€™ê°„ì˜ ê¶Œë¦¬, ì˜ë¬´ ë“± ê¸°ë³¸ì ì¸ ì‚¬í•­ì„ ê·œì •í•˜ëŠ” ê²ƒì„ ëª©ì ìœ¼ë¡œ í•©ë‹ˆë‹¤.
                 </p>
               </div>
               <label for="popup"></label>
             </div>
             <input type="checkbox" id="popup2">
-            <label for="popup2"><a>°³ÀÎÁ¤º¸ Ã³¸® ¹æÄ§</a></label>
+            <label for="popup2"><a>ê°œì¸ì •ë³´ ì²˜ë¦¬ ë°©ì¹¨</a></label>
             <div>
               <div>
                 <label for="popup2">X</label>
-                  <br><br><span>°³ÀÎÁ¤º¸ Ã³¸®¹æÄ§</span><br><br><br>
+                  <br><br><span>ê°œì¸ì •ë³´ ì²˜ë¦¬ë°©ì¹¨</span><br><br><br>
                   <p>
-                    (ÁÖ)H.T.C'(ÀÌÇÏ 'H.T.C'¶ó°í ÇÔ)´Â È¸¿øÀÇ °³ÀÎÁ¤º¸¸¦ Áß¿ä½ÃÇÏ¸ç,"Á¤º¸Åë½Å¸Á ÀÌ¿ëÃËÁø ¹× Á¤º¸º¸È£¿¡ °üÇÑ ¹ý·ü" ¹× ¡°°³ÀÎÁ¤º¸º¸È£¹ý¡±À» ÁØ¼öÇÏ°í ÀÖ½À´Ï´Ù. <br><br>H.T.C´Â °³ÀÎÁ¤º¸Ãë±Þ¹æÄ§À» ÅëÇÏ¿© È¸¿øÀ¸·ÎºÎÅÍ Á¦°ø¹ÞÀº °³ÀÎÁ¤º¸°¡ ¾î¶°ÇÑ ¿ëµµ¿Í ¹æ½ÄÀ¸·Î ÀÌ¿ëµÇ°í ÀÖÀ¸¸ç, °³ÀÎÁ¤º¸º¸È£¸¦ À§ÇØ ¾î¶°ÇÑ Á¶Ä¡°¡ ÃëÇØÁö°í ÀÖ´ÂÁö ¾Ë·Áµå¸³´Ï´Ù.
-                    Å¸ÀÎÀÇ °³ÀÎÁ¤º¸¸¦ µµ¿ëÇÏ¿© °¡ÀÔÇÒ °æ¿ì °ü·Ã ¹ý·É¿¡ µû¶ó Ã³¹úµÉ¼ö ÀÖÀ¸¸ç, ´ç»ç´Â ¸¸ 14¼¼ ¹Ì¸¸ÀÚÀÇ È¸¿ø°¡ÀÔ ½Ã ¹ýÁ¤´ë¸®ÀÎÀÇ µ¿ÀÇ¸¦ ¹Þ°í ÀÖ½À´Ï´Ù.<br><br>
-                    H.T.C´Â °³ÀÎÁ¤º¸Ãë±Þ¹æÄ§À» °³Á¤ÇÏ´Â °æ¿ì À¥»çÀÌÆ® ¶Ç´Â ¸ð¹ÙÀÏ ¾îÇÃ¸®ÄÉÀÌ¼Ç °øÁö»çÇ×(¶Ç´Â °³º°°øÁö)À» ÅëÇØ È¸¿ø¿¡°Ô °íÁöÇÕ´Ï´Ù.<br><br>°³Á¤µÈ ÀÌÈÄ¿¡µµ È¸¿øÀÌ 1°³¿ù°£ ÀÌÀÇ Á¦±â ¾øÀÌ °è¼ÓÀûÀ¸·Î ¼­ºñ½º¸¦ ÀÌ¿ëÇÏ´Â °æ¿ì¿¡´Â °³Á¤»çÇ×¿¡ µ¿ÀÇÇÑ °ÍÀ¸·Î °£ÁÖÇÕ´Ï´Ù.
-                    * º» ¹æÄ§Àº 2020 ³â 11 ¿ù 22 ÀÏºÎÅÍ ½ÃÇàµË´Ï´Ù.
+                    (ì£¼)H.T.C'(ì´í•˜ 'H.T.C'ë¼ê³  í•¨)ëŠ” íšŒì›ì˜ ê°œì¸ì •ë³´ë¥¼ ì¤‘ìš”ì‹œí•˜ë©°,"ì •ë³´í†µì‹ ë§ ì´ìš©ì´‰ì§„ ë° ì •ë³´ë³´í˜¸ì— ê´€í•œ ë²•ë¥ " ë° â€œê°œì¸ì •ë³´ë³´í˜¸ë²•â€ì„ ì¤€ìˆ˜í•˜ê³  ìžˆìŠµë‹ˆë‹¤. <br><br>H.T.CëŠ” ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨ì„ í†µí•˜ì—¬ íšŒì›ìœ¼ë¡œë¶€í„° ì œê³µë°›ì€ ê°œì¸ì •ë³´ê°€ ì–´ë– í•œ ìš©ë„ì™€ ë°©ì‹ìœ¼ë¡œ ì´ìš©ë˜ê³  ìžˆìœ¼ë©°, ê°œì¸ì •ë³´ë³´í˜¸ë¥¼ ìœ„í•´ ì–´ë– í•œ ì¡°ì¹˜ê°€ ì·¨í•´ì§€ê³  ìžˆëŠ”ì§€ ì•Œë ¤ë“œë¦½ë‹ˆë‹¤.
+                    íƒ€ì¸ì˜ ê°œì¸ì •ë³´ë¥¼ ë„ìš©í•˜ì—¬ ê°€ìž…í•  ê²½ìš° ê´€ë ¨ ë²•ë ¹ì— ë”°ë¼ ì²˜ë²Œë ìˆ˜ ìžˆìœ¼ë©°, ë‹¹ì‚¬ëŠ” ë§Œ 14ì„¸ ë¯¸ë§Œìžì˜ íšŒì›ê°€ìž… ì‹œ ë²•ì •ëŒ€ë¦¬ì¸ì˜ ë™ì˜ë¥¼ ë°›ê³  ìžˆìŠµë‹ˆë‹¤.<br><br>
+                    H.T.CëŠ” ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨ì„ ê°œì •í•˜ëŠ” ê²½ìš° ì›¹ì‚¬ì´íŠ¸ ë˜ëŠ” ëª¨ë°”ì¼ ì–´í”Œë¦¬ì¼€ì´ì…˜ ê³µì§€ì‚¬í•­(ë˜ëŠ” ê°œë³„ê³µì§€)ì„ í†µí•´ íšŒì›ì—ê²Œ ê³ ì§€í•©ë‹ˆë‹¤.<br><br>ê°œì •ëœ ì´í›„ì—ë„ íšŒì›ì´ 1ê°œì›”ê°„ ì´ì˜ ì œê¸° ì—†ì´ ê³„ì†ì ìœ¼ë¡œ ì„œë¹„ìŠ¤ë¥¼ ì´ìš©í•˜ëŠ” ê²½ìš°ì—ëŠ” ê°œì •ì‚¬í•­ì— ë™ì˜í•œ ê²ƒìœ¼ë¡œ ê°„ì£¼í•©ë‹ˆë‹¤.
+                    * ë³¸ ë°©ì¹¨ì€ 2020 ë…„ 11 ì›” 22 ì¼ë¶€í„° ì‹œí–‰ë©ë‹ˆë‹¤.
                   </p>
               </div>
               <label for="popup2"></label>
@@ -136,27 +138,27 @@
         </div>
         <div>
           <input type="checkbox" id="popup3">
-            <label for="popup3"><a>À§Ä¡±â¹Ý ¼­ºñ½º ÀÌ¿ë¾à°ü</a></label>
+            <label for="popup3"><a>ìœ„ì¹˜ê¸°ë°˜ ì„œë¹„ìŠ¤ ì´ìš©ì•½ê´€</a></label>
             <div>
               <div>
                 <label for="popup3">X</label>
-                <br><br><span>À§Ä¡±â¹Ý ¼­ºñ½º ÀÌ¿ë¾à°ü</span><br><br>
-                Á¦ 1 Á¶ (ÀÌ¿ë ¸ñÀû)<br><br>
+                <br><br><span>ìœ„ì¹˜ê¸°ë°˜ ì„œë¹„ìŠ¤ ì´ìš©ì•½ê´€</span><br><br>
+                ì œ 1 ì¡° (ì´ìš© ëª©ì )<br><br>
                   <p>
-                    º» ¾à°üÀº ¡®È¸¿ø¡¯(H.T.C¸â¹ö½º È¸¿øÀ¸·Î¼­, º» ¾à°ü¿¡ µ¿ÀÇÇÑ ÀÚ¸¦ ¸»ÇÏ¸ç, ÀÌÇÏ ¡®È¸¿ø¡¯ÀÌ¶ó°í ÇÕ´Ï´Ù)ÀÌ (ÁÖ)H.T.C(ÀÌÇÏ ¡¯È¸»ç¡¯¶ó°í ÇÕ´Ï´Ù)°¡ Á¦°øÇÏ´Â À§Ä¡±â¹Ý¼­ºñ½º(ÀÌÇÏ ¡®¼­ºñ½º¡¯¶ó°í ÇÕ´Ï´Ù)¸¦ ÀÌ¿ëÇÔ¿¡ ÀÖ¾î ¡¯È¸»ç¡¯¿Í ¡®È¸¿ø¡¯ÀÇ ±Ç¸®¡¤ÀÇ¹« ¹× Ã¥ÀÓ»çÇ×À» ±ÔÁ¤ÇÔÀ» ¸ñÀûÀ¸·Î ÇÕ´Ï´Ù.
+                    ë³¸ ì•½ê´€ì€ â€˜íšŒì›â€™(H.T.Cë©¤ë²„ìŠ¤ íšŒì›ìœ¼ë¡œì„œ, ë³¸ ì•½ê´€ì— ë™ì˜í•œ ìžë¥¼ ë§í•˜ë©°, ì´í•˜ â€˜íšŒì›â€™ì´ë¼ê³  í•©ë‹ˆë‹¤)ì´ (ì£¼)H.T.C(ì´í•˜ â€™íšŒì‚¬â€™ë¼ê³  í•©ë‹ˆë‹¤)ê°€ ì œê³µí•˜ëŠ” ìœ„ì¹˜ê¸°ë°˜ì„œë¹„ìŠ¤(ì´í•˜ â€˜ì„œë¹„ìŠ¤â€™ë¼ê³  í•©ë‹ˆë‹¤)ë¥¼ ì´ìš©í•¨ì— ìžˆì–´ â€™íšŒì‚¬â€™ì™€ â€˜íšŒì›â€™ì˜ ê¶Œë¦¬Â·ì˜ë¬´ ë° ì±…ìž„ì‚¬í•­ì„ ê·œì •í•¨ì„ ëª©ì ìœ¼ë¡œ í•©ë‹ˆë‹¤.
                   </p>
               </div>
               <label for="popup3"></label>
             </div>
             <input type="checkbox" id="popup4">
-            <label for="popup4"><a>¸¶ÄÉÆÃ È°¿ë ¹× ±¤°í¼º Á¤º¸ ¼ö½Åµ¿ÀÇ</a></label>
+            <label for="popup4"><a>ë§ˆì¼€íŒ… í™œìš© ë° ê´‘ê³ ì„± ì •ë³´ ìˆ˜ì‹ ë™ì˜</a></label>
             <div>
               <div>
                 <label for="popup4">X</label>
-                <br><br><span>¸¶ÄÉÆÃ È°¿ë ¹× ±¤°í¼º Á¤º¸ ¼ö½Åµ¿ÀÇ</span><br><br>
+                <br><br><span>ë§ˆì¼€íŒ… í™œìš© ë° ê´‘ê³ ì„± ì •ë³´ ìˆ˜ì‹ ë™ì˜</span><br><br>
                   <p>
-                    ¼öÁýÇÏ´Â °³ÀÎÁ¤º¸´Â ¸¶ÄÉÆÃ, ÇÁ·Î¸ð¼Ç, ÀÌº¥Æ®, Çà»ç°ü·Ã Á¤º¸ ¾È³» ¹× Á¦¹Ý ¸¶ÄÉÆÃÈ°µ¿, ¸ÂÃãÇü ¼­ºñ½º Á¦°ø, ¸ÂÃãÇü ÄíÆù Á¦°ø, ´ç»ç ¹× Á¦ÈÞ»ç »óÇ°/¼­ºñ½º ¾È³» ¹× ±ÇÀ¯ µîÀ» À§ÇØ »ç¿ëÇÏ¸ç, È¸»ç´Â ÇØ´ç ¾÷¹«¸¦ ¼öÇàÇÏ±â À§ÇÏ¿© ¼öÅ¹»ç¸¦ È°¿ëÇÒ ¼ö ÀÖ°í, ÀÌ¿¡ ´ëÇØ¼­´Â °³ÀÎÁ¤º¸ Ã³¸®¹æÄ§À» ÅëÇØ È®ÀÎ °¡´ÉÇÕ´Ï´Ù.<br><br>
-                    ¼±ÅÃ »çÇ×¿¡ µ¿ÀÇÇÏÁö ¾ÊÀ¸¼Åµµ ¼­ºñ½º °¡ÀÔ ¹× ÀÌ¿ëÀÌ °¡´ÉÇÏ³ª, µ¿ÀÇÇÏÁö ¾ÊÀ» °æ¿ì Á¦°ø °¡´ÉÇÑ °ü·Ã ÆíÀÇ »çÇ× µî(¸ÂÃãÇü ÄíÆù ±âÅ¸ °¢Á¾ ÇýÅÃ µî)ÀÌ Á¦ÇÑµÉ ¼ö ÀÖ½À´Ï´Ù.
+                    ìˆ˜ì§‘í•˜ëŠ” ê°œì¸ì •ë³´ëŠ” ë§ˆì¼€íŒ…, í”„ë¡œëª¨ì…˜, ì´ë²¤íŠ¸, í–‰ì‚¬ê´€ë ¨ ì •ë³´ ì•ˆë‚´ ë° ì œë°˜ ë§ˆì¼€íŒ…í™œë™, ë§žì¶¤í˜• ì„œë¹„ìŠ¤ ì œê³µ, ë§žì¶¤í˜• ì¿ í° ì œê³µ, ë‹¹ì‚¬ ë° ì œíœ´ì‚¬ ìƒí’ˆ/ì„œë¹„ìŠ¤ ì•ˆë‚´ ë° ê¶Œìœ  ë“±ì„ ìœ„í•´ ì‚¬ìš©í•˜ë©°, íšŒì‚¬ëŠ” í•´ë‹¹ ì—…ë¬´ë¥¼ ìˆ˜í–‰í•˜ê¸° ìœ„í•˜ì—¬ ìˆ˜íƒì‚¬ë¥¼ í™œìš©í•  ìˆ˜ ìžˆê³ , ì´ì— ëŒ€í•´ì„œëŠ” ê°œì¸ì •ë³´ ì²˜ë¦¬ë°©ì¹¨ì„ í†µí•´ í™•ì¸ ê°€ëŠ¥í•©ë‹ˆë‹¤.<br><br>
+                    ì„ íƒ ì‚¬í•­ì— ë™ì˜í•˜ì§€ ì•Šìœ¼ì…”ë„ ì„œë¹„ìŠ¤ ê°€ìž… ë° ì´ìš©ì´ ê°€ëŠ¥í•˜ë‚˜, ë™ì˜í•˜ì§€ ì•Šì„ ê²½ìš° ì œê³µ ê°€ëŠ¥í•œ ê´€ë ¨ íŽ¸ì˜ ì‚¬í•­ ë“±(ë§žì¶¤í˜• ì¿ í° ê¸°íƒ€ ê°ì¢… í˜œíƒ ë“±)ì´ ì œí•œë  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
                   </p>
               </div>
               <label for="popup4"></label>
