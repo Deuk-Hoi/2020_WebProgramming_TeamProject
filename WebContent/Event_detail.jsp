@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	<div class="detail_body" align="center">
-		<div class="detail_head">
+		<div class="detail_head" style="font-size:15px;">
 			<table style="width:1100px;border-collapse:collapse;">
 				<thead>
 					<tr>
