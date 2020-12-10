@@ -44,26 +44,27 @@ body{
 /*Å×ÀÌºí*/
 #htctable{
 	margin:100px auto 0;
-   width:1050px;
-   border-bottom:3px solid #444444;
-   border-collapse: collapse;
+   	width:1050px;
+   	border-radius:10px;
 }
 #htctable #paymain{
 	font-size:45px;
 	border-right:hidden;
 	border-top:hidden;
+	border-collapse: collapse;
 }
 th{
-   width:100px;
-   border-right:1px solid #444444;
-   border-bottom: 1px solid #444444;
-   font-weight:bold;
-   padding:10px;
+   	width:100px;
+   	border-right:1px solid #444444;
+   	border-bottom: 1px solid #444444;
+   	font-weight:bold;
+   	padding:10px;
 }
 td{
-   border-bottom: 1px solid #444444;
-   height:100px;
-   text-align: center;
+	
+   	border-bottom: 1px solid #444444;
+   	height:100px;
+   	text-align: center;
 }
 /*select*/
 #sel{

@@ -1,3 +1,4 @@
+<jsp:include page="header.jsp"></jsp:include>
 <%@page contentType="text/html; charset=UTF-8" import="java.util.ArrayList" %>
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
@@ -42,7 +43,7 @@
 <%
 	if((setOrder.getAb() != null)){
 		if(InsertOrder.InsertOrd(setOrder, userinfo.getUserId()) == 1){
-			out.print("<script>alert('주문 감사합니다.');</script>");
+			out.print("<script>alert('주문 감사합니다.');location.href='./index.jsp';</script>");
 		}
 	}
 %>
@@ -60,16 +61,16 @@
 <body>
     <div id="pageImg">
 		<div id = "pageImgTxt" align="center">
-			<p class="page_title">H.T.C pay</p>
+			<p class="page_title">H.T.C PAY</p>
 			<hr width="50px">
-			<P class="page_letter"></P>
+			<P class="page_letter">엄청난 맛, 저렴한 가격 H.T.C Cafe 함께합니다.</P>
 		</div>
 	</div>
     <form accept-charset="UTF-8" method="POST">
     <div align="center">
     <table id="htctable">
     	<thead>
-    		<th colspan="3" id="paymain">H.T.C pay</th>
+    		<th colspan="3" id="paymain">H.T.C PAY</th>
     	</thead>
     	<tr>
     		<th>주문 내역</th>
@@ -116,7 +117,7 @@
     		</td>
     		<td>
     			Takeout 전용<br>
-    		 	<input type="datetime" id="takeouttime" name="takeouttime">
+    		 	<input type="datetime-local" id="takeouttime" name="takeouttime">
     		</td>
     	</tr>
     	<tr>

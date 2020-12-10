@@ -47,11 +47,10 @@ body{
 /*menu bar*/
 #menu{
     list-style-type: none;
-    margin: 0;
     padding: 0;
     overflow: hidden;
     margin: 0 auto;
-    width: 600px;
+    display:table;
 }
 .menubar {
     float: left;
@@ -126,14 +125,20 @@ body{
 	border-bottom: 1px solid #444444;
 	padding:10px;
 }
-#ordertable #cartnow{
+
+#ordertable td{
+	font-weight:700;
+	text-align:center;
+}
+/*테이블 내부 input*/
+#ordertable .cartnow{
 	border:none;
 	text-align:center;
 	color:#444444;
 	font-size:25px;
 	width:80%;
 }
-#ordertable #cartco{
+#ordertable .cartco{
 	border:none;
 	text-align:center;
 	color:#444444;
@@ -146,4 +151,17 @@ body{
 	font-size:18px;
 	font-weight:700;
 	width: 700px;
+}
+#ordertable #cartmay{
+	border:none;
+	text-align:center;
+	color:#444444;
+	font-size:25px;
+	width:10%;
+}
+#ai{
+	border-bottom:none;
+	text-align:right;
+	font-size:25px;
+	font-weight:bold;
 }
