@@ -67,7 +67,7 @@ public class LoginDAO {
 			info.put(3, pw_sha);
 			info.put(4, db_dto.getUserEmail());
 			info.put(5, db_dto.getUserPhone());
-			sql="INSERT INTO Userinfo(userName,userId,userPw,userEmail,userPhone,rank,couponNum) VALUES (?,?,?,?,?,'bronze',0)";
+			sql="INSERT INTO Userinfo(userName,userId,userPw,userEmail,userPhone,couponNum) VALUES (?,?,?,?,?,0)";
 			
 			HashMap<Integer, String> info_2 = new HashMap<Integer, String>();
 			String sql_2 = "SELECT userId FROM Userinfo WHERE userId=?";

@@ -50,4 +50,30 @@ public class OrderDAO {
 		
 		return db.InsertUpdateDB(sql, info);
 	}
+
+	
+	public JSONArray SelectUserOrder(String userId){
+		DatabaseManager db = new DatabaseManager();
+		
+		HashMap<Integer, String> info = new HashMap<Integer, String>();
+		info.put(1, userId);
+		
+		sql  = "SELECT * FROM Orders WHERE uid = (SELECT uid FROM Userinfo WHERE userId = ?)"; 
+		System.out.println(sql);
+		rs = db.selectDB(sql, info);
+		
+		try {
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("oid", rs.getString("oid"));
+				obj.put("orderList", rs.getString("orderList"));
+				obj.put("totalCost", rs.getString("totalCost"));
+				Jarray.add(obj);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		return Jarray;
+	}
+
 }

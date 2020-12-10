@@ -11,8 +11,13 @@
 <jsp:useBean id="InsertQnA" class = "com.webprogramming.project.QnaDAO"/>
 <jsp:setProperty name="setQnA" property="*"/>
 <%
-	userinfo.setUserId((String)session.getAttribute("userId"));
-	JSONObject element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
+	JSONObject element = null;
+	if((String)session.getAttribute("userId")!=null){
+		userinfo.setUserId((String)session.getAttribute("userId"));
+		element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
+	}else{
+		out.print("<script>alert('히히');location.href='./index.jsp';</script>");
+	}
 %>
 <%
 	if((setQnA.getTitle() != null) && (setQnA.getContents() != null)){
@@ -42,14 +47,6 @@
 				<P class="page_letter">H.T.C 카페에 전하고 싶은 불만, 칭찬을 보내주세요.<br>항상 고객의 소리에 귀 기울이며 고객만족 향상을 위해 노력 하겠습니다.</P>
 			</div>
 		</div>
-		<div class="contents">
-			<div id="pageLocation">
-				<p>Home > 고객센터 > Q & A</p>
-			</div>
-			<div>
-				<h1 id="subtitle">Q & A</h1>
-
-			</div>
 			<div class="contents">
 				<div id="pageLocation">
 					<p>Home > 고객센터 > Q & A</p>

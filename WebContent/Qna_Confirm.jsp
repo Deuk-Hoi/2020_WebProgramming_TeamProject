@@ -37,7 +37,7 @@
 				</div>
 				<div id = "qna_form">
 					<div class = "qna_headline">
-						<h2>문의 답변하기</h2>
+						<h3>문의 답변하기</h3>
 					</div>
 					<div class = "qna_title_date">
 						<table>

@@ -26,7 +26,7 @@ body{
 	font-weight: bold;
 	margin-bottom: 20px;
 }
-/*��ư*/
+/*¹öÆ°*/
 .orderbtn{
 	width:200px;
 	height:100px;
@@ -41,9 +41,10 @@ body{
 	background-color:black;
 	color:white;
 }
-/*���̺�*/
+/*Å×ÀÌºí*/
 #htctable{
 	margin:100px auto 0;
+
    width:1050px;
    border-bottom:3px solid #444444;
    border-collapse: collapse;
@@ -52,6 +53,7 @@ body{
 	font-size:45px;
 	border-right:hidden;
 	border-top:hidden;
+
 }
 th{
    width:100px;
@@ -64,6 +66,7 @@ td{
    border-bottom: 1px solid #444444;
    height:100px;
    text-align: center;
+
 }
 /*select*/
 #sel{

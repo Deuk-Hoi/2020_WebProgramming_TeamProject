@@ -105,7 +105,7 @@
                 회원를 등록하여 마이 H.T.C 멤버십 회원이 되신 후,<br>
                 첫 구매를 하시면 무료 음료 쿠폰을 드립니다!
               </p>
-            <a href="" class="btn type2">H.T.C - 주문하기</a>
+            <a href="Orderpage.jsp" class="btn type2">H.T.C - 주문하기</a>
           </div>
         </div>
       </section>
@@ -114,7 +114,7 @@
         <div>
           <div class="img1">
             <img src="images/main/2_logo.PNG" alt="CARRT the MERRY">
-            <a href="">자세히 보기</a>
+            <a href="OrderHot.jsp">자세히 보기</a>
           </div>
             <div class="img2"><img src="images/main/2_coffe1.PNG" alt="토피 넛 라떼"></div>
             <div class="img3"><img src="images/main/2_coffe2.PNG" alt="캐모마일 릴렉서"></div>

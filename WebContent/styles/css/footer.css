@@ -3,7 +3,7 @@
 footer .top {background: #383f43;}
 footer .top > div { width: 59rem; margin: 0 auto; padding:.65rem 0;}
 footer .top > div ul { float: left;}
-footer .top > div ul li { float: left; position: relative; padding: 0 .95rem 0 0; margin-top: 100rem;}
+footer .top > div ul li { float: left; position: relative; padding: 0 .95rem 0 0;}
 footer .top > div ul li:after {content:""; position: absolute; right: .45rem; top: 50%; margin-top: -0.2rem; width: 0.05rem; height: 0.4rem; background: #70767a;}
 footer .top > div ul li a { color: #fff; font-size: 13px; line-height: 2.25rem;}
 footer .top > div ul li:last-child::after {display: none;}

@@ -1,4 +1,56 @@
-<%@page contentType="text/html; charset=UTF-8" %>
+<jsp:include page="header.jsp"></jsp:include>
+<%@page contentType="text/html; charset=UTF-8" import="java.util.ArrayList" %>
+<%@page import="org.json.simple.JSONObject"%>
+<%@page import="org.json.simple.parser.JSONParser"%>
+<%@page import="org.json.simple.JSONArray"%>
+<%@page import="com.webprogramming.project.DatabaseManager"%>
+<% request.setCharacterEncoding("UTF-8"); %>
+<jsp:useBean id="seattable" class="com.webprogramming.project.DatabaseManager"/>
+<jsp:useBean id="userinfo" class="com.webprogramming.project.UserInfoDO"/>
+<jsp:useBean id="userinfoDAO" class="com.webprogramming.project.UserInfoDAO"/>
+<jsp:useBean id="setOrder" class = "com.webprogramming.project.OrderDO"/>
+<jsp:useBean id="InsertOrder" class = "com.webprogramming.project.OrderDAO"/>
+<jsp:setProperty name="setOrder" property="*"/>
+<%
+    ArrayList<String> list = (ArrayList)session.getAttribute("worldlist");
+%> 
+<%
+    String wow="";
+	int total = 0; 
+	ArrayList cost = new ArrayList<Integer>();
+    for(int i=0; i<list.size(); i++) {
+    	wow += (list.get(i)+" ");
+	}
+    
+    String a[]=wow.split(" ");
+    wow = "";
+    for(int i = 0; i < a.length; i++){
+		if(i %2 == 0){
+			wow += (a[i]+" ");
+    	}
+    	else{
+    		cost.add(Integer.parseInt(a[i]));
+    	}
+    }
+    for(Object money : cost){
+    	total += (int)money;
+    }
+%>
+<%
+	userinfo.setUserId((String)session.getAttribute("userId"));
+	JSONObject element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
+%>
+<%
+	if((setOrder.getAb() != null)){
+		if(InsertOrder.InsertOrd(setOrder, userinfo.getUserId()) == 1){
+			out.print("<script>alert('주문 감사합니다.');location.href='./index.jsp';</script>");
+		}
+	}
+%>
+<%
+	DatabaseManager dm = new DatabaseManager();
+	String htcseat = dm.Loadseat();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,69 +59,86 @@
  <link rel="stylesheet" href="styles/Wow.css">
 </head>
 <body>
-	<div class="banner">
-        <p class="bannertext">Order</p>
-    </div>
+    <div id="pageImg">
+		<div id = "pageImgTxt" align="center">
+			<p class="page_title">H.T.C PAY</p>
+			<hr width="50px">
+			<P class="page_letter">엄청난 맛, 저렴한 가격 H.T.C Cafe 함께합니다.</P>
+		</div>
+	</div>
+    <form accept-charset="UTF-8" method="POST">
     <div align="center">
-    <table class="htctable">
+    <table id="htctable">
     	<thead>
-    		<th colspan="3">htcpay</th>
+    		<th colspan="3" id="paymain">H.T.C PAY</th>
     	</thead>
     	<tr>
-    		<td>주문 내역</td>
-    		<td><label><input type="radio" name="pickup" value="매장">매장</label></td>
-    		<td><label><input type="radio" name="pickup" value="TakeOut">TakeOut</label></td>
-    	</tr>
-    	<tr>
-    		<td>좌석 선택</td>
-    		<td><img src=images/coffee/seat.png alt="" style="width:500px;height:500px;"></td>
+    		<th>주문 내역</th>
     		<td>
-    			<select name="seatnum" style="width:130px;">
-    				<option>1</option>
-    				<option>2</option>
-    				<option>3</option>
-    				<option>4</option>
-    				<option>5</option>
-    				<option>6</option>
-    				<option>7</option>
-    				<option>8</option>
-    				<option>9</option>
-    				<option>10</option>
-    				<option>11</option>
-    				<option>12</option>
+    			<input type="text" name="ab" value="<%=wow %>" id="wowlist" readonly>
+    		<td>
+    			<select name="pickup" id="sel" onchange='hello()'>
+    				<option name="cafe">매장 내 섭취</option>
+    				<option name="takeout">Takeout</option>
     			</select>
     		</td>
     	</tr>
     	<tr>
-    		<td>시간 선택</td>
+    		<th>좌석 선택</th>
+    		<td><img src=images/coffee/seat.png alt="" style="width:500px;height:500px;"></td>
+    		<td colspan="2">
+    			<%
+            		JSONParser parser = new JSONParser();
+            		Object o = parser.parse(htcseat);
+            		JSONArray ja = (JSONArray)o;
+               
+              			for(int i = 0; i < ja.size(); i++){
+                  			JSONObject hello = (JSONObject)ja.get(i);
+         		%>
+    			 <label>
+    			 	<input type="checkbox" name=seatnum class="seatnum" value="<%=(String)hello.get("csname")%>"><%=(String)hello.get("csname")%><br>
+    			 </label>
+    		 	<%
+            		}
+           		%>
+    		</td>
+    	</tr>
+    	<tr>
+    		<th>예약</th>
     		<td>
-    			<select name="seatnum" style="width:130px;">
-    				<option>10:00~12:00</option>
-    				<option>12:00~14:00</option>
-    				<option>14:00~16:00</option>
-    				<option>16:00~18:00</option>
-    				<option>18:00~20:00</option>
-    				<option>20:00~22:00</option>
+    			<select name="cafetime" id="timesel">
+    				<option value="10:00~12:00">10:00~12:00</option>
+    				<option value="12:00~14:00">12:00~14:00</option>
+    				<option value="14:00~16:00">14:00~16:00</option>
+    				<option value="16:00~18:00">16:00~18:00</option>
+    				<option value="18:00~20:00">18:00~20:00</option>
+    				<option value="20:00~22:00">20:00~22:00</option>
    				</select>
     		</td>
     		<td>
-    		 	/*TakeOut 이용 고객만 사용해 주시길 바랍니다.*/
-    			<input type="time" name="pickuptime">
+    			Takeout 전용<br>
+    		 	<input type="datetime-local" id="takeouttime" name="takeouttime">
     		</td>
     	</tr>
     	<tr>
-    		<td>멤버쉽 혜택</td>
+    		<th>결제 수단</th>
     		<td colspan="2"></td>
     	</tr>
     	<tr>
-    		<td>결제 수단</td>
-    		<td colspan="2"></td>
-    	</tr>
-    	<tr>
-    		<td>총 결제 금액</td>
-    		<td colspan="2"></td>
+    		<th>총 결제 금액</th>
+    		<td colspan="2" id="univ">
+    			<input type="text" name="price" value="<%=total %>" id="tex" readonly>원
+    		</td>
     	</tr>
     </table>
+    <div align="center">
+    	<input type="submit" value="결제하기" class="orderbtn">
     </div>
+    </div>
+    </form>
 </body>
 </html>
+<script>
+
+
+</script>
