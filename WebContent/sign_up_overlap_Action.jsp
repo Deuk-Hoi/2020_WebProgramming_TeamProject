@@ -3,11 +3,11 @@
 <%@ page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page import= "java.io.PrintWriter"%>
 <% request.setCharacterEncoding("UTF-8"); %>
-<jsp:useBean id="dao" class="com.webprogramming.project.DatabaseManager"/>
+<jsp:useBean id="loginDAO"  class = "com.webprogramming.project.LoginDAO"/>
 <%
 	int rst=0;
 	String id = (String)request.getParameter("id");
-	rst=dao.IdCheck(id);
+	rst=loginDAO.IdCheck(id);
 %>
 <!DOCTYPE html>
 <html>

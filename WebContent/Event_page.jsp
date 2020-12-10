@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page import="com.webprogramming.project.Event_DTO"%>
 <%@ page import="java.util.ArrayList" %>
-
+<jsp:useBean id="EDAO" class = "com.webprogramming.project.EventDAO"/>
 <!DOCTYPE html>
 <html>
 <%
@@ -19,13 +18,12 @@
 		response.sendRedirect("Event_page.jsp");
 		return;
 	}
-	DatabaseManager dao = new DatabaseManager();
-	ArrayList<Event_DTO> list = dao.getList(pageNum);
+	ArrayList<Event_DTO> list = EDAO.getList(pageNum);
 %>
 <head>
 <meta charset="UTF-8">
 <title>이벤트</title>
-<link rel="stylesheet" type="text/css" href="styles/Event_page.css?v=4">
+<link rel="stylesheet" type="text/css" href="styles/Event_page.css?v=5">
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -69,7 +67,7 @@
 			</table>
 			<br>
 			<%
-				for(int j=0;j<dao.maxPage()+1;j++){
+				for(int j=0;j<EDAO.maxPage()+1;j++){
 			%>
 				<a href="Event_page.jsp?pageNum=<%out.print(j+1);%>" style="margin:8px;">[<%out.print(j+1);%>]</a>
 			<%

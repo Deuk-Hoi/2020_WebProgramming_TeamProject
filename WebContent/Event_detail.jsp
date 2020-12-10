@@ -1,15 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page import="com.webprogramming.project.Event_DTO"%>
 <%@ page import="java.util.ArrayList" %>
+<jsp:useBean id="EDAO" class = "com.webprogramming.project.EventDAO"/>
 <!DOCTYPE html>
 <html>
 <%
 	String eventNum=request.getParameter("eventNum");
-	DatabaseManager dao = new DatabaseManager();
-	ArrayList<Event_DTO> list = dao.Event_detail(Integer.parseInt(eventNum));
-	dao.view_update(Integer.parseInt(eventNum));
+	ArrayList<Event_DTO> list = EDAO.Event_detail(Integer.parseInt(eventNum));
+	EDAO.view_update(Integer.parseInt(eventNum));
 
 %>
 <head>
