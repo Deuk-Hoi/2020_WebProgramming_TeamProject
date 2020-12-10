@@ -15,4 +15,4 @@ header > div .spot a { padding: 0 .95rem; font-size: .7rem; color:#333;}
 header > div .spot li ~ li a:after { content: ""; position: absolute; left: 0; top: 50%; width: 1px; height: .6rem; background: #504d4d; transform: translateY(-25%);}
 header > div .total { display:none;}
 
-header .mainheader {visibility: hidden;}
+header .menuham {visibility: hidden;}

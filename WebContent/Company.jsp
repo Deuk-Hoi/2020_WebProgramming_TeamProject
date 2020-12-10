@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
-<html>
+<html style="margin: 0 0 0 0;">
   <head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +42,7 @@
             <div class="companytitle">
                 <div class="clear">
                     <div class="tit">
-                        <h1>H.T.C 커피</h1><br>
+                        <h1>H.T.C 커피</h1>
                         <p>Always Beside You, H.T.C 커피는 언제나 당신 곁에 함께 합니다.</p><br>
                     </div>
                   </div>
@@ -87,7 +87,7 @@
                 <div class="companytitle">
                     <div class="clear">
                         <div class="tit">
-                            <h1>경영철학</h1><br>
+                            <h1>경영철학</h1>
                             <p>고객과 가맹점주, 협력사의 상생의 가치를 실천합니다.</p><br>
                         </div>
                       </div>
