@@ -13,6 +13,7 @@
 <title>고객의 소리</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 	<section>
 		<div id="pageImg">
 			<div id = "pageImgTxt" align="center">

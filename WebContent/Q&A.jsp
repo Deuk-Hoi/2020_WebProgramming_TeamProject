@@ -173,6 +173,7 @@
 </style>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 	<section id="qnaSection">
 		<div id="pageImg">
 			<div id = "pageImgTxt" align="center">

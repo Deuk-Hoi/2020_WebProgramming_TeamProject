@@ -90,7 +90,7 @@
 	
 	#coupon .couponList{
 		text-align: center;
-		margin: 0 5em 0 5em;
+		margin: 0 6em 0 6em;
 	}
 	
 	#coupon .couponList img{
@@ -170,6 +170,7 @@
 </style>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 	<section id="mypageSection">
 		<div id="pageImg">
 			<div id = "pageImgTxt" align="center">
@@ -270,6 +271,7 @@
 			</div>
 		</div>
 	</section>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
 <script>
