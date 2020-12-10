@@ -1,3 +1,4 @@
+<jsp:include page="header.jsp"></jsp:include>
 <%@page import="org.json.simple.parser.JSONParser"%>
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.JSONArray"%>
@@ -49,9 +50,10 @@
 			%>
 			<div class="cof">
 				<img src="images/coffee/<%=(String)element.get("img")%>" alt=""><br>
-            	<label><input type="checkbox" name="world" value="<%=(String)element.get("menuName")%> <%=(String)element.get("price")%>"><%=(String)element.get("menuName")%></label>
+            	<label><input type="checkbox" name="hoseo" value="<%=(String)element.get("menuName")%> <%=(String)element.get("price")%>"><%=(String)element.get("menuName")%>
             	<br>
             	<%=(String)element.get("price")%>원
+            	</label>
             </div>
         	<%
 				}
@@ -64,3 +66,4 @@
     </form>
 </body>
 </html>
+<jsp:include page="footer.jsp"></jsp:include>

@@ -1,4 +1,4 @@
-
+<jsp:include page="header.jsp"></jsp:include>
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
 <%@page import="org.json.simple.JSONArray"%><%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.ArrayList"%>
@@ -14,12 +14,14 @@
     	wow += (list.get(i)+" ");
 	}
     
+    ArrayList bbb=new ArrayList<String>();
     String a[]=wow.split(" ");
     wow = "";
     for(int i = 0; i < a.length; i++){
 		if(i %2 == 0){
 			wow += (a[i]+" ");
-    	}
+    		bbb.add(a[i]);
+		}
     	else{
     		cost.add(Integer.parseInt(a[i]));
     	}
@@ -56,18 +58,29 @@
     	</thead>
     	<tbody>
     		<tr>
-				<th colspan="2" id="list1">Orderlist</th>
-				<th id="list2">TotalCost</th>
+				<th colspan="2" id="list1">주문 목록</th>
+				<th id="list2">상품 금액</th>
 			</tr>
+			<%
+				for(int i=0; i<bbb.size() ;i++){
+			%>
+			<tr>
+    			<th colspan="2">
+    				<input type="text" name="cart" value="<%=(String)bbb.get(i) %>" class="cartnow" readonly>
+    			</th>
+    			<th>
+    				<input type="text" name="cartcost" value="<%=cost.get(i) %>" class="cartco" readonly>원
+    			</th>
+    		</tr>
+    		<%
+				}
+    		%>
     	</tbody>
     	<tfoot>
     		<tr>
-    			<th colspan="2">
-    				<input type="text" name="cart" value="<%=wow %>" id="cartnow" readonly>
-    			</th>
-    			<th>
-    				<input type="text" name="cartcost" value="<%=total %>" id="cartco" readonly>원
-    			</th>
+    			<td colspan="3">
+    				합계 금액&nbsp;<input type="text" name="cartcost" value="<%=total %>" id="cartmay" readonly>원
+    			</td>
     		</tr>
     	</tfoot>
     </table>

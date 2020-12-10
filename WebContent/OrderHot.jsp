@@ -1,3 +1,4 @@
+<jsp:include page="header.jsp"></jsp:include>
 <%@page import="org.json.simple.parser.JSONParser"%>
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.JSONArray"%>
@@ -57,7 +58,7 @@
           	<%
             	}
            	%>
-    </div>    	
+    </div>  	
     <div align="center">
     	<input type="submit" value="주문하기" class="orderbtn" >
     	<input type="button" value="장바구니 이동" class="orderbtn" onclick="window.open('Orderlist.jsp')">
@@ -66,3 +67,4 @@
     </form>
 </body>
 </html>
+<jsp:include page="footer.jsp"></jsp:include>

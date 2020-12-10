@@ -1,10 +1,10 @@
+<jsp:include page="header.jsp"></jsp:include>
 <%@page import="org.json.simple.parser.JSONParser"%>
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.JSONArray"%>
 <%@page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page contentType="text/html; charset=UTF-8" %>
 <jsp:useBean id="menudb" class="com.webprogramming.project.DatabaseManager"/>
 <%
 	request.setCharacterEncoding("UTF-8");
@@ -14,7 +14,6 @@
 	String menu = dm.LoadorderIce();
 %>
 <!DOCTYPE html>
-<%@page contentType="text/html; charset=UTF-8" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,9 +48,11 @@
 			%>
 			<div class="cof">
 				<img src="images/coffee/<%=(String)element.get("img")%>" alt=""><br>
-            	<label><input type="checkbox" name="world" value="<%=(String)element.get("menuName")%> <%=(String)element.get("price")%>"><%=(String)element.get("menuName")%></label>
-            	<br>
-            	<%=(String)element.get("price")%>원
+            	<label>
+            		<input type="checkbox" name="hoseo" value="<%=(String)element.get("menuName")%> <%=(String)element.get("price")%>"><%=(String)element.get("menuName")%>
+            		<br>
+            		<%=(String)element.get("price")%>원
+            	</label>
             </div>
         	<%
 				}
@@ -64,3 +65,4 @@
     </form>
 </body>
 </html>
+<jsp:include page="footer.jsp"></jsp:include>
