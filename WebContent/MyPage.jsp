@@ -1,14 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="org.json.simple.JSONObject"%>
+<%@page import="org.json.simple.JSONArray"%>
 <jsp:useBean id="userinfo" class="com.webprogramming.project.UserInfoDO"/>
 <jsp:useBean id="userinfoDAO" class="com.webprogramming.project.UserInfoDAO"/>
+<jsp:useBean id="QnaDAO" class="com.webprogramming.project.QnaDAO"/>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
 <%
 	userinfo.setUserId((String)session.getAttribute("userId"));
 	JSONObject element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
+	JSONArray myqna = QnaDAO.SelectQna_Mypage((String)session.getAttribute("userId"));
 %>
 <!DOCTYPE html>
 <html>
@@ -18,9 +21,10 @@
 <link rel="stylesheet" type="text/css" href="styles/User_page_css/MyPage.css">
 </head>
 <body>
-	<header>
+	<!-- <header>
 		<jsp:include page="header.jsp"></jsp:include>
-	</header>
+	</header> -->
+	<jsp:include page="header.jsp"></jsp:include>
 	<main>
 		<section id="mypageSection">
 			<div id="pageImg">
@@ -88,6 +92,62 @@
 						</div>
 					</div>
 				</div>
+				<div id = "my_qna">
+					<div class="qna_list">
+						<h2>나의 문의 현황</h2>
+					</div>
+					<table id = "qna_table">
+						<tr class="qna_row_width ans_title">
+							<td><strong>등록번호</strong></td>
+							<td><strong>제목</strong></td>
+							<td><strong>답변 상태</strong></td>
+							<td><strong>답변 확인</strong></td>
+						</tr>
+						<% 
+							for(int i = 0; i < myqna.size(); i++){
+								JSONObject qna = (JSONObject)myqna.get(i);
+						%>
+							<tr class="qna_row_width ans_list">
+								<td><%= (String)qna.get("qid") %></td>
+								<td><%= (String)qna.get("title") %></td>
+								<%
+									if((String)qna.get("answer") == null){
+								%>
+										<td style="color: red; font-weight: bold;">답변 대기</td>
+										<td><input type="button" value = "답변 확인 >" style="display: none;"/></td>
+								<%
+									}else{	
+								%>
+										<td style="color: blue; font-weight: bold;">답변 완료</td>
+										<td><input type="button" value = "답변 확인 >" onclick="location.href='Qna_Confirm.jsp?num=<%= (String)qna.get("qid") %>'"/></td>
+						<%				
+									}
+							}
+						%>
+							</tr>
+					</table>
+				</div>
+				
+				<div id = "recent_order">
+					<div class="order_list">
+						<h2>최근 주문 현황</h2>
+					</div>
+					<table id = "order_table">
+						<tr class="order_row_width order_title">
+							<td><strong>주문 번호</strong></td>
+							<td><strong>주문 내역</strong></td>
+							<td><strong>총 가격</strong></td>
+							<td><strong>영수증 보기</strong></td>
+						</tr>
+						<tr class="order_row_width order_list">
+							<td><strong>1</strong></td>
+							<td><strong>아이스 아메리카노</strong></td>
+							<td><strong>3200</strong></td>
+							<td><input type="button" value = "영수증 >"/></td>
+						</tr>
+					</table>
+				</div>
+				
 				<div id = "MemberShip">
 					<div class = "Benefits">
 						<h2>H.T.C 멤버십 혜택</h2>
@@ -123,9 +183,9 @@
 			</div>
 		</section>
 	</main>
-	<footer>
+	<!--  <footer>
 		<jsp:include page="footer.jsp"></jsp:include>
-	</footer>
+	</footer>-->
 </body>
 </html>
 <script>

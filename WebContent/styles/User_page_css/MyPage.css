@@ -111,7 +111,7 @@ body{
 	
 	#coupon .couponList{
 		text-align: center;
-		margin: 0 5em 0 5em;
+		margin: 0 3em 0 3em;
 	}
 	
 	#coupon .couponList img{
@@ -169,6 +169,106 @@ body{
 	#UsageGuide .Benefit_contents>span{
 		color: #666666;
 	}
+	#my_qna{
+						margin-bottom: 100px;
+					}
+					#my_qna>.qna_list{
+						border-bottom: 1px solid #dadada;
+						margin-top: 150px;
+						margin-bottom: 50px;
+						padding-bottom: 17px;
+					}
+					#qna_table{
+						width: 100%;
+						border-collapse: collapse;
+					}
+					.qna_row_width{
+						width: 100%;
+					}
+					.qna_row_width td:nth-child(1){
+						width: 10%;
+						text-align: center;
+					}
+					.qna_row_width td:nth-child(2){
+						width: 60%;
+					}
+					.qna_row_width td:nth-child(3){
+						width: 20%;
+						text-align: center;
+					}
+					.qna_row_width td:nth-child(4){
+						width: 10%;
+						text-align: center;
+					}
+					.ans_title>td:nth-child(2){
+						text-align: center;
+					}
+					.ans_title>td{
+						padding-bottom: 10px;
+					}
+					.ans_list>td{
+						border-top: 1px solid #d9d9d9;
+						border-bottom: 1px solid #d9d9d9;
+						padding: 10px 0px 10px 0px;
+					}
+					.ans_list>td:nth-child(4)>input{
+						background-color: blue;
+						color: white;
+						font-weight: bold; 
+						border-radius: 5px;
+					}
+					
+					#recent_order{
+						width: 100%;
+						border-collapse: collapse;
+					}
+					#recent_order>.order_list{
+						border-bottom: 1px solid #dadada;
+						margin-top: 150px;
+						margin-bottom: 50px;
+						padding-bottom: 17px;
+					}
+					#order_table{
+						width: 100%;
+						border-collapse: collapse;
+					}
+					
+					.order_row_width{
+						width: 100%;
+					}
+					.order_row_width td:nth-child(1){
+						width: 10%;
+						text-align: center;
+					}
+					.order_row_width td:nth-child(2){
+						width: 60%;
+					}
+					.order_row_width td:nth-child(3){
+						width: 15%;
+						text-align: center;
+					}
+					.order_row_width td:nth-child(4){
+						width: 15%;
+						text-align: center;
+					}
+					
+					.order_title>td:nth-child(2){
+						text-align: center;
+					}
+					.order_title>td{
+						padding-bottom: 10px;
+					}
+					.order_list>td{
+						border-top: 1px solid #d9d9d9;
+						border-bottom: 1px solid #d9d9d9;
+						padding: 10px 0px 10px 0px;
+					}
+					.order_list>td:nth-child(4)>input{
+						background-color: blue;
+						color: white;
+						font-weight: bold; 
+						border-radius: 5px;
+					}
 @media screen and (max-width:1910px) { 
 	.contents{
 		margin-top: 50px;
