@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 html { font-size : 20px;}
-
 /* 헤더 */
 header {background: #f6f5ef; border: top 2px solid #000;}
 header > div { position: relative; width : 54.5rem; margin : 0 auto;}
