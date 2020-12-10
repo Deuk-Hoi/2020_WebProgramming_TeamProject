@@ -1,0 +1,131 @@
+body{
+	margin:0;
+	font-family : '¸¼Àº °íµñ', sans-serif;
+}
+	
+#pageImg{
+	background-image: url("../../images/noticeImg/noticeImg.jpg");
+	width: 100%;
+}
+	
+#pageImgTxt{
+	padding : 50px;
+}
+	
+#pageImgTxt p{
+	color: white;
+}
+	
+#pageImgTxt .page_title{
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+	
+#pageImgTxt.page_letter{
+	font-size: 17px;
+}
+
+.contents{
+	margin-top: 50px;
+	margin-left: 350px;
+	margin-right: 350px;
+	margin-bottom: 50px;
+}
+
+#pageLocation > p{
+	text-align: right;
+	font-size: 12px;
+	font-weight: bold;
+	color: gray;
+	font-family : '¸¼Àº °íµñ', sans-serif;
+}
+#subtitle{
+	font-size: 2.25em;
+	margin-top: 40px;
+	margin-bottom: 80px;
+}
+
+#noticeTable{
+		width: 100%;
+		text-align: center;
+		border-top: 2px solid;
+		border-collapse: collapse;
+	}
+	#noticeTable td{
+		border-top: 1px solid #d9d9d9;
+		border-bottom: 1px solid #d9d9d9;
+	}
+	#noticeTable th, td{
+		padding: 30px;
+	}
+	#noticeTable .cel-1, .cel-4{
+		width: 10%;
+	}
+	#noticeTable .cel-3{
+		width: 15%;
+	}
+	#noticeTable .cel-2{
+		width: 65%;
+	}
+	#noticeTable #td-2{
+		cursor: pointer;
+	}
+	#noticeTable #td-2{
+		text-align: left;
+	}
+	#noticeTable tbody tr:hover{
+		background-color:lightgray;
+	}
+	#pagingForm{ 
+		text-align : center;
+		margin-top : 20px;
+	}
+	.pagination {
+	  display: inline-block;
+	  text-align:center
+	}
+	.pagination a {
+	  color: black;
+	  float: left;
+	  padding: 8px 16px;
+	  text-decoration: none;
+	}
+	
+	.pagination a.active {
+	  background-color: #4CAF50;
+	  color: white;
+	  border-radius: 5px;
+	}
+	
+	.pagination a:hover:not(.active) {
+	  background-color: #ddd;
+	  border-radius: 5px;
+	}
+	
+@media screen and (max-width:1910px) { 
+	.contents{
+		margin-top: 50px;
+		margin-left: 200px;
+		margin-right: 200px;
+		margin-bottom: 50px;
+	}
+}
+	
+@media screen and (max-width:1440px) { 
+	.contents{
+		margin-top: 50px;
+		margin-left: 100px;
+		margin-right: 100px;
+		margin-bottom: 50px;
+	}
+}
+
+@media screen and (max-width:1243px) { 
+	.contents{
+		margin-top: 50px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 50px;
+	}
+}

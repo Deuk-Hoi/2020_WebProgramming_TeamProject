@@ -1,14 +1,14 @@
 @charset "EUC-KR";
 
-body{
+.main{
 	margin:0;
 	background-image: url('../../images/login_Event_Img/main.jpg');
 	background-size:cover;
-	padding:0;
+	padding:100px 0;
 	font-family : '¸¼Àº °íµñ', sans-serif;
 	background-repeat:no-repeat;
 }
-.box {
+.main .box {
 	width:500px;
 	height:700px;
 	background-color:white;
@@ -17,7 +17,7 @@ body{
 	border-radius:5px;
 	margin:50px 0 80px 0;
 }
-.box_search_id{
+.main .box_search_id{
 	width:500px;
 	height:240px;
 	background-color:white;
@@ -26,19 +26,19 @@ body{
 	border-radius:5px;
 	margin:220px 0 0 0;
 }
-.box_in{
+.main .box_in{
 	text-align:left;
 	padding:10px 0 0 0;
 	margin: 0 50px 0;
 }
-.sign_up_ip{
+.main .sign_up_ip{
 	font-size:18px;
 	font-weight:border;
 	letter-spacing:2px;
 	margin:17px 0 8px 0;
 }
-.login_ip{
-	border:2px solid #b3b0ab;
+.main .login_ip{
+	border:2px solid #85837f;
 	outline:0;
 	background-color:rgba(255,255,255,0);
 	padding:0 15px 0;
@@ -49,7 +49,7 @@ body{
 	border-radius:2px;
 	letter-spacing:2px;
 }
-.sign_up_sub{
+.main .sign_up_sub{
 	border:0;
 	outline:0;
 	margin:24px 0 20px 0;
@@ -61,15 +61,15 @@ body{
 	font-size:20px;
 	border-radius:2px;
 }
-.sign_up_exist{
+.main .sign_up_exist{
 	border:0;
 	outline:0;
 	background-color:rgba(255,255,255,0);
 	border-bottom:0.9px solid black;
 }
-.overlap{
+.main .overlap{
 	outline:0;
-	border:2px solid #b3b0ab;
+	border:2px solid #85837f;
 	background-color:rgba(255,255,255,0);
 	font-family : '¸¼Àº °íµñ', sans-serif;
 	height:45px;
@@ -80,9 +80,9 @@ body{
 	font-size:15px;
 	color:#3d3c3c;
 }
-.overlap:hover{
+.main .overlap:hover{
 	outline:0;
-	border:2px solid #b3b0ab;
+	border:2px solid #85837f;
 	background-color:rgba(166, 121, 7,0.7);
 	font-family : '¸¼Àº °íµñ', sans-serif;
 	height:45px;

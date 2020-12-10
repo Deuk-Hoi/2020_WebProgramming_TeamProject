@@ -3,8 +3,11 @@
 <%@ page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page import= "java.io.PrintWriter"%>
 <% request.setCharacterEncoding("UTF-8"); %>
+<jsp:useBean id="loginDAO"  class = "com.webprogramming.project.LoginDAO"/>
 <jsp:useBean id="user" class="com.webprogramming.project.DB_DTO" scope="page"/>
 <jsp:setProperty name="user" property="userId" />
+<jsp:setProperty name="user" property="userPw" />
+<jsp:setProperty name="user" property="checkPw" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,26 +16,27 @@
 </head>
 <body>
 	<%
-		DatabaseManager dm = new DatabaseManager();
-		String result = dm.searchPw(user);
+		user.setUserId((String)session.getAttribute("userId"));
+		String result = loginDAO.searchPw(user);
 		if(result == "-2"){
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('DB 오류입니다.')");
 			script.println("history.back()");
 			script.println("</script>");
-		}else if(result == "-1"){
+		}else if(result == "-3"){
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
-			script.println("alert('존재하지 않는 아이디입니다.')");
+			script.println("alert('비밀번호가 일치하지 않습니다.')");
 			script.println("history.back()");
 			script.println("</script>");
 		}else{
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
-			script.println("alert('회원님의 비밀번호는 "+result+" 입니다.')");
+			script.println("alert('비밀번호 변경이 완료되었습니다.')");
 			script.println("location.href='./login_main.jsp'");
 			script.println("</script>");
+			session.invalidate();
 		}
 	%>
 </body>

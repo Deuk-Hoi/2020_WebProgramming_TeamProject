@@ -1,0 +1,55 @@
+#qnaTable{
+		width: 100%;
+		text-align: center;
+		border-top: 2px solid;
+		border-collapse: collapse;
+	}
+	#qnaTable td{
+		border-top: 1px solid #d9d9d9;
+		border-bottom: 1px solid #d9d9d9;
+	}
+	#qnaTable th, td{
+		padding: 30px;
+	}
+	#qnaTable .cel-1, .cel-4{
+		width: 10%;
+	}
+	#qnaTable .cel-3{
+		width: 25%;
+	}
+	#qnaTable .cel-2{
+		width: 55%;
+	}
+	#qnaTable #td-2{
+		cursor: pointer;
+	}
+	#qnaTable #td-2{
+		text-align: left;
+	}
+	#qnaTable tbody tr:hover{
+		background-color:lightgray;
+	}
+	#pagingForm{
+		text-align: center;
+		margin : 20px;
+	}
+	.pagination {
+	  display: inline-block;
+	}
+	.pagination a {
+	  color: black;
+	  float: left;
+	  padding: 8px 16px;
+	  text-decoration: none;
+	}
+	
+	.pagination a.active {
+	  background-color: #4CAF50;
+	  color: white;
+	  border-radius: 5px;
+	}
+	
+	.pagination a:hover:not(.active) {
+	  background-color: #ddd;
+	  border-radius: 5px;
+	}

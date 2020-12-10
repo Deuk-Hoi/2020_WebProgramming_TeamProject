@@ -16,45 +16,11 @@
 <head>
 <meta charset="UTF-8">
 <title>자주하는 질문</title>
-<link rel="stylesheet" type="text/css" href="styles/Supports.css">
-<style>
-	.subtitle{
-		padding: 80px 0px 30px 0;
-		border-bottom: 1px solid #dadada;
-	}
-	.question, .answer{
-		padding: 30px;
-		border-bottom : 1px solid #dadada;
-		margin: 0px 0px;
-		
-	}
-	.question{
-		font-size: 18px;
-        font-weight: 800; 
-    }
-    .question>span{
-        color: darkblue;
-        font-size: 25px;
-        font-weight: 800;
-    }
-    .question:hover{
-        border: 2px solid blueviolet;
-        color: blueviolet;
-    }
-    .answer{
-        display: none;
-        background-color: #F6F6F6;
-        font-size: 16px;
-        font-weight: 800;
-    }
-    .answer>span{
-        color:darkred;
-        font-size: 25px;
-    }
-	
-</style>
+<link rel="stylesheet" type="text/css" href="styles/Support_page_css/Supports.css">
+<link rel="stylesheet" type="text/css" href="styles/Support_page_css/FAQ.css">
 </head>
 <body>
+
 <jsp:include page="header.jsp"></jsp:include>
 	<section>
 		<div id="pageImg">
@@ -67,25 +33,34 @@
 		<div class="contents">
 			<div id="pageLocation">
 				<p>Home > 고객센터 > FAQ</p>
+
 			</div>
-			<div id = "FAQContent">
-				<div class = "subtitle">
-					<h2>자주하는 질문 [FAQ]</h2>
+			<div class="contents">
+				<div id="pageLocation">
+					<p>Home > 고객센터 > FAQ</p>
 				</div>
-				<%
-					for(int i = 0; i < ja.size(); i++){
-						JSONObject element = (JSONObject)ja.get(i);
-				%>
-					<div id = "FAQDetail">
-				        <p class = "question" id = "que-<%=i %>"><span>Q.&nbsp;&nbsp;</span><%=(String)element.get("question")%></p>
-				        <p class = "answer" id = "ans-<%=i %>"><span>A.&nbsp;&nbsp;</span><%=(String)element.get("answer")%></p>
-				    </div>
-				<%		
-					}
-				%>
+				<div id = "FAQContent">
+					<div class = "subtitle">
+						<h2>자주하는 질문 [FAQ]</h2>
+					</div>
+					<%
+						for(int i = 0; i < ja.size(); i++){
+							JSONObject element = (JSONObject)ja.get(i);
+					%>
+						<div id = "FAQDetail">
+					        <p class = "question" id = "que-<%=i %>"><span>Q.&nbsp;&nbsp;</span><%=(String)element.get("question")%></p>
+					        <p class = "answer" id = "ans-<%=i %>"><span>A.&nbsp;&nbsp;</span><%=(String)element.get("answer")%></p>
+					    </div>
+					<%		
+						}
+					%>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</main>
+	<footer>
+		<jsp:include page="footer.jsp"></jsp:include>
+	</footer>
 </body>
 </html>
 <script>

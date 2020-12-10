@@ -28,7 +28,6 @@
         <div class="slidewrap">
           
           <ul class="slidelist">
-  
             <!-- 슬라이드 영역 -->
             <li class="slideitem">
               <a>
@@ -65,7 +64,6 @@
                 <img src="images/main/banner_4.PNG">
               </a>
             </li class="slideitem">
-      
             <!-- 좌,우 슬라이드 버튼 -->
             <div class="slide-control">
               <div>

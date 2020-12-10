@@ -3,6 +3,7 @@
 <%@ page import="com.webprogramming.project.DatabaseManager"%>
 <%@ page import= "java.io.PrintWriter"%>
 <% request.setCharacterEncoding("UTF-8"); %>
+<jsp:useBean id="loginDAO"  class = "com.webprogramming.project.LoginDAO"/>
 <jsp:useBean id="user" class="com.webprogramming.project.DB_DTO"/>
 <jsp:setProperty name="user" property="userEmail" />
 <!DOCTYPE html>
@@ -13,8 +14,7 @@
 </head>
 <body>
 	<%
-		DatabaseManager dm = new DatabaseManager();
-		String result = dm.searchId(user);
+		String result = loginDAO.searchId(user);
 		if(result == "-1"){
 			PrintWriter script = response.getWriter();
 			script.println("<script>");

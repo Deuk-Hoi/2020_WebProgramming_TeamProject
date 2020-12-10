@@ -1,0 +1,140 @@
+#qnaSection{
+		font-family : '¸¼Àº °íµñ', sans-serif;
+	}
+	#subtitle{
+		font-size: 2.25em;
+		margin-top: 40px;
+	}
+	#notice{
+		border: 6px solid #e0dddd;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	#notice h2{
+		font-weight: 550;
+	}
+	#notice p{
+		color: #404040;
+	}
+	
+	#qna_form{
+		margin-top: 50px;
+		margin-left: 200px;
+		margin-right: 200px;
+		margin-bottom: 50px;
+		
+	}
+	.border_design{
+		border-top: 2px solid;
+	}
+	.border_design>h3{
+    	padding-top: 20px;
+	}
+	#terms{
+		font-size: 13px;
+		width: 100%;
+	    height: 150px;
+	    margin: 24px 0 10px;
+	    padding: 15px 20px;
+	    background: #f8f8f8;
+	    border: 1px solid #CCC;
+	    border-radius: 3px;
+	    box-sizing: border-box;
+	    overflow-y: scroll;	
+	}
+	
+	#insert_userinfo{
+		margin-top: 40px;
+		border-color: #e0dddd;
+	}
+	
+	#insert_userinfo h3{
+		display: inline-block;
+	}
+	#insert_userinfo span{
+		color: red;	
+	}
+	
+	.table_design{
+		margin : 0;
+		width:100%;
+	}
+	
+	.table_design th{
+		text-align: left;
+	}
+	.table_design th>span{
+		color: red;
+	}
+	
+	.table_design th, td{
+		padding : 15px;
+	}
+	
+	.table_design input{
+		width:100%;
+		padding-left : 20px;
+		padding-right:0px;
+		padding-top : 15px;
+		padding-bottom : 15px;
+		border-radius: 3px;
+		border: 1px solid #CCC;
+		box-sizing: border-box;
+		font-size: 17px;
+	}
+	
+	.table_design td{
+		padding-right:0px;
+	}
+	
+	#insert_qna{
+		margin-top: 40px;
+		border-color: #e0dddd;
+	}
+	
+	#insert_qna h3{
+		display: inline-block;
+	}
+	#insert_qna span{
+		color: red;	
+	}
+	#insert_qna textarea{
+		width: 100%;
+	    height: 200px;
+	    padding: 15px;
+	    border: 1px solid #CCC;
+	    border-radius: 3px;
+	    box-sizing: border-box;
+	    font-family : '¸¼Àº °íµñ', sans-serif;
+	    resize: none;
+	}
+	#enroll{
+		text-align:center;
+		margin-top: 20px;
+	}
+	#enroll input{
+		width: 250px;
+		height: 80px;
+		font-size: 20px;
+		border-radius: 5px;
+		font-family : '¸¼Àº °íµñ', sans-serif;
+	}
+	
+	#reset{
+		background-color: #572a31;
+		border-color: #572a31;
+		color: white;
+		font-weight: bold;
+		
+		margin-right: 10px; 
+	}
+	
+	#submit{
+		background-color: #002f6c;
+		border-color: #002f6c;
+		color: white;
+		font-weight: bold;
+		margin-left: 10px;
+	}
