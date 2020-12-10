@@ -23,18 +23,21 @@
 			function Logout(s){
 				location.href="Logout_Action.jsp";
 			}
+			function Mypage(s){
+				location.href="MyPage.jsp"
+			}
 		</script>
 </head>
 <body>
 	<header>
       <div>
-        <h1><a href="Main.jsp"><img src="images/main/logo.PNG" alt="Hoseo TimeOut Cafe LOGO"></a></h1>
+        <h1><a href="index.jsp"><img src="images/main/logo.PNG" alt="Hoseo TimeOut Cafe LOGO"></a></h1>
         <h2 class="hide">대메뉴</h2>
         <nav>
             <ul>
-                <li><a href="#a">COFFEE</a></li>
-                <li><a href="#a">ORDER</a></li>
-                <li><a href="#a">MENU</a></li>
+                <li><a href="OrderHot.jsp">COFFEE</a></li>
+                <li><a href="Orderpage.jsp">ORDER</a></li>
+                <li><a href="Notice.jsp">Notice</a></li>
                 <li><a href="Membership.jsp">MEMBERSHIP</a></li>
                 <li><a href="Event_page.jsp">EVENT</a></li>
                 <li><a href="Customer_Sound.jsp">Service Center</a></li>
@@ -47,26 +50,27 @@
             <li><a href="#a"><i class="xi-map-o"></i><span>  Find a Store</span></a></li>
             <%}else{%>
             <li><a><span><%out.print(id);%>님. 환영합니다!</span></a></li>
+            <li><a><span><input type="button" value="My page" onclick="Mypage()" style="background-color:rgba( 255, 255, 255, 0 );font-size:13px;"></span></a></li>
             <li><a><span><input type="button" value="Log out" onclick="Logout()" style="background-color:rgba( 255, 255, 255, 0 );font-size:13px;"></span></a></li>
             <%} %>
           </ul>
-              <section class="mainheader">
-		            <input type="checkbox" id="hambu">
-		                <label for="hambu"><a class="total"><i class="xi-bars"></i></a></label>
-		                <div>
-		                  <div>
-		                    <label for="hambu">close</label>
-		                    <a href="#a">COFFEE</a>
-		                    <a href="#a">ORDER</a>
-		                    <a href="Notice.jsp">Notice</a>
-		                    <a href="Membership.jsp">MEMBERSHIP</a>
-		                    <a href="Event_page.jsp">EVENT</a>
-		                    <a href="Customer_Sound.jsp">Service Center</a>
-		                  </div>
-		                  <label for="hambu"></label>
-		                </div>
-		          </section>
-          <a href="#a" class="total"><i class="xi-bars"></i><span>전체메뉴보기</span></a>
+          
+           <section class="menuham">
+            <input type="checkbox" id="ham">
+                <label for="ham"><a class="total"><i class="xi-bars"></i></a></label>
+                <div>
+                  <div>
+                    <label for="ham">close</label>
+                    <a href="OrderHot.jsp">COFFEE</a>
+                    <a href="Orderpage.jsp">ORDER</a>
+                    <a href="Notice.jsp">Notice</a>
+                    <a href="Membership.jsp">MEMBERSHIP</a>
+                    <a href="Event_page.jsp">EVENT</a>
+                    <a href="Customer_Sound.jsp">Service Center</a>
+                  </div>
+                  <label for="ham"></label>
+                </div>
+          </section>
       </div>
     </header>
     

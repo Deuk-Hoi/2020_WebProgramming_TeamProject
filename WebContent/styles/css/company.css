@@ -10,13 +10,13 @@ body { font-size : 1rem;}
 
 /* 소개 */
 .companystart {position: relative; width: 100%;height: 460px; background:url('../../images/main/company.PNG') no-repeat center top;}
-.companystart > div > p{text-align: center; padding-top: 7rem; font-size: 0.9rem; color:black;}
+.companystart > div > p{text-align: center; padding-top: 7rem; font-size: 0.9rem; color:black; margin :0;}
 .companystart > div .member_title{font-size:2.4rem; color:#464646;}
 .companyindex { position: relative;}
-.companyindex > div > p{ text-align:right; font-size:0.6rem; margin : 1rem 18rem 0 0;}
+.companyindex > div > p{ text-align:right; font-size:.7rem; margin : 1rem 18rem 0 0;}
 
 /* 회사 소개 1*/
-.companyarticle {position: relative; height: 450px;  background:#fff;}
+.companyarticle {position: relative; height: 450px;  background:#fff; margin:1rem 0 0 0;}
 .companyarticle > div div{ position: absolute;}
 .companyarticle > div div.img1{ left : 21%; top: 0.7rem;z-index: 5;}
 .companyarticle > div > p{text-align: center; padding-top: 4rem; font-size: 0.9rem;}
@@ -28,7 +28,7 @@ body { font-size : 1rem;}
 /* 회사 소개 2 */
 .companyarticle2 {position: relative; height: 450px;  background:#fff;}
 .companyarticle2 > div div{ position: absolute;}
-.companyarticle2 > div div.img1{ left : 53%; top: 0.7rem;z-index: 5;}
+.companyarticle2 > div div.img1{ left : 56%; top: 0.7rem;z-index: 5;}
 .companyarticle2 > div > p{text-align: center; padding-top: 4rem; font-size: 0.9rem;}
 .companyarticle2 > div .member_title{font-size:1.4rem; color: black;}
 .companyarticle2 > div div.info {position: absolute;  height: 17rem; left:21%; top: 6.5rem;}
