@@ -3,7 +3,7 @@
 html { font-size: 16px;}
 body { font-size: 1rem;}
 
-header .mainheader {visibility: visible;}
+header .membershipterms {visibility: visible;}
 
 header > div .spot i { display:inline-block;font-size: 2.5rem;}
 header > div .total { display:inline-block;}
@@ -19,7 +19,7 @@ header > div .spot li ~ li a:after{ display: none;}
 header > div .spot li:nth-child(2){display: none;}
 header .total span,
 header > div .spot li span { position: absolute; left:-40000%;}
-header > .mainheader {display: inline;}
+header > .membershipterms {display: inline;}
 
 .visual > div div img{ width: 100%;}
 .visual > div div.img1 { min-width: 12rem; width: 40%; }
@@ -113,7 +113,7 @@ header > .mainheader {display: inline;}
 .blick .tit h2 { font-size: 38px; color:#333; line-height:1;}
 
 /* 매장찾기 */
-.find_store {position: relative; height: 32.3rem; background:url('../../images/main/m_store_bk.PNG') no-repeat center top;}
+.find_store {position: relative; height: 32.3rem; background:url('../image/m_store_bk.PNG') no-repeat center top;}
 .find_store > div { position: relative; width:100%; max-width: 70rem; height: 32.3rem; margin: 0 auto;}
 .find_store > div div {position: absolute;}
 .find_store > div div {left: 8%;  top: 6rem; font-size: 0.8rem;}
@@ -137,7 +137,7 @@ header > .mainheader {display: inline;}
 .companytitle > .clear > .tit > p{ color:#70767a;  font-size: 15px;}
 
 /* 소개 */
-.companystart {position: relative; width: 100%;height: 460px; background:url('../../images/main/company.PNG') no-repeat center top;}
+.companystart {position: relative; width: 100%;height: 460px; background:url('../image/company.PNG') no-repeat center top;}
 .companystart > div > p{text-align: center; padding-top: 7rem; font-size: 0.9rem; color:black;}
 .companystart > div .member_title{font-size:2.4rem; color:#464646;}
 .companyindex { position: relative;}
@@ -181,21 +181,21 @@ header > .mainheader {display: inline;}
 .companylogoin > div div.lock strong { font-size: 18px; color:#333;}
 .companylogoin > div div.lock .field { font-size: 13px; color:#4c5459;}
 
-.mainheader > div a{display: inline-block; min-width:13rem; height: 1.9rem; line-height: 1.9rem; font-size: 1rem; border:2px solid #7A7A7A; border-radius:3px; text-align: center; color:#7A7A7A; }
-.mainheader > div a{margin-top: 2rem; margin-left: 1rem;}
-.mainheader > div a img{margin-left: 10rem;}
+.membershipterms > div a{display: inline-block; min-width:13rem; height: 1.9rem; line-height: 1.9rem; font-size: 1rem; border:2px solid #7A7A7A; border-radius:3px; text-align: center; color:#7A7A7A; }
+.membershipterms > div a{margin-top: 2rem; margin-left: 1rem;}
+.membershipterms > div a img{margin-left: 10rem;}
 
 
-input[id*="hambu"] {display: none;}
-input[id*="hambu"] + label + div {display: none;}
-input[id*="hambu"]:checked + label + div {display: block; }
-input[id*="hambu"] + label {display: inline-block; padding: 5px;  color:  rgba(255,255,255,.9); }
-input[id*="hambu"] + label + div {position: fixed; top: 0; left: 50%; width: 100%; height: 100%; z-index: 100; }
-input[id*="hambu"] + label + div > div {position: absolute; top:10%; left:0%;  width: 20rem; height: 22.5rem; background: rgba(255,255,255,.9); z-index: 2; }
-input[id*="hambu"] + label + div > div > label {position: absolute; left:50%; width: 20rem; height: 1.5rem; transform: translate(-50%, -50%);  background:  rgba(255,255,255,.9); z-index: 1;text-align: left; margin-left: 1rem; font-size: 1.2rem; }
-input[id*="hambu"] + label + div > div > p{font-size:0.8rem; text-align: left; padding-left: 1rem; padding-right: 1rem;}
-input[id*="hambu"] + label + div > div > span{font-size:1.5rem; text-align: center; color:#000;}
-input[id*="hambu"] + label + div > label {position: absolute; top:0%; left:0%; width:100%; height: 100%; background: rgba(255,255,255,.9); z-index: 1; }
+input[id*="popup"] {display: none;}
+input[id*="popup"] + label + div {display: none;}
+input[id*="popup"]:checked + label + div {display: block; }
+input[id*="popup"] + label {display: inline-block; padding: 5px;  color:  rgba(255,255,255,.9); }
+input[id*="popup"] + label + div {position: fixed; top: 0; left: 50%; width: 100%; height: 100%; z-index: 100; }
+input[id*="popup"] + label + div > div {position: absolute; top:10%; left:0%;  width: 20rem; height: 22.5rem; background: rgba(255,255,255,.9); z-index: 2; }
+input[id*="popup"] + label + div > div > label {position: absolute; left:50%; width: 20rem; height: 1.5rem; transform: translate(-50%, -50%);  background:  rgba(255,255,255,.9); z-index: 1;text-align: left; margin-left: 1rem; font-size: 1.2rem; }
+input[id*="popup"] + label + div > div > p{font-size:0.8rem; text-align: left; padding-left: 1rem; padding-right: 1rem;}
+input[id*="popup"] + label + div > div > span{font-size:1.5rem; text-align: center; color:#000;}
+input[id*="popup"] + label + div > label {position: absolute; top:0%; left:0%; width:100%; height: 100%; background: rgba(255,255,255,.9); z-index: 1; }
 
 
 
@@ -203,3 +203,4 @@ input[id*="hambu"] + label + div > label {position: absolute; top:0%; left:0%; w
 
 /* footer */
 footer .top {display: none;}
+

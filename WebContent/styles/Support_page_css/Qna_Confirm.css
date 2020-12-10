@@ -39,19 +39,19 @@ body{
 	#qna_form .qna_title_date>table td:nth-child(2){
 		width: 20%;
 		text-align: right;
+		font-size: 15px;
 	}
 	#qna_form .qna_title_date>table td:nth-child(3){
 		width: 20%;
 		text-align: right;
+		font-size: 15px;
 	}
 	#qna_form .qna_contents>table{
 		margin-top: 20px;
 		text-align: center;
 	}
-	#qna_form .qna_contents>table tr:nth-child(2){
+	#qna_form .qna_contents>table tr{
 		padding-top: 30px;
-	}
-	#qna_form .qna_contents>table tr:nth-child(2) td{
 		text-align: left;
 	}
 	#ans_form{

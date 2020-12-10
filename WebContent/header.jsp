@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +46,7 @@
             <li><a href="sign_up.jsp"><i class="xi-user-plus-o"></i>  Sign Up</a></li>
             <li><a href="#a"><i class="xi-map-o"></i><span>  Find a Store</span></a></li>
             <%}else{%>
-            <li><a><span><%out.print(id);%> 님 환영합니다.</span></a></li>
+            <li><a><span><%out.print(id);%>님. 환영합니다!</span></a></li>
             <li><a><span><input type="button" value="Log out" onclick="Logout()" style="background-color:rgba( 255, 255, 255, 0 );font-size:13px;"></span></a></li>
             <%} %>
           </ul>

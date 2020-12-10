@@ -35,10 +35,6 @@
 				<p>Home > 고객센터 > FAQ</p>
 
 			</div>
-			<div class="contents">
-				<div id="pageLocation">
-					<p>Home > 고객센터 > FAQ</p>
-				</div>
 				<div id = "FAQContent">
 					<div class = "subtitle">
 						<h2>자주하는 질문 [FAQ]</h2>
