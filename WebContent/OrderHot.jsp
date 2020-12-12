@@ -1,3 +1,4 @@
+<jsp:include page="header.jsp"></jsp:include>
 <%@page import="org.json.simple.parser.JSONParser"%>
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.JSONArray"%>
@@ -66,3 +67,4 @@
     </form>
 </body>
 </html>
+<jsp:include page="footer.jsp"></jsp:include>

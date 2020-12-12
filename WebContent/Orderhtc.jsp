@@ -1,3 +1,4 @@
+<jsp:include page="header.jsp"></jsp:include>
 <%@page contentType="text/html; charset=UTF-8" import="java.util.ArrayList" %>
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
@@ -42,7 +43,7 @@
 <%
 	if((setOrder.getAb() != null)){
 		if(InsertOrder.InsertOrd(setOrder, userinfo.getUserId()) == 1){
-			out.print("<script>alert('주문 감사합니다.');</script>");
+			out.print("<script>alert('주문 감사합니다.');location.href='./index.jsp';</script>");
 		}
 	}
 %>
@@ -137,7 +138,4 @@
     </form>
 </body>
 </html>
-<script>
-
-
-</script>
+<jsp:include page="footer.jsp"></jsp:include>

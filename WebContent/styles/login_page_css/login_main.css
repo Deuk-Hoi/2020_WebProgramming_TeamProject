@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+html {margin:0; padding:0;}
+
 .main{
 	margin:0;
 	background-image: url('../../images/login_Event_Img/main.jpg');

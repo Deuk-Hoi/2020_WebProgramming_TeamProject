@@ -25,9 +25,9 @@
 </head>
 
 <body>
-	<!-- <header>
+	<header>
 		<jsp:include page="header.jsp"></jsp:include>
-	</header> -->
+	</header>
 	<main>
 		<section id="QnaSection">
 			<div id="pageImg">
@@ -85,8 +85,8 @@
 			</div>
 		</section>
 	</main>
-	<!-- <footer>
+	<footer>
 		<jsp:include page="footer.jsp"></jsp:include>
-	</footer> -->
+	</footer>
 </body>
 </html>

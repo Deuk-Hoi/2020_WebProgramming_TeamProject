@@ -16,7 +16,7 @@
 		userinfo.setUserId((String)session.getAttribute("userId"));
 		element = (JSONObject)userinfoDAO.SelectUserInfo(userinfo.getUserId()).get(0);
 	}else{
-		out.print("<script>alert('히히');location.href='./index.jsp';</script>");
+		out.print("<script>alert('로그인 이후 이용 바랍니다!');location.href='./index.jsp';</script>");
 	}
 %>
 <%

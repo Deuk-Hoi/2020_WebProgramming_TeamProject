@@ -11,6 +11,8 @@
 <%
    request.setCharacterEncoding("UTF-8");
    ArrayList<String> list = (ArrayList)session.getAttribute("worldlist");
+   list = null;
+   session.setAttribute("worldlist", list);
    String[] world = request.getParameterValues("hoseo");
    
    if(list==null){

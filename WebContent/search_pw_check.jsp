@@ -18,7 +18,7 @@
 					<p class="sign_up_ip">아이디<font color="red">*</font></p>
 					<input class = "login_ip" type="text" name="userId" placeholder="ID">
 					<p class="sign_up_ip">이메일<font color="red">*</font></p>
-					<input class = "login_ip" type="email" name="userEmail" placeholder="ID">
+					<input class = "login_ip" type="email" name="userEmail" placeholder="e-mail">
 					<input class="sign_up_sub" type="submit" value="확인">
 					<div align="center" style="margin:-15px 0 0 0;">
 						<input class="sign_up_exist" type="button" value="비밀번호를 기억하시나요? 홈으로 돌아가기" onclick="location.href='login_main.jsp'">

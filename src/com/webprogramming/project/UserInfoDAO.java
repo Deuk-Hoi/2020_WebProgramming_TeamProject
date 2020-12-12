@@ -54,4 +54,32 @@ public class UserInfoDAO {
 		return db.InsertUpdateDB(sql, info);
 	}
 	
+	public JSONArray UserOrderbill(String oid) {
+	      DatabaseManager db = new DatabaseManager();
+	      
+	      HashMap<Integer, String> info = new HashMap<Integer, String>();
+	      info.put(1, oid);
+	      
+	      sql  = "SELECT o.oid, o.orderList, o.totalCost, o.pickUp, s.seatNum, s.seatTime, (SELECT userName FROM Userinfo WHERE uid = o.uid) AS username FROM Orders AS o, Seat AS s WHERE o.oid = ? AND o.oid = s.oid; ";
+	      rs = db.selectDB(sql, info);
+	      
+	      try {
+	         while(rs.next()) {
+	            JSONObject obj = new JSONObject();
+	            obj.put("oid", rs.getString("oid"));
+	            obj.put("orderList", rs.getString("orderList"));
+	            obj.put("totalCost", rs.getString("totalCost"));
+	            obj.put("pickUp", rs.getString("pickUp"));
+	            obj.put("seatNum", rs.getString("seatNum"));
+	            obj.put("seatTime", rs.getString("seatTime"));
+	            obj.put("userName", rs.getString("userName"));
+	            Jarray.add(obj);
+	         }
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      } 
+	      return Jarray;
+	      
+	   }
+	
 }

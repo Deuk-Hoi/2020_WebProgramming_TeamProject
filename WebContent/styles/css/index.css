@@ -50,14 +50,13 @@ header > div .total { display:none;}
 .visual > div div.img3 { left : 45%; top: 14.5rem; z-index: 3;}
 .visual > div div.img4 { left : 75%; top: 9rem;}
 
-/* 멤버 소개 */
+/* 멤버 소개 이동 */
 .barista {position: relative;  height: 646px;}
 .barista div { position: relative; width:100%; max-width: 70rem; height: 35rem; }
 .barista > div div{ position: absolute;}
 .barista > div div.barista_img { top: 2rem; left : -100%;}
 .barista > div div.barista_img img{ transform: translateX(85rem); transition: all 2.3s;}
 .barista > div div.barista_left_img { top: 10rem; left : 65%; width: 49rem;}
-
 .barista > div div.barista_btn { top: 20rem; left : 150%;}
 .barista > div div.barista_btn {display: inline-block; width:21rem; text-align: center;  font-size: 30px; color:#666666;}
 .barista > div div.barista_btn { transform: translateX(-62rem); transition: all 3s; }

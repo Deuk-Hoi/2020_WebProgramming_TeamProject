@@ -31,13 +31,13 @@
 	          <div>
 	            <p style="margin:0;padding:0;">고객상담<strong>041-532-4752</strong></p>
 	            <select>
-	              <option>FAMILY SITE</option>
+	              <option>호서 월드</option>
 	            </select>
 	          </div>
 	        </div>
 	      </div>
 	      <div class="btm">
-	        <img src="images/main/footer_logo.PNG" alt="호서대 로고">
+	        <a href="Qna_list.jsp"><img src="images/main/footer_logo.PNG" alt="호서대 로고"></a>
 	        <p>HOSEO TIMEOUT CAFE</p>
 	        <ul>
 	          <li> 충청남도 아산시 배방읍 호서로 79번길 20 (31499) 강석규 교육관 지하 1층</li>

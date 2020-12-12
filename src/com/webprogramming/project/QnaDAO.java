@@ -32,7 +32,7 @@ public class QnaDAO {
 	
 	public JSONArray SelectQna(String pages){
 		DatabaseManager db = new DatabaseManager();		
-		sql  = "SELECT * FROM Qna LIMIT "+(Integer.parseInt(pages)-1)*10+", 10"; 
+		sql  = "SELECT * FROM Qna ORDER BY qid DESC LIMIT "+(Integer.parseInt(pages)-1)*10+", 10"; 
 		Jarray = new JSONArray();
 		rs = db.selectDB(sql, null);
 		

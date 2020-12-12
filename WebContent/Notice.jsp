@@ -41,13 +41,6 @@
 			<div>
 				<h1 id="subtitle">공지사항</h1>
 			</div>
-			<div class="contents">
-				<div id="pageLocation">
-					<p>Home > 카페 소식 > 공지사항</p>
-				</div>
-				<div>
-					<h1 id="subtitle">공지사항</h1>
-				</div>
 				<table id="noticeTable">
 					<thead>
 						<tr>

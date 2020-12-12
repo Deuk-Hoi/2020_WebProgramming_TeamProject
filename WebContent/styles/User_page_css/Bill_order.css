@@ -1,0 +1,83 @@
+#bill_head{
+            background-color: rgb(53, 59, 75);
+        }
+        #bill_table{
+            width: 100%;
+        }
+        #bill_row{
+            width: 100%;
+        }
+        #bill_row td:nth-child(1){
+            text-align: left;
+            padding-left: 20px;
+            color: #06dd02;
+        }
+        #bill_row td:nth-child(2){
+            text-align: right;
+            padding-right: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        #subform{
+            margin: 15px;
+        }
+        #bill_detail{
+            width: 100%;
+            border-collapse: collapse;
+           
+        }
+        .detail_row{
+            width: 100%;
+        }
+        .detail_row td{
+            border: 1px solid lightgray;
+            padding: 15px;
+        }
+        .detail_row td:nth-child(1){
+            width: 30%;
+            background-color: lightgray;
+        }
+        .detail_row td:nth-child(2){
+            width: 70%;
+            font-size: 14px;
+        }
+        #notice{
+            font-size: 11px;
+            margin-top: 10px;
+            color: #b5b8c1;
+        }
+        #workplace_info{
+            width: 100%;
+            border-bottom: 1px solid lightgray;
+        }
+        #workplace_info td:nth-child(1){
+            width: 40%;
+        }
+        #workplace_info td:nth-child(2){
+            width: 60%;
+        }
+        #workplace_info tr>td ul{
+            font-size: 11px;
+            line-height: 2em;
+            padding: 0;
+            color: gray;
+        }
+        #bill_button{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #bill_button input:nth-child(1){
+            margin-right: 10px;
+            padding: 5px 15px 5px 15px;
+            color: white;
+            background-color: rgb(22, 190, 11);
+            border: 1px solid rgb(22, 190, 11);
+            border-radius: 2px;
+        }
+        #bill_button input:nth-child(2){
+            margin-right: 10px;
+            padding: 5px 15px 5px 15px;
+            background-color: rgb(231, 231, 231);
+            border: 1px solid rgb(231, 231, 231);
+            border-radius: 2px;
+        }

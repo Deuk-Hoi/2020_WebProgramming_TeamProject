@@ -48,7 +48,7 @@
 						<li>
 							<img src="images/supportImg/customer_accept_info2.gif">
 							<h3>인터넷</h3>
-							<div class="title_notice">www.htcafe.com</div>
+							<div class="title_notice">www.htcafe.ga</div>
 							<div class="notice">상담접수 시간 : 24시간</div>
 							<a href="./Q&A.jsp">접수하기</a>
 						</li>

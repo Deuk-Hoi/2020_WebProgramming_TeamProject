@@ -5,7 +5,7 @@ body { font-size : 1rem;}
 
 /* 소개 */
 .membershipstart {position: relative; width: 100%;height: 460px; background:url('../../images/main/membershipbk3.PNG') no-repeat center top;}
-.membershipstart > div > p{text-align: center; padding-top: 4rem; font-size: 0.9rem; color:white;}
+.membershipstart > div > p{text-align: center; padding-top: 6rem; font-size: 0.9rem; color:white; }
 .membershipstart > div .member_title{font-size:2.4rem; color: white;}
 .membershipstart > div a{display: inline-block; min-width:6.25rem; height: 1.9rem; line-height: 1.9rem; font-size: .7rem; color:#fff; border:2px solid #fff; border-radius:3px; text-align: center;}
 .membershipstart > div a{margin-top: 2rem;}
