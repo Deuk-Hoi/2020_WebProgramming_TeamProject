@@ -1,0 +1,21 @@
+@charset "EUC-KR";
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/* Reset */
+body > header{width:100%;}
+
+
+body > header,input,select,textarea,button {border:none;font-size:12px; font-family:'Noto Sans KR', sans-serif;color:#727272;}
+
+body > header ul,ol,li{list-style:none;}
+
+body > header img,fieldset{border:0;}
+body > header label,img,input,select,textarea,button{vertical-align:middle;}
+body > header .hide,caption,legend{line-height:0;font-size:1px;overflow:hidden;}
+body > header hr{display:none;}
+
+body > header a{color:#000;text-decoration:none;}
+ 
+
+body > header .clear:after { content:""; display:block; clear:both;}

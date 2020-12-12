@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+html { font-size : 20px;}
+/* 헤더 */
+header {background: #f6f5ef; border: top 2px solid #000;}
+header > div { position: relative; width : 54.5rem; margin : 0 auto;}
+header > div:after { content: ""; display: block; clear: both;}
+header > div h1 { float : left; padding: 0.7rem 0 1.2rem;}
+header > div nav { float : right; padding: 3.4rem 0 0 0;}
+header > div nav > ul > li { float : left;}
+header > div nav > ul > li > a { display :block; padding: .75rem 1.25rem 0; height: 2.6rem; font-size: .7rem; color:#333; line-height: 100%;}
+header > div .spot { position: absolute; right: 4rem; top: 1rem;}
+header > div .spot li { float: left; position: relative;}
+header > div .spot a { padding: 0 .95rem; font-size: .7rem; color:#333;}
+header > div .spot li ~ li a:after { content: ""; position: absolute; left: 0; top: 50%; width: 1px; height: .6rem; background: #504d4d; transform: translateY(-25%);}
+header > div .total { display:none;}
+
+header .mainheader {visibility: hidden;}
